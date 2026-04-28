@@ -1,0 +1,393 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Contact from '../components/Contact.astro';
+
+const pageTitle = "Sobre Nosotros | INNOVA SYSTEMS CENTER - Innovación en Soluciones Tecnológicas";
+const pageDescription = "Descubre cómo INNOVA SYSTEMS CENTER lidera la innovación en soluciones tecnológicas. Expertos en desarrollo web, inteligencia artificial, bases de datos, cloud computing y más. ¡Conócenos!";
+const pageKeywords = "tecnología, empresa de tecnología, desarrollo de software, transformación digital, automatización empresarial, análisis de datos, recolección de datos, inteligencia de negocios, BI, bases de datos, consultoría tecnológica, desarrollo web, automatización de procesos, sistemas de información, empresas tecnológicas en Colombia, innovación tecnológica, soluciones digitales, integración de datos, machine learning, desarrollo a medida, sistemas escalables, Innova Systems Center, equipo de tecnología, empresa de software Colombia, consultoría en datos, manejo de datos, limpieza de datos, sistemas empresariales, soporte tecnológico, visión empresarial, misión empresarial, valores corporativos, arquitectura de software, desarrollo backend, desarrollo frontend, tecnología para empresas, soluciones informáticas, sistemas SIG, QGIS, ODK, Kobotoolbox, Power BI, procesos digitales, optimización de procesos, estrategia tecnológica, sistemas inteligentes, infraestructura digital, experiencia empresarial, crecimiento digital, empresa innovadora Colombia";
+---
+
+<Layout title={pageTitle} description={pageDescription} keywords={pageKeywords}>
+  <Header />
+
+  <main class="min-h-screen text-gray-100">
+
+    <!-- HERO -->
+    <section class="w-full">
+      <div class="max-w-[1480px] h-screen mx-auto px-6 flex flex-col lg:flex-row gap-8 items-center bg-center bg-cover bg-fixed" style="background-image: url('/assets/images/fondohome.png');">
+        <div class="lg:w-2/3 mt-10 text-left">
+          <p class="text-[#F39C12] font-semibold mb-4">QUIÉNES SOMOS</p>
+          <h1 class="text-3xl md:text-5xl font-bold leading-tight mb-6 text-white">
+            INNOVA SYSTEMS CENTER — Soluciones tecnológicas para empresas modernas
+          </h1>
+          <p class="text-lg text-gray-300 my-12 max-w-3xl">
+            Somos un equipo interdisciplinario con más de <strong>10 años de experiencia</strong> en desarrollo, automatización, análisis de datos y producción digital. Diseñamos e implementamos soluciones prácticas que optimizan procesos, reducen costos y escalan la operación de empresas en múltiples sectores.
+          </p>
+
+          <div class="flex gap-4">
+            <a href="/nosotros#contact-form" class="bg-[#F39C12] text-dark-900 font-bold px-6 py-3 rounded-md hover:bg-[#FEB94C] text-black transition">
+              Solicita una consultoría
+            </a>
+            <a href="/#nuestros_servicios" class="border border-[#F39C12] px-6 py-3 rounded-md text-[#F39C12] hover:bg-[#111] transition">
+              Ver servicios
+            </a>
+          </div>
+        </div>
+
+        <div class="lg:w-1/3 text-left">
+          <!-- Box con datos rápidos / cifras -->
+          <div class="bg-[#0A0A0A] p-6 rounded-lg border border-[#1A1A1A]">
+            <p class="text-sm text-gray-400 mb-2">Años de experiencia</p>
+            <p class="text-3xl font-bold text-white mb-4">+10</p>
+
+            <p class="text-sm text-gray-400 mb-2">Servicios principales</p>
+            <ul class="text-gray-300 list-disc pl-5 mb-4">
+              <li>Desarrollo Web a Medida</li>
+              <li>Bases de Datos & Automatización</li>
+              <li>Análisis y Recolección de Datos</li>
+              <li>Producción de Contenido Digital</li>
+            </ul>
+
+            <p class="text-sm text-gray-400">Compromiso</p>
+            <p class="text-white font-semibold">Innovación práctica y resultados medibles</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUÉ HACEMOS / SERVICIOS -->
+    <section id="servicios" class="w-full py-20 bg-[#070707] text-left">
+      <div class="max-w-[1480px] mx-auto px-6">
+
+        <!-- TÍTULO -->
+        <p class="text-[#F39C12] font-semibold tracking-wide mb-2">SERVICIOS</p>
+        <h2 class="text-3xl font-bold text-white mb-4">Qué hacemos</h2>
+
+        <p class="text-gray-300 mb-10 max-w-3xl">
+          En INNOVA SYSTEMS CENTER entregamos soluciones integrales que combinan 
+          <strong>desarrollo, datos, automatización y contenido digital</strong> para ayudar a las empresas 
+          a crecer con tecnología moderna, precisa y escalable.
+        </p>
+
+        <!-- GRID DE SERVICIOS -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+          <article class="bg-[#0D0D0D] p-6 rounded-lg border border-[#1A1A1A] hover:border-[#F39C12] transition">
+            <div class="mb-4">
+              <i data-lucide="layout-dashboard" class="w-10 h-10 text-[#F39C12]"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-white mb-2">Desarrollo web a medida</h3>
+            <p class="text-gray-300 mb-3">Plataformas rápidas, seguras y diseñadas para convertir.</p>
+            <p class="text-sm text-gray-400">Integraciones, UX, performance y SEO técnico.</p>
+          </article>
+
+          <article class="bg-[#0D0D0D] p-6 rounded-lg border border-[#1A1A1A] hover:border-[#F39C12] transition">
+            <div class="mb-4">
+              <i data-lucide="database" class="w-10 h-10 text-[#F39C12]"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-white mb-2">Consultoría en bases de datos</h3>
+            <p class="text-gray-300 mb-3">Estructuras eficientes, seguras y optimizadas para escalar.</p>
+            <p class="text-sm text-gray-400">Backups automáticos, rendimiento y administración profesional.</p>
+          </article>
+
+          <article class="bg-[#0D0D0D] p-6 rounded-lg border border-[#1A1A1A] hover:border-[#F39C12] transition">
+            <div class="mb-4">
+              <i data-lucide="bar-chart" class="w-10 h-10 text-[#F39C12]"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-white mb-2">Análisis y recolección de datos</h3>
+            <p class="text-gray-300 mb-3">Transformamos información en decisiones estratégicas.</p>
+            <p class="text-sm text-gray-400">Dashboards, datos limpios y reporting automatizado.</p>
+          </article>
+
+          <article class="bg-[#0D0D0D] p-6 rounded-lg border border-[#1A1A1A] hover:border-[#F39C12] transition">
+            <div class="mb-4">
+              <i data-lucide="workflow" class="w-10 h-10 text-[#F39C12]"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-white mb-2">Automatización empresarial</h3>
+            <p class="text-gray-300 mb-3">Reducimos errores, tiempos y tareas repetitivas.</p>
+            <p class="text-sm text-gray-400">RPA, integraciones y flujos inteligentes.</p>
+          </article>
+
+          <article class="bg-[#0D0D0D] p-6 rounded-lg border border-[#1A1A1A] hover:border-[#F39C12] transition">
+            <div class="mb-4">
+              <i data-lucide="clapperboard" class="w-10 h-10 text-[#F39C12]"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-white mb-2">Producción digital y publicidad</h3>
+            <p class="text-gray-300 mb-3">Contenido visual que impulsa tu marca y presencia digital.</p>
+            <p class="text-sm text-gray-400">Videos, animaciones y piezas para campañas.</p>
+          </article>
+
+          <article class="bg-[#0D0D0D] p-6 rounded-lg border border-[#1A1A1A] hover:border-[#F39C12] transition">
+            <div class="mb-4">
+              <i data-lucide="headset" class="w-10 h-10 text-[#F39C12]"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-white mb-2">Soporte y acompañamiento</h3>
+            <p class="text-gray-300 mb-3">Aseguramos continuidad, mejoras y rendimiento constante.</p>
+            <p class="text-sm text-gray-400">Monitoreo, mantenimiento y escalabilidad.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- NUESTRA HISTORIA -->
+    <section class="w-full py-24 bg-[#0A0A0A] text-left">
+      <div class="max-w-[1480px] mx-auto px-6">
+        
+        <!-- Encabezado -->
+        <div class="mb-10">
+          <p class="text-[#F39C12] font-semibold tracking-wide mb-2">NUESTRA HISTORIA</p>
+          <h2 class="text-4xl font-bold text-white leading-tight">
+            Un camino construido sobre innovación, experiencia y tecnología
+          </h2>
+        </div>
+
+        <!-- Párrafos -->
+        <div class="space-y-6 text-gray-300 text-lg leading-relaxed">
+
+          <p>
+            Innova Systems Center nace con una visión clara: convertirnos en 
+            <strong class="text-white">el aliado tecnológico estratégico</strong> para empresas que buscan evolucionar, digitalizarse y mejorar la forma en que operan.
+          </p>
+
+          <p>
+            Desde nuestros primeros años, nos especializamos en resolver desafíos complejos mediante 
+            <span class="text-[#F39C12] font-semibold">soluciones diseñadas a medida</span>: 
+            sistemas de información geográfica, plataformas de software, automatización de procesos, 
+            almacenamiento en la nube, gestión de datos y herramientas digitales personalizadas.
+          </p>
+
+          <p>
+            Durante más de una década, hemos trabajado con organizaciones de diferentes sectores, 
+            ayudándoles a transformar sus operaciones a través de la integración entre 
+            <strong class="text-white">tecnología avanzada y estrategia empresarial</strong>. 
+            Esto nos ha permitido consolidar un equipo altamente capacitado, con enfoque en innovación, escalabilidad y resultados reales.
+          </p>
+
+          <p>
+            Hoy, Innova Systems Center es más que una empresa de tecnología: somos 
+            <strong class="text-white">arquitectos digitales</strong>, construyendo soluciones que impulsan crecimiento, productividad y competitividad en un mundo cada vez más conectado.
+          </p>
+
+        </div>
+
+        <!-- Línea decorativa -->
+        <div class="w-32 h-1 bg-[#F39C12] mt-10 rounded-full"></div>
+      </div>
+    </section>
+
+     <!-- CULTURA DE INNOVA -->
+    <section class="w-full py-24 bg-[#151515] text-left">
+      <div class="max-w-[1200px] mx-auto px-6">
+
+        <p class="text-[#F39C12] text-sm font-semibold mb-2">NUESTRA CULTURA</p>
+        <h2 class="text-4xl font-bold text-white mb-6 max-w-2xl">
+          Crecemos contigo: cultura enfocada en innovación, aprendizaje y resultados reales
+        </h2>
+
+        <p class="text-gray-300 text-lg max-w-3xl mb-14">
+          En INNOVA SYSTEMS CENTER creemos que el talento florece cuando tiene los recursos correctos.
+          Fomentamos la creatividad, el pensamiento crítico y el aprendizaje continuo. Cada integrante del equipo
+          trabaja en proyectos reales que generan impacto directo en organizaciones de toda Colombia y Latinoamérica.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+
+          <div class="bg-[#0D0D0D] p-6 rounded-xl border border-[#1A1A1A]">
+            <i data-lucide="rocket" class="w-10 h-10 text-[#F39C12] mb-4"></i>
+            <h3 class="text-xl font-bold text-white mb-2">Crecimiento profesional</h3>
+            <p class="text-gray-400 text-sm">
+              Cada proyecto te reta, te enseña y mejora tu nivel técnico.
+            </p>
+          </div>
+
+          <div class="bg-[#0D0D0D] p-6 rounded-xl border border-[#1A1A1A]">
+            <i data-lucide="users" class="w-10 h-10 text-[#F39C12] mb-4"></i>
+            <h3 class="text-xl font-bold text-white mb-2">Trabajo colaborativo</h3>
+            <p class="text-gray-400 text-sm">
+              Equipos multidisciplinarios con desarrolladores, creativos y analistas.
+            </p>
+          </div>
+
+          <div class="bg-[#0D0D0D] p-6 rounded-xl border border-[#1A1A1A]">
+            <i data-lucide="lightbulb" class="w-10 h-10 text-[#F39C12] mb-4"></i>
+            <h3 class="text-xl font-bold text-white mb-2">Ambiente innovador</h3>
+            <p class="text-gray-400 text-sm">
+              Apostamos por la experimentación, nuevas ideas y tecnología de vanguardia.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- MISIÓN / VISIÓN / VALORES -->
+    <section class="w-full py-20 bg-[#151515] text-left">
+      <div class="max-w-[1480px] mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-10">
+
+        <!-- MISIÓN -->
+        <div class="p-8 bg-[#0D0D0D] rounded-xl border border-[#1A1A1A] shadow-md hover:border-[#F39C12] transition">
+          <div class="flex items-center gap-3 mb-4">
+            <i data-lucide="target" class="w-7 h-7 text-[#F39C12]"></i>
+            <h3 class="text-xl font-bold text-white">Nuestra misión</h3>
+          </div>
+          <p class="text-gray-300 leading-relaxed">
+            Brindar soluciones informáticas innovadoras que optimicen procesos, aumenten la eficiencia
+            y potencien el crecimiento de las empresas mediante tecnología avanzada, enfoque estratégico
+            y acompañamiento continuo.
+          </p>
+        </div>
+
+        <!-- VISIÓN -->
+        <div class="p-8 bg-[#0D0D0D] rounded-xl border border-[#1A1A1A] shadow-md hover:border-[#F39C12] transition">
+          <div class="flex items-center gap-3 mb-4">
+            <i data-lucide="eye" class="w-7 h-7 text-[#F39C12]"></i>
+            <h3 class="text-xl font-bold text-white">Nuestra visión (2028)</h3>
+          </div>
+          <p class="text-gray-300 leading-relaxed">
+            Ser líderes en innovación tecnológica en Colombia, desarrollando soluciones avanzadas en IA,
+            automatización, plataformas inteligentes y digitalización empresarial para impactar sectores clave
+            y transformar su productividad.
+          </p>
+        </div>
+
+        <!-- VALORES -->
+        <div class="p-8 bg-[#0D0D0D] rounded-xl border border-[#1A1A1A] shadow-md hover:border-[#F39C12] transition">
+          <div class="flex items-center gap-3 mb-4">
+            <i data-lucide="heart-handshake" class="w-7 h-7 text-[#F39C12]"></i>
+            <h3 class="text-xl font-bold text-white">Nuestros valores</h3>
+          </div>
+
+          <ul class="text-gray-300 space-y-2">
+            <li class="flex items-start gap-2">
+              <i data-lucide="sparkles" class="w-5 h-5 text-[#F39C12] mt-1"></i>
+              <span><strong>Innovación:</strong> mejoramos continuamente nuestras soluciones.</span>
+            </li>
+
+            <li class="flex items-start gap-2">
+              <i data-lucide="check-circle" class="w-5 h-5 text-[#F39C12] mt-1"></i>
+              <span><strong>Compromiso:</strong> resultados reales y medibles para nuestros clientes.</span>
+            </li>
+
+            <li class="flex items-start gap-2">
+              <i data-lucide="shield" class="w-5 h-5 text-[#F39C12] mt-1"></i>
+              <span><strong>Transparencia:</strong> procesos claros, reportes y comunicación constante.</span>
+            </li>
+
+            <li class="flex items-start gap-2">
+              <i data-lucide="award" class="w-5 h-5 text-[#F39C12] mt-1"></i>
+              <span><strong>Calidad:</strong> soluciones robustas, seguras y diseñadas para escalar.</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- EQUIPO -->
+    <section class="w-full py-24 bg-[#0A0A0A]">
+      <div class="max-w-[1480px] mx-auto px-6 text-center">
+
+        <p class="text-[#F39C12] font-semibold tracking-wide mb-3">
+          NUESTRO EQUIPO
+        </p>
+
+        <h2 class="text-4xl font-bold text-white mb-12">
+          Un equipo experto que impulsa tu transformación digital
+        </h2>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+
+          <!-- CARD 1 -->
+          <div class="bg-[#111] rounded-2xl shadow-lg border border-[#1A1A1A] p-8 relative group hover:shadow-[0_0_25px_#F39C1260] transition duration-300">
+            <div class="absolute top-0 left-0 w-full h-1 bg-[#F39C12]"></div>
+            <div class="flex flex-col items-center">
+              <div class="w-28 h-28 rounded-full overflow-hidden mb-6 border-2 border-[#F39C12]">
+                <img src="/assets/images/foto_yimi.webp" class="w-full h-full object-cover">
+              </div>
+              <h3 class="text-xl font-bold text-white">Yimi Vacca</h3>
+              <p class="text-[#F39C12] font-semibold mb-3">CEO & Fundador</p>
+              <p class="text-gray-300 text-sm leading-relaxed">
+                Líder estratégico con más de 10 años diseñando soluciones tecnológicas innovadoras enfocadas en crecimiento empresarial.
+              </p>
+            </div>
+          </div>
+
+          <!-- CARD 2 -->
+          <div class="bg-[#111] rounded-2xl shadow-lg border border-[#1A1A1A] p-8 relative group hover:shadow-[0_0_25px_#F39C1260] transition duration-300">
+            <div class="absolute top-0 left-0 w-full h-1 bg-[#F39C12]"></div>
+            <div class="flex flex-col items-center">
+              <div class="w-28 h-28 rounded-full overflow-hidden mb-6 border-2 border-[#F39C12]">
+                <img src="/assets/images/foto_brayan.webp" class="w-full h-full object-cover">
+              </div>
+              <h3 class="text-xl font-bold text-white">Brayan Jamanoy</h3>
+              <p class="text-[#F39C12] font-semibold mb-3">CTO & Arquitecto de Software</p>
+              <p class="text-gray-300 text-sm leading-relaxed">
+                Especialista en arquitectura de software, automatización y sistemas escalables para organizaciones modernas.
+              </p>
+            </div>
+          </div>
+
+          <!-- CARD 3 -->
+          <div class="bg-[#111] rounded-2xl shadow-lg border border-[#1A1A1A] p-8 relative group hover:shadow-[0_0_25px_#F39C1260] transition duration-300">
+            <div class="absolute top-0 left-0 w-full h-1 bg-[#F39C12]"></div>
+            <div class="flex flex-col items-center">
+              <div class="w-28 h-28 rounded-full overflow-hidden mb-6 border-2 border-[#F39C12]">
+                <img src="/assets/images/foto_edwin.webp" class="w-full h-full object-cover">
+              </div>
+              <h3 class="text-xl font-bold text-white">Edwin Fernández</h3>
+              <p class="text-[#F39C12] font-semibold mb-3">Diseñador & Especialista SIG</p>
+              <p class="text-gray-300 text-sm leading-relaxed">
+                Experto en diseño digital, sistemas de información geográfica y visualización de datos para proyectos de alto impacto.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- TECNOLOGÍAS -->
+    <section class="w-full py-20 bg-[#151515]">
+      <div class="max-w-[1480px] mx-auto px-6">
+        <h2 class="text-3xl font-bold text-white mb-6 text-left">Tecnologías que usamos</h2>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+          <div class="bg-[#0D0D0D] p-4 rounded-lg text-center border border-[#1A1A1A]">Python</div>
+          <div class="bg-[#0D0D0D] p-4 rounded-lg text-center border border-[#1A1A1A]">JavaScript</div>
+          <div class="bg-[#0D0D0D] p-4 rounded-lg text-center border border-[#1A1A1A]">HTML / CSS</div>
+          <div class="bg-[#0D0D0D] p-4 rounded-lg text-center border border-[#1A1A1A]">Java</div>
+
+          <div class="bg-[#0D0D0D] p-4 rounded-lg text-center border border-[#1A1A1A]">PHP</div>
+          <div class="bg-[#0D0D0D] p-4 rounded-lg text-center border border-[#1A1A1A]">React / Angular / Vue</div>
+          <div class="bg-[#0D0D0D] p-4 rounded-lg text-center border border-[#1A1A1A]">Django / Spring Boot</div>
+          <div class="bg-[#0D0D0D] p-4 rounded-lg text-center border border-[#1A1A1A]">Node.js</div>
+
+          <div class="bg-[#0D0D0D] p-4 rounded-lg text-center border border-[#1A1A1A]">MySQL / PostgreSQL / MongoDB</div>
+          <div class="bg-[#0D0D0D] p-4 rounded-lg text-center border border-[#1A1A1A]">ODK / Enketo / Kobotoolbox</div>
+          <div class="bg-[#0D0D0D] p-4 rounded-lg text-center border border-[#1A1A1A]">Power BI / Looker / Tableau</div>
+          <div class="bg-[#0D0D0D] p-4 rounded-lg text-center border border-[#1A1A1A]">Adobe Suite / DaVinci / Blender</div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CONTACTO / CTA -->
+    <section id="contact-form" class="w-full py-20 bg-[#0A0A0A] text-left">
+      <div class="max-w-[900px] mx-auto px-6">
+        <h2 class="text-3xl font-bold text-white mb-4">Envíanos un mensaje</h2>
+        <p class="text-gray-300 mb-6">Déjanos tu mensaje y te responderemos lo antes posible.</p>
+
+        <Contact />
+      </div>
+    </section>
+
+  </main>
+
+  <Footer />
+
+</Layout>

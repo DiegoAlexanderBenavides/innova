@@ -1,0 +1,15 @@
+---
+---
+<div id="imageModal" class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 hidden opacity-0 transition-opacity duration-500 ease-out">
+  <div class="relative bg-[#ffdd551f] border-2 border-[#FEB94CFA] shadow-2xl p-4 md:p-6 max-w-6xl mx-auto rounded-2xl overflow-hidden transform scale-90 transition-transform duration-500 ease-out">
+    <!-- Botón de cerrar -->
+    <button onclick="closeModal()" class="absolute top-4 right-4 bg-[#F39C12] cursor-pointer text-white rounded-full w-10 h-10 flex items-center justify-center text-xl hover:bg-[#FEB94CFA] hover:text-[#0d0d0d] shadow-lg transition">
+      <i data-lucide="x" class="w-6 h-6"></i>
+    </button>
+
+    <!-- Contenedor de la imagen -->
+    <div class="p-4">
+      <img id="modalImage" src="" class="rounded-xl max-h-[85vh] max-w-full object-contain border border-[#FEB94CFA] shadow-xl">
+    </div>
+  </div>
+</div>

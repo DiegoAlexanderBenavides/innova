@@ -1,0 +1,142 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import Contact from "../components/Contact.astro";
+
+const pageTitle =
+  "Contacto | INNOVA SYSTEMS CENTER – Asesoría Tecnológica y Consultoría Digital";
+const pageDescription =
+  "Ponte en contacto con INNOVA SYSTEMS CENTER. Te ayudamos a optimizar procesos, automatizar tu empresa y aprovechar tus datos con tecnología avanzada. Escríbenos y recibe asesoría personalizada.";
+const pageKeywords =
+  "contacto Innova Systems Center, asesoría tecnológica, solicitar consultoría digital, desarrollo de software Colombia, automatización empresarial, recolección de datos, dashboards, desarrollo web, servicios tecnológicos, cotizar software, soporte técnico, transformación digital, empresa de tecnología Bogotá, innovación tecnológica, sistemas de información, comunicar con Innova Systems Center, consultoría TI";
+---
+
+<Layout title={pageTitle} description={pageDescription} keywords={pageKeywords}>
+  <Header />
+
+  <main class="w-full">
+    <!-- HERO -->
+    <section
+      class="w-full h-screen flex flex-col justify-center bg-center bg-cover bg-fixed"
+      style="background-image: url('/assets/images/fondohome.png'); background-size: cover; background-position: center;"
+      data-animation="animate-fade-in"
+    >
+      <div class="w-full max-w-[1480px] px-6 mx-auto text-left mt-20">
+        <!-- TÍTULO HERO -->
+        <p class="text-white text-3xl lg:text-6xl font-bold max-w-3xl mb-6">
+          Conversemos sobre tu próximo proyecto
+        </p>
+
+        <!-- DESCRIPCIÓN -->
+        <h1
+          class="text-white text-xl lg:text-2xl font-normal max-w-3xl mb-8 leading-relaxed"
+        >
+          Agenda una consultoría gratuita y descubre cómo podemos ayudarte con
+          desarrollo, datos y automatización.
+        </h1>
+
+        <!-- BOTÓN -->
+        <a
+          href="#formulario-contacto"
+          class="inline-block bg-[#F39C12] font-bold text-dark-900 text-lg px-6 py-3 rounded-md hover:bg-[#FEB94CFA] text-black transition"
+        >
+          Quiero hablar con un experto
+        </a>
+      </div>
+    </section>
+
+    <!-- SECCIÓN PRINCIPAL DE CONTACTO -->
+    <section id="formulario-contacto" class="w-full py-24 bg-[#151515]">
+      <div
+        class="max-w-[1200px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16"
+      >
+        <!-- INFORMACIÓN -->
+        <div>
+          <p class="text-[#F39C12] font-semibold tracking-wide mb-3">
+            CONTACTO DIRECTO
+          </p>
+
+          <h2 class="text-3xl font-bold text-white leading-tight mb-6">
+            Estamos listos para impulsar tu transformación digital
+          </h2>
+
+          <p class="text-gray-300 mb-6 text-lg leading-relaxed">
+            Resolvemos tus dudas, analizamos tus necesidades y te guiamos para
+            implementar la solución ideal para tu organización.
+          </p>
+
+          <div class="space-y-6">
+            <div class="flex items-center gap-4">
+              <i data-lucide="mail" class="w-7 h-7 text-[#F39C12]"></i>
+              <p class="text-gray-300 text-lg">
+                gerencia@innovasystemscenter.com
+              </p>
+            </div>
+
+            <div class="flex items-center gap-4">
+              <i data-lucide="phone" class="w-7 h-7 text-[#F39C12]"></i>
+              <p class="text-gray-300 text-lg">+57 323 325 9454</p>
+            </div>
+
+            <div class="flex items-center gap-4">
+              <i data-lucide="facebook" class="w-7 h-7 text-[#F39C12]"></i>
+              <a
+                href="https://web.facebook.com/innovasystemscenter.co/"
+                target="_blank"
+                class="text-gray-300 hover:underline"
+              >
+                Facebook Oficial
+              </a>
+            </div>
+
+            <div class="flex items-center gap-4">
+              <i data-lucide="linkedin" class="w-7 h-7 text-[#F39C12]"></i>
+              <a href="#" class="text-gray-300 hover:underline"> LinkedIn </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- FORMULARIO -->
+        <div
+          class="bg-[#0D0D0D] p-8 rounded-2xl border border-[#1A1A1A] shadow-lg text-left"
+        >
+          <Contact />
+        </div>
+      </div>
+    </section>
+
+    <!-- MAPA OPCIONAL -->
+    <section class="w-full bg-[#0A0A0A] py-10">
+      <div class="max-w-[1200px] mx-auto px-6">
+        <h3 class="text-xl text-white font-semibold mb-4">Nuestra ubicación</h3>
+        <div class="rounded-xl overflow-hidden border border-[#1A1A1A]">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d1994.50566161683!2d-76.65231099999998!3d1.1524030000000027!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMcKwMDknMDguNyJOIDc2wrAzOScwOC4zIlc!5e0!3m2!1ses-419!2sco!4v1763678433082!5m2!1ses-419!2sco"
+            width="100%"
+            height="380"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="w-full bg-[#151515] py-20 text-center">
+      <p class="text-2xl font-bold text-white mb-4">¿Listo para empezar?</p>
+      <a
+        href="#formulario-contacto"
+        class="bg-[#F39C12] text-black font-bold px-8 py-4 rounded-md hover:bg-[#FEB94CFA] transition"
+      >
+        Agenda tu consultoría ahora
+      </a>
+    </section>
+  </main>
+
+  <Footer />
+
+  <script src="/assets/js/services.js" is:inline></script>
+  <script src="/assets/js/modal_view_img.js" is:inline></script>
+</Layout>

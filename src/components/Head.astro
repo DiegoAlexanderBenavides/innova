@@ -1,0 +1,48 @@
+---
+const {
+    pageTitle = "INNOVA SYSTEMS CENTER | Soluciones Informáticas Innovadoras",
+    pageDescription = "INNOVA SYSTEMS CENTER ofrece soluciones tecnológicas en desarrollo web, inteligencia artificial, bases de datos...",
+    pageKeywords = "tecnología, desarrollo web, IA, bases de datos, cloud computing...",
+    pageImage = "/assets/images/globo2.webp",
+    imageIco = "/assets/images/globo2.ico",
+} = Astro.props;
+
+// URL actual (equivalente a $_SERVER['REQUEST_URI'])
+const pageURL = new URL(Astro.request.url).href;
+---
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+<!-- SEO -->
+<title>{pageTitle}</title>
+<meta name="description" content={pageDescription} />
+<meta name="keywords" content={pageKeywords} />
+<meta name="author" content="INNOVA SYSTEMS CENTER" />
+<link rel="canonical" href={pageURL} />
+
+<!-- Open Graph -->
+<meta property="og:title" content={pageTitle} />
+<meta property="og:description" content={pageDescription} />
+<meta property="og:image" content={pageImage} />
+<meta property="og:url" content={pageURL} />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="INNOVA SYSTEMS CENTER" />
+<meta property="og:locale" content="es_ES" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={pageTitle} />
+<meta name="twitter:description" content={pageDescription} />
+<meta name="twitter:image" content={pageImage} />
+<meta name="twitter:site" content="@innova_systems_center" />
+
+<!-- Favicon -->
+<link rel="icon" href={imageIco} type="image/x-icon" />
+
+<!-- Tailwind -->
+<script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
+<!-- Scripts -->
+<script defer src="/assets/js/head.js"></script>

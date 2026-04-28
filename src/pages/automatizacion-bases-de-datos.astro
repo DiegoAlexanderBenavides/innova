@@ -1,0 +1,355 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const pageTitle = "Sistemas de Automatización y Bases de Datos a Medida | INNOVA SYSTEMS CENTER – Procesos Inteligentes y Datos Confiables";
+const pageDescription = "Automatizamos procesos y gestionamos bases de datos para mejorar eficiencia, reducir errores y asegurar información confiable. Soluciones a medida en MySQL, PostgreSQL, ODK, Enketo y más.";
+const pageKeywords = "automatización de procesos, bases de datos, administración de bases de datos, PostgreSQL, MySQL, SQL, NoSQL, MongoDB, automatización empresarial, RPA, flujos automáticos, integración de sistemas, APIs, ETL, pipelines de datos, optimización de procesos internos, reducción de tiempos operativos, limpieza de datos, migración de datos, diseño de bases de datos, seguridad informática, sistemas automatizados, integración API, scripts automatizados, automatización de reportes, eficiencia operativa";
+---
+
+<Layout title={pageTitle} description={pageDescription} keywords={pageKeywords}>
+  <Header />
+
+  <main class="min-h-screen flex flex-col items-center justify-center text-center">
+    <!-- HERO -->
+    <section class="w-full h-screen flex flex-col justify-center bg-center bg-cover bg-fixed" data-animation="animate-fade-in"
+      style="background-image: url('/assets/images/fondohome.png');">
+      <div class="w-full max-w-[1480px] px-6 mx-auto flex flex-col items-start text-left mt-10 mb-15">
+
+        <!-- TEXTO CORTO -->
+        <p class="text-white text-3xl lg:text-6xl font-bold max-w-3xl mb-6">
+          Automatización que elimina errores y acelera tus procesos
+        </p>
+
+        <!-- H1 SEO -->
+        <h1 class="text-[#ffffff] text-xl lg:text-2xl font-normal max-w-3xl mb-8">
+          Sistemas de Automatización y Bases de Datos a Medida
+        </h1>
+
+        <!-- BOTÓN -->
+        <div class="flex flex-col sm:flex-row items-start">
+          <a href="/contacto#formulario-contacto"
+            class="w-full sm:w-auto text-center bg-[#F39C12] font-bold text-dark-900 text-lg px-6 py-3 rounded-md hover:bg-[#FEB94CFA] transition duration-300 text-black">
+            Solicita tu Consultoría Gratuita
+          </a>
+        </div>
+      </div>
+
+      <!-- LOGOS -->
+      <div class="w-full max-w-[1480px] px-6 mx-auto">
+        <div class="flex flex-wrap items-center gap-10 opacity-80">
+          <img src="/assets/images/projects/imakikuna.png" class="h-20 sm:h-30 object-contain hover:opacity-100 transition" />
+        </div>
+      </div>
+    </section>
+
+    <!-- BENEFICIOS ESTRATÉGICOS -->
+    <section class="w-full bg-[#151515] text-white py-20">
+      <div class="max-w-2xl mx-auto">
+        <p class="text-[#F39C12] font-semibold text-center tracking-wide mb-3">
+          AUTOMATIZACIÓN Y BASES DE DATOS PARA EMPRESAS MODERNAS
+        </p>
+
+        <h2 class="text-4xl md:text-5xl font-bold text-center mb-6">
+          Centraliza tus datos, automatiza procesos y toma decisiones con precisión
+        </h2>
+
+        <p class="text-lg text-gray-300 text-center max-w-3xl mx-auto mb-14">
+          Diseñamos sistemas de automatización y bases de datos que eliminan tareas manuales, reducen errores,
+          protegen tu información y optimizan cada flujo crítico dentro de tu organización.
+        </p>
+      </div>
+
+      <!-- BENEFICIOS -->
+      <div class="max-w-[1480px] mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
+
+        <div class="text-center">
+          <i data-lucide="database" class="w-12 h-12 text-[#F39C12] mx-auto mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Datos organizados y accesibles</h3>
+          <p class="text-gray-400">Estructuras limpias y estables para consultar información sin errores ni duplicados.</p>
+        </div>
+
+        <div class="text-center">
+          <i data-lucide="workflow" class="w-12 h-12 text-[#F39C12] mx-auto mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Automatización inteligente</h3>
+          <p class="text-gray-400">Procesos automáticos que reducen tiempos, eliminan tareas repetitivas y mejoran eficiencia.</p>
+        </div>
+
+        <div class="text-center">
+          <i data-lucide="shield" class="w-12 h-12 text-[#F39C12] mx-auto mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Seguridad y control total</h3>
+          <p class="text-gray-400">Protección de datos, gestión de accesos y cumplimiento de buenas prácticas de seguridad.</p>
+        </div>
+
+        <div class="text-center">
+          <i data-lucide="server-cog" class="w-12 h-12 text-[#F39C12] mx-auto mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Rendimiento optimizado</h3>
+          <p class="text-gray-400">Bases de datos rápidas, escalables y preparadas para crecer con tu negocio.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PROBLEMAS QUE RESOLVEMOS -->
+    <section class="w-full py-24 bg-[#0A0A0A]">
+      <div class="max-w-[1480px] mx-auto px-6 text-left space-y-16">
+
+        <h2 class="text-4xl lg:text-5xl font-bold text-white">
+          Problemas que resolvemos con automatización y bases de datos
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+          <div class="flex items-start gap-4">
+            <i data-lucide="database" class="w-6 h-6 text-[#F39C12] mt-1"></i>
+            <p class="text-gray-300 text-lg">
+              Datos duplicados, incompletos o difíciles de consultar.
+            </p>
+          </div>
+
+          <div class="flex items-start gap-4">
+            <i data-lucide="timer-off" class="w-6 h-6 text-[#F39C12] mt-1"></i>
+            <p class="text-gray-300 text-lg">
+              Procesos manuales que consumen tiempo y generan errores.
+            </p>
+          </div>
+
+          <div class="flex items-start gap-4">
+            <i data-lucide="file-clock" class="w-6 h-6 text-[#F39C12] mt-1"></i>
+            <p class="text-gray-300 text-lg">
+              Reportes tardados que dificultan la toma de decisiones.
+            </p>
+          </div>
+
+          <div class="flex items-start gap-4">
+            <i data-lucide="link-2-off" class="w-6 h-6 text-[#F39C12] mt-1"></i>
+            <p class="text-gray-300 text-lg">
+              Sistemas que no se comunican entre sí.
+            </p>
+          </div>
+
+          <div class="flex items-start gap-4">
+            <i data-lucide="shield-alert" class="w-6 h-6 text-[#F39C12] mt-1"></i>
+            <p class="text-gray-300 text-lg">
+              Información sin respaldo o con riesgo de pérdida.
+            </p>
+          </div>
+
+          <div class="flex items-start gap-4">
+            <i data-lucide="repeat" class="w-6 h-6 text-[#F39C12] mt-1"></i>
+            <p class="text-gray-300 text-lg">
+              Equipos que dependen de tareas repetitivas y no escalables.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- POR QUÉ NOSOTROS -->
+    <section class="w-full py-24 bg-[#0A0A0A]">
+      <div class="max-w-[1480px] mx-auto px-6 space-y-24">
+
+        <h2 class="text-4xl lg:text-5xl text-white font-bold text-left">Soluciones diseñadas para hacer tu información más útil</h2>
+
+        <!-- BLOQUE 1 -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
+          <div class="text-left">
+            <h3 class="text-4xl text-white font-bold mb-6">Bases de datos robustas y personalizadas</h3>
+            <p class="text-gray-300 text-lg mb-6">
+              Diseñamos estructuras de datos estables, seguras y adaptadas exactamente a las necesidades de tu empresa.
+            </p>
+          </div>
+          <img class="rounded-xl w-full object-cover h-80" src="/assets/images/services/automatizacion_bases_de_datos/db-robustas-personalizadas.png" />
+        </div>
+
+        <!-- BLOQUE 2 -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
+          <img class="rounded-xl w-full object-cover h-80" src="/assets/images/services/automatizacion_bases_de_datos/db-automatizacion-tiempo-errores.png" />
+          <div class="text-left">
+            <h3 class="text-4xl text-white font-bold mb-6">Automatización para reducir tiempos y errores</h3>
+            <p class="text-gray-300 text-lg mb-6">
+              Automatizamos procesos internos, reportes, cargas de datos y flujos complejos para liberar trabajo operativo.
+            </p>
+          </div>
+        </div>
+
+        <!-- BLOQUE 3 -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
+          <div class="text-left">
+            <h3 class="text-4xl text-white font-bold mb-6">Integraciones confiables con tus sistemas</h3>
+            <p class="text-gray-300 text-lg mb-6">
+              Conectamos tus bases de datos con plataformas internas, CRM, ERP, formularios, APIs y dashboards en tiempo real.
+            </p>
+          </div>
+          <img class="rounded-xl w-full object-cover h-80" src="/assets/images/services/automatizacion_bases_de_datos/db-integraciones-confiables.png" />
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CASOS DE ÉXITO -->
+    <section class="w-full py-24 bg-[#151515]">
+      <div class="max-w-[1480px] mx-auto px-6">
+
+        <div class="text-center mb-16">
+          <p class="text-[#F39C12] font-semibold tracking-wide mb-2">CASOS DE ÉXITO</p>
+          <h2 class="text-4xl font-bold text-white mb-4">Resultados reales con automatización y datos</h2>
+          <p class="text-gray-300 max-w-3xl mx-auto">
+            Soluciones que mejoraron precisión, tiempos operativos y toma de decisiones dentro de organizaciones reales.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+
+          <!-- CARD 1 -->
+          <a href="/fundacion-makikuna-gestion-de-datos" class="group bg-[#0D0D0D] rounded-xl overflow-hidden relative shadow-lg border border-[#1A1A1A] text-left">
+            <div class="relative h-64 overflow-hidden">
+              <img src="/assets/images/projects/imakikuna.png" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+              <div class="absolute inset-0 bg-gradient-to-b from-transparent to-[#0D0D0D] opacity-70"></div>
+            </div>
+            <div class="p-6 relative">
+              <div class="absolute top-0 left-0 w-full h-1 bg-[#F39C12]"></div>
+              <h3 class="font-bold text-xl text-white">Gestión de Datos</h3>
+              <p class="text-gray-300 text-sm mt-2">Automatización de datos para gestión y entendimiento de información clave.</p>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- TECNOLOGÍAS -->
+    <section class="w-full py-24 bg-[#0A0A0A]">
+      <div class="max-w-[1480px] mx-auto px-6 text-center">
+
+        <p class="text-[#F39C12] font-semibold tracking-wide mb-3">TECNOLOGÍAS</p>
+        <h2 class="text-4xl font-bold text-white mb-6">Tecnologías para automatización y bases de datos</h2>
+
+        <p class="text-gray-300 max-w-2xl mx-auto mb-16">
+          Utilizamos tecnologías modernas, estables y confiables para garantizar velocidad, seguridad y escalabilidad.
+        </p>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-10 text-white">
+
+          <div class="bg-[#151515] p-6 rounded-xl border border-[#1A1A1A]">MySQL</div>
+          <div class="bg-[#151515] p-6 rounded-xl border border-[#1A1A1A]">PostgreSQL</div>
+          <div class="bg-[#151515] p-6 rounded-xl border border-[#1A1A1A]">SQL Server</div>
+          <div class="bg-[#151515] p-6 rounded-xl border border-[#1A1A1A]">ODK</div>
+          <div class="bg-[#151515] p-6 rounded-xl border border-[#1A1A1A]">Enketo</div>
+          <div class="bg-[#151515] p-6 rounded-xl border border-[#1A1A1A]">Python</div>
+          <div class="bg-[#151515] p-6 rounded-xl border border-[#1A1A1A]">Node.js</div>
+          <div class="bg-[#151515] p-6 rounded-xl border border-[#1A1A1A]">MongoDB</div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- NUESTRO MÉTODO -->
+    <section class="w-full py-24 bg-[#151515]">
+      <div class="max-w-[1480px] mx-auto px-6">
+
+        <p class="text-center text-[#F39C12] font-semibold tracking-wide mb-3">NUESTRO MÉTODO</p>
+        <h2 class="text-center text-4xl font-bold text-white mb-6">
+          Un proceso claro para automatizar y optimizar tus datos
+        </h2>
+
+        <p class="text-center text-white max-w-2xl mx-auto mb-16">
+          Nuestro método garantiza precisión en la información, integraciones sólidas y automatizaciones que realmente funcionan.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+
+          <div class="bg-[#0A0A0A] p-8 rounded-xl text-center text-white border-t-4 border-[#F39C12]">
+            <div class="text-4xl mb-4 text-[#F39C12]">①</div>
+            <h3 class="font-bold text-xl mb-3">Análisis de datos y procesos</h3>
+            <p class="text-sm">Mapeamos el flujo actual de información y definimos puntos de mejora.</p>
+          </div>
+
+          <div class="bg-[#0A0A0A] p-8 rounded-xl text-center text-white border-t-4 border-[#F39C12]">
+            <div class="text-4xl mb-4 text-[#F39C12]">②</div>
+            <h3 class="font-bold text-xl mb-3">Diseño de BD y automatizaciones</h3>
+            <p class="text-sm">Creamos estructuras estables y flujos automáticos totalmente personalizados.</p>
+          </div>
+
+          <div class="bg-[#0A0A0A] p-8 rounded-xl text-center text-white border-t-4 border-[#F39C12]">
+            <div class="text-4xl mb-4 text-[#F39C12]">③</div>
+            <h3 class="font-bold text-xl mb-3">Integración con sistemas</h3>
+            <p class="text-sm">Conectamos tus datos con plataformas internas, APIs o dashboards.</p>
+          </div>
+
+          <div class="bg-[#0A0A0A] p-8 rounded-xl text-center text-white border-t-4 border-[#F39C12]">
+            <div class="text-4xl mb-4 text-[#F39C12]">④</div>
+            <h3 class="font-bold text-xl mb-3">Optimización y soporte</h3>
+            <p class="text-sm">Monitoreamos, ajustamos y aseguramos el rendimiento continuo.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="w-full py-24 bg-[#0A0A0A]">
+      <div class="max-w-[1480px] mx-auto px-6 flex flex-col items-center">
+
+        <h2 class="text-center text-4xl font-bold text-white mb-4">Preguntas frecuentes</h2>
+        <p class="text-center text-gray-400 max-w-2xl mx-auto mb-16">
+          Resolvemos las dudas más comunes sobre automatización y bases de datos.
+        </p>
+
+        <div class="space-y-4 max-w-2xl w-full text-left" id="faq-container">
+
+          <div class="bg-[#111] w-full rounded-xl p-6 border border-gray-800">
+            <button class="w-full flex justify-between items-center faq-toggle">
+              <span class="text-white font-semibold text-lg">¿Pueden migrar mi base de datos actual?</span>
+              <svg class="w-6 h-6 text-[#F39C12]" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M10 12l-6-6h12l-6 6z"></path>
+              </svg>
+            </button>
+            <div class="faq-content hidden mt-4 text-gray-400 text-sm">Sí, migramos bases de datos sin perder información.</div>
+          </div>
+
+          <div class="bg-[#111] w-full rounded-xl p-6 border border-gray-800">
+            <button class="w-full flex justify-between items-center faq-toggle">
+              <span class="text-white font-semibold text-lg">¿Pueden automatizar tareas internas?</span>
+              <svg class="w-6 h-6 text-[#F39C12]" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M10 12l-6-6h12l-6 6z"></path>
+              </svg>
+            </button>
+            <div class="faq-content hidden mt-4 text-gray-400 text-sm">Sí, automatizamos reportes, flujos internos, registros y más.</div>
+          </div>
+
+          <div class="bg-[#111] w-full rounded-xl p-6 border border-gray-800">
+            <button class="w-full flex justify-between items-center faq-toggle">
+              <span class="text-white font-semibold text-lg">¿Qué tan segura estará mi información?</span>
+              <svg class="w-6 h-6 text-[#F39C12]" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M10 12l-6-6h12l-6 6z"></path>
+              </svg>
+            </button>
+            <div class="faq-content hidden mt-4 text-gray-400 text-sm">
+              Implementamos seguridad, roles, accesos y cifrado según buenas prácticas.
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section id="contacto" class="w-full bg-[#151515] text-white py-20 text-center">
+      <div class="max-w-2xl mx-auto px-6">
+        <h2 class="text-3xl font-bold mb-4">¿Listo para automatizar y optimizar tus datos?</h2>
+        <p class="text-gray-300 mb-8">
+          Agenda una sesión con nuestro equipo y descubre cómo la automatización y las bases de datos pueden transformar la productividad de tu negocio.
+        </p>
+        <a href="/contacto#formulario-contacto" class="bg-[#F39C12] text-black font-bold px-8 py-4 rounded-md hover:bg-[#FEB94CFA] transition duration-300">
+          Agenda una Sesión
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>

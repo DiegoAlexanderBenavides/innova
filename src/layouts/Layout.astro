@@ -1,0 +1,66 @@
+---
+import '../styles/global.css';
+
+interface Props {
+	title?: string;
+	description?: string;
+	keywords?: string;
+	image?: string;
+}
+
+const {
+	title = "INNOVA SYSTEMS CENTER | Soluciones Informáticas Innovadoras",
+	description = "INNOVA SYSTEMS CENTER ofrece soluciones tecnológicas en desarrollo web, inteligencia artificial, bases de datos, sistemas de información geográfica y almacenamiento en la nube. Sistemas de Monitoreo y Evaluación. Captura, análisis y visualización de datos (kobotoolbox, odk collect, Qgis, XLSForms, Power BI)",
+	keywords = "tecnología, soluciones informáticas, desarrollo web, inteligencia artificial, IA, machine learning, aprendizaje automático, desarrollo de software, bases de datos, PostgreSQL, MySQL, MongoDB, SQL, NoSQL, sistemas de información, seguridad informática, ciberseguridad, cloud computing, almacenamiento en la nube, AWS, Google Cloud, Azure, DevOps, Docker, Kubernetes, desarrollo móvil, aplicaciones móviles, desarrollo Android, desarrollo iOS, frontend, backend, fullstack, JavaScript, TypeScript, Python, Java, PHP, React.js, Angular, Vue.js, diseño UX/UI, experiencia de usuario, automatización, transformación digital, blockchain, criptomonedas, ERP, CRM, Big Data, analítica de datos, SEO, marketing digital, consultoría tecnológica, Sistemas de Monitoreo y Evaluación, Captura, análisis y visualización de datos, sistemas geográficos, kobotoolbox, odk collect, Qgis, XLSForms, Power BI, Excel",
+	image = "/assets/images/globo2.webp"
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site || "https://innovasystemscenter.com");
+---
+
+<!DOCTYPE html>
+<html lang="es-ES">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+		<!-- SEO Básico -->
+		<title>{title}</title>
+		<meta name="description" content={description} />
+		<meta name="keywords" content={keywords} />
+		<meta name="author" content="INNOVA SYSTEMS CENTER" />
+		<link rel="canonical" href={canonicalURL} />
+
+		<!-- Open Graph (Para compartir en redes sociales) -->
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content={image} />
+		<meta property="og:url" content={canonicalURL} />
+		<meta property="og:type" content="website" />
+		<meta property="og:site_name" content="INNOVA SYSTEMS CENTER" />
+		<meta property="og:locale" content="es_ES" />
+
+		<!-- Twitter Cards (Para mejorar la vista en Twitter) -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+		<meta name="twitter:image" content={image} />
+		<meta name="twitter:site" content="@innova_systems_center" />
+
+		<!-- Favicon -->
+		<link rel="icon" href="/assets/images/globo2.ico" type="image/x-icon" />
+
+		<!-- Alpine.js (para mantener la compatibilidad con el proyecto original) -->
+		<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+		<!-- Lucide Icons Script -->
+		<script is:inline src="https://unpkg.com/lucide@latest"></script>
+
+		<!-- Scripts Globales (migrados) -->
+		<script defer src="/assets/js/head.js"></script>
+	</head>
+	<body class="bg-[#0d0d0d] text-white antialiased">
+		<slot />
+	</body>
+</html>

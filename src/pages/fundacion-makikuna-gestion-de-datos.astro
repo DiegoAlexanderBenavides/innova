@@ -1,0 +1,199 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const pageTitle = "Caso de Éxito: Fundación Makikuna | Gestión y Optimización de Datos – INNOVA SYSTEMS CENTER";
+const pageDescription = "Descubre cómo INNOVA SYSTEMS CENTER transformó la base de datos del proyecto ‘Ven y Juega’ de la Fundación Makikuna mediante limpieza, estandarización y análisis visual, permitiendo decisiones basadas en información precisa y organizada.";
+const pageKeywords = "caso de éxito Makikuna, Fundación Makikuna, gestión de datos, limpieza de datos, estandarización de bases de datos, análisis de datos, visualización de datos, dashboards, informes analíticos, depuración de datos, procesamiento de datos, analítica para ONGs, transformación digital, sistemas de datos, automatización de reportes, recolección de datos, datos para proyectos sociales, análisis de información, inteligencia de datos, INNOVA SYSTEMS CENTER, Ven y Juega, consultoría de datos, optimización de bases de datos, análisis estadístico, sistemas de información, BI, business intelligence, reportes institucionales, informes sociales, organización de datos para fundaciones, tecnología para ONGs";
+---
+
+<Layout title={pageTitle} description={pageDescription} keywords={pageKeywords}>
+  <Header />
+
+  <main class="w-full">
+
+    <!-- HERO -->
+    <section class="w-full h-screen flex flex-col justify-center bg-center bg-cover bg-fixed"
+      style="background-image: url('/assets/images/fondohome.png'); background-size: cover; background-position: center;"
+      data-animation="animate-fade-in">
+
+      <div class="w-full max-w-[1480px] px-6 mx-auto text-left mt-20">
+        
+        <!-- TÍTULO HERO -->
+        <p class="text-white text-3xl lg:text-6xl font-bold max-w-3xl mb-6">
+          Gestión y Optimización de Datos para Decisiones Estratégicas
+        </p>
+
+        <!-- DESCRIPCIÓN -->
+        <h1 class="text-white text-xl lg:text-2xl font-normal max-w-3xl mb-8 leading-relaxed">
+          Caso real donde transformamos datos desordenados en información clara, estructurada y lista para análisis en el proyecto “Ven y Juega” de la Fundación Makikuna.
+        </h1>
+
+        <!-- BOTÓN -->
+        <a href="/contacto#formulario-contacto"
+          class="inline-block bg-[#F39C12] font-bold text-dark-900 text-lg px-6 py-3 rounded-md hover:bg-[#FEB94CFA] transition text-black">
+          Quiero un resultado similar
+        </a>
+      </div>
+
+    </section>
+
+    <!-- IMPACTO GENERADO (INMEDIATAMENTE DESPUÉS DEL HERO) -->
+    <section class="w-full py-20 bg-[#151515]">
+      <div class="max-w-[1200px] mx-auto px-6 text-left">
+
+        <h2 class="text-3xl font-bold text-white mb-10">Impacto generado</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+
+          <div class="bg-[#0D0D0D] p-6 rounded-lg border border-[#1A1A1A]">
+            <i data-lucide="database" class="w-10 h-10 text-[#F39C12] mb-4"></i>
+            <p class="text-white font-bold text-3xl mb-2">100%</p>
+            <p class="text-gray-400 text-sm">Base de datos depurada, organizada y libre de duplicados.</p>
+          </div>
+
+          <div class="bg-[#0D0D0D] p-6 rounded-lg border border-[#1A1A1A]">
+            <i data-lucide="file-check" class="w-10 h-10 text-[#F39C12] mb-4"></i>
+            <p class="text-white font-bold text-3xl mb-2">Informes listos</p>
+            <p class="text-gray-400 text-sm">Gráficos y reportes finales listos para toma de decisiones.</p>
+          </div>
+
+          <div class="bg-[#0D0D0D] p-6 rounded-lg border border-[#1A1A1A]">
+            <i data-lucide="bar-chart-3" class="w-10 h-10 text-[#F39C12] mb-4"></i>
+            <p class="text-white font-bold text-3xl mb-2">Visualización clara</p>
+            <p class="text-gray-400 text-sm">Análisis visual que simplifica la comprensión de los datos.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- LA EMPRESA -->
+    <section class="w-full py-24 bg-[#0A0A0A]">
+      <div class="max-w-[1300px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-14 text-left">
+
+        <!-- Izquierda -->
+        <div>
+          <p class="text-[#F39C12] text-sm font-semibold mb-2">LA EMPRESA</p>
+          <h2 class="text-4xl font-bold text-white leading-tight">
+            Fundación Makikuna: impulso social a través del desarrollo comunitario
+          </h2>
+        </div>
+
+        <!-- Derecha -->
+        <div>
+          <p class="text-gray-300 text-lg mb-4">
+            La Fundación Makikuna desarrolla proyectos orientados a la educación, el apoyo social
+            y la inclusión comunitaria. Dentro del programa <strong>“Ven y Juega”</strong>,
+            recopilaron información de cientos de beneficiarios en diferentes territorios.
+          </p>
+
+          <p class="text-gray-300 text-lg">
+            Sin embargo, la base de datos presentaba inconsistencias, registros duplicados y
+            falta de estructura, afectando los análisis y reportes finales necesarios para evaluar
+            el impacto real del proyecto.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+
+
+    <!-- EL DESAFÍO -->
+    <section class="w-full py-24 bg-[#0A0A0A] border-t border-[#1A1A1A]">
+      <div class="max-w-[1300px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-14 text-left">
+
+        <div>
+          <p class="text-[#F39C12] text-sm font-semibold mb-2">EL DESAFÍO</p>
+          <h2 class="text-4xl font-bold text-white leading-tight">
+            Ordenar y estructurar miles de registros para obtener datos confiables
+          </h2>
+        </div>
+
+        <div>
+          <p class="text-gray-300 text-lg mb-4">
+            Makikuna necesitaba depurar completamente la información recolectada,
+            evitar errores y construir una base sólida para el análisis final.
+          </p>
+
+          <p class="text-gray-300 text-lg">
+            El reto principal era transformar un volumen de datos desorganizados en una matriz limpia,
+            estandarizada y lista para análisis técnicos y visuales.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+
+
+    <!-- LA SOLUCIÓN -->
+    <section class="w-full py-24 bg-[#0A0A0A] border-t border-[#1A1A1A]">
+      <div class="max-w-[1300px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-14 text-left">
+
+        <div>
+          <p class="text-[#F39C12] text-sm font-semibold mb-2">LA SOLUCIÓN</p>
+          <h2 class="text-4xl font-bold text-white leading-tight">
+            Procesamiento integral de base de datos y análisis visual
+          </h2>
+        </div>
+
+        <div>
+          <ul class="space-y-4 text-gray-300 text-lg">
+
+            <li class="flex items-start gap-3">
+              <i data-lucide="filter" class="w-6 h-6 text-[#F39C12] mt-1"></i>
+              Limpieza completa de datos: eliminación de duplicados, errores y campos inconsistentes.
+            </li>
+
+            <li class="flex items-start gap-3">
+              <i data-lucide="table-2" class="w-6 h-6 text-[#F39C12] mt-1"></i>
+              Estructuración y estandarización de información para análisis estadístico.
+            </li>
+
+            <li class="flex items-start gap-3">
+              <i data-lucide="line-chart" class="w-6 h-6 text-[#F39C12] mt-1"></i>
+              Creación de gráficos, visualizaciones y reportes finales interpretables.
+            </li>
+
+            <li class="flex items-start gap-3">
+              <i data-lucide="folder-check" class="w-6 h-6 text-[#F39C12] mt-1"></i>
+              Entrega de un informe final listo para presentación institucional.
+            </li>
+
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+
+
+    <!-- CTA FINAL -->
+    <section class="w-full bg-[#151515] py-24 text-center">
+      <div class="max-w-[700px] mx-auto px-6">
+        <h2 class="text-3xl font-bold text-white mb-4">
+          ¿Quieres convertir tu proyecto en un caso de éxito?
+        </h2>
+
+        <p class="text-gray-300 mb-8">
+          Conversemos sobre tus objetivos y te ayudamos a construir una solución tecnológica
+          que genere impacto real.
+        </p>
+
+        <a href="/contacto#formulario-contacto"
+          class="bg-[#F39C12] text-black font-bold px-8 py-4 rounded-md hover:bg-[#FEB94CFA] transition duration-300">
+          Agenda una Consultoría
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <Footer />
+
+</Layout>

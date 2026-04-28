@@ -1,0 +1,303 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const pageTitle = "Producción de Contenido Digital | INNOVA SYSTEMS CENTER – Videos, Diseño y Contenidos Profesionales";
+const pageDescription = "Servicio profesional de producción de contenido digital: videos corporativos, piezas para redes sociales, animación 3D y diseño gráfico. Impulsa la presencia visual de tu marca con contenido creativo y de alto impacto.";
+const pageKeywords = "marketing digital, producción de contenido, contenido audiovisual, video corporativo, animación 2D, animación 3D, diseño gráfico, contenido para redes, estrategias de contenido, branding visual, publicidad digital, campañas digitales, fotografía profesional, storytelling visual, creación de contenido para empresas, edición de video, diseño de piezas para redes, marketing de marca, contenido multimedia, videos institucionales, creatividad digital";
+---
+
+<Layout title={pageTitle} description={pageDescription} keywords={pageKeywords}>
+  <Header />
+
+  <main class="min-h-screen flex flex-col items-center justify-center text-center">
+
+    <!-- HERO -->
+    <section class="w-full h-screen flex flex-col justify-center bg-center bg-cover bg-fixed" data-animation="animate-fade-in"
+      style="background-image: url('/assets/images/fondohome.png');">
+
+      <div class="w-full max-w-[1480px] px-6 mx-auto flex flex-col items-start text-left mt-10 mb-15">
+
+        <!-- TEXTO CORTO HERO -->
+        <p class="text-white text-3xl lg:text-6xl font-bold max-w-3xl mb-6">
+          Contenido visual que conecta y posiciona tu marca
+        </p>
+
+        <!-- H1 SEO -->
+        <h1 class="text-white text-xl lg:text-2xl font-normal max-w-3xl mb-8">
+          Agencia de contenido digital
+        </h1>
+
+        <!-- BOTÓN CTA -->
+        <div class="flex flex-col sm:flex-row items-start">
+          <a href="/contacto#formulario-contacto"
+            class="w-full sm:w-auto text-center bg-[#F39C12] font-bold text-dark-900 text-lg px-6 py-3 rounded-md hover:bg-[#FEB94CFA] transition duration-300 text-black">
+            Solicita tu Consultoría Gratuita
+          </a>
+        </div>
+
+      </div>
+
+      <!-- LOGOS -->
+      <div class="w-full max-w-[1480px] px-6 mx-auto">
+        <div class="flex flex-wrap items-center gap-10 opacity-80">
+          <img src="/assets/images/projects/icasa_de_bosque.png" class="h-20 sm:h-30 object-contain hover:opacity-100 transition" />
+        </div>
+      </div>
+    </section>
+
+    <!-- BENEFICIOS -->
+    <section class="w-full bg-[#151515] text-white py-20">
+      <div class="max-w-2xl mx-auto">
+        <p class="text-[#F39C12] font-semibold text-center tracking-wide mb-3">
+          PRODUCCIÓN AUDIOVISUAL Y CONTENIDO DIGITAL
+        </p>
+
+        <h2 class="text-4xl md:text-5xl font-bold text-center mb-6">
+          Contenido profesional que inspira, comunica y atrae clientes
+        </h2>
+
+        <p class="text-lg text-gray-300 text-center max-w-3xl mx-auto mb-14">
+          Creamos contenido visual de alto impacto: videos, animaciones, diseños y piezas digitales que elevan tu identidad de marca y mejoran tu presencia en redes, plataformas educativas y campañas digitales.
+        </p>
+      </div>
+
+      <div class="max-w-[1480px] mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
+
+        <div class="text-center">
+          <i data-lucide="video" class="w-12 h-12 text-[#F39C12] mx-auto mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Videos profesionales</h3>
+          <p class="text-gray-400">Producción, grabación y edición de videos corporativos, educativos y publicitarios.</p>
+        </div>
+
+        <div class="text-center">
+          <i data-lucide="instagram" class="w-12 h-12 text-[#F39C12] mx-auto mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Contenido para redes</h3>
+          <p class="text-gray-400">Piezas creativas, reels, animaciones y contenido listo para campañas digitales.</p>
+        </div>
+
+        <div class="text-center">
+          <i data-lucide="palette" class="w-12 h-12 text-[#F39C12] mx-auto mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Diseño gráfico</h3>
+          <p class="text-gray-400">Diseños profesionales, retoque fotográfico y branding visual.</p>
+        </div>
+
+        <div class="text-center">
+          <i data-lucide="boxes" class="w-12 h-12 text-[#F39C12] mx-auto mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Animación y 3D</h3>
+          <p class="text-gray-400">Modelado, renders y animaciones 3D para productos, proyectos o marketing.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SERVICIOS ESPECÍFICOS -->
+    <section class="w-full py-24 bg-[#0A0A0A]">
+      <div class="max-w-[1480px] mx-auto px-6 space-y-16 text-left">
+
+        <h2 class="text-4xl lg:text-5xl text-white font-bold">
+          Servicios de contenido digital diseñados para tu marca
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+
+          <div class="flex items-start gap-4">
+            <i data-lucide="film" class="w-6 h-6 text-[#F39C12] mt-1"></i>
+            <p class="text-gray-300 text-lg">
+              Edición de videos corporativos, educativos y publicitarios.
+            </p>
+          </div>
+
+          <div class="flex items-start gap-4">
+            <i data-lucide="sparkles" class="w-6 h-6 text-[#F39C12] mt-1"></i>
+            <p class="text-gray-300 text-lg">
+              Creación de contenido para redes sociales y campañas digitales.
+            </p>
+          </div>
+
+          <div class="flex items-start gap-4">
+            <i data-lucide="brush" class="w-6 h-6 text-[#F39C12] mt-1"></i>
+            <p class="text-gray-300 text-lg">
+              Diseño gráfico, branding visual y retoque fotográfico profesional.
+            </p>
+          </div>
+
+          <div class="flex items-start gap-4">
+            <i data-lucide="box" class="w-6 h-6 text-[#F39C12] mt-1"></i>
+            <p class="text-gray-300 text-lg">
+              Animación y producción de objetos 3D para contenido digital.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- POR QUÉ NOSOTROS -->
+    <section class="w-full py-24 bg-[#0A0A0A]">
+      <div class="max-w-[1480px] mx-auto px-6 space-y-24 text-left">
+
+        <h2 class="text-4xl lg:text-5xl text-white font-bold">Creatividad, técnica y estrategia en cada pieza</h2>
+
+        <!-- BLOQUE 1 -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
+          <div>
+            <h3 class="text-4xl text-white font-bold mb-6">Contenido que mejora tu visibilidad</h3>
+            <p class="text-gray-300 text-lg mb-6">
+              Creamos contenido que no solo se ve bien, sino que mejora tu presencia digital y refuerza tu mensaje.
+            </p>
+          </div>
+          <img src="/assets/images/services/produccion_contenido_digital/contenio-mejora-visibilidad.png" class="rounded-xl w-full object-cover h-80" />
+        </div>
+
+        <!-- BLOQUE 2 -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
+          <img src="/assets/images/services/produccion_contenido_digital/material-audiovisual-para-redes.png" class="rounded-xl w-full object-cover h-80 order-2 lg:order-1" />
+          <div class="order-1 lg:order-2">
+            <h3 class="text-4xl text-white font-bold mb-6">Material audiovisual optimizado para redes</h3>
+            <p class="text-gray-300 text-lg mb-6">
+              Videos cortos, animaciones y piezas visuales diseñadas para convertir mejor en redes sociales.
+            </p>
+          </div>
+        </div>
+
+        <!-- BLOQUE 3 -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
+          <div>
+            <h3 class="text-4xl text-white font-bold mb-6">Proceso ágil y colaborativo</h3>
+            <p class="text-gray-300 text-lg mb-6">
+              Gestionamos la producción de principio a fin, con entregas rápidas y revisiones claras.
+            </p>
+          </div>
+          <img src="/assets/images/services/produccion_contenido_digital/proceso-agil-colaborativo.png" class="rounded-xl w-full object-cover h-80" />
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CASOS DE ÉXITO -->
+    <section class="w-full py-24 bg-[#151515]">
+      <div class="max-w-[1480px] mx-auto px-6">
+
+        <div class="text-center mb-16">
+          <p class="text-[#F39C12] font-semibold tracking-wide mb-2">CASOS DE ÉXITO</p>
+          <h2 class="text-4xl font-bold text-white mb-4">Contenido digital que genera impacto real</h2>
+          <p class="text-gray-300 max-w-3xl mx-auto">
+            Historias de marcas que mejoraron su presencia digital con contenido profesional y creativo.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+
+          <a href="/casa-del-bosque-video-educativo" class="group bg-[#0D0D0D] rounded-xl overflow-hidden relative shadow-lg border border-[#1A1A1A] text-left">
+            <div class="relative h-64 overflow-hidden">
+              <img src="/assets/images/projects/icasa_de_bosque.png" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+              <div class="absolute inset-0 bg-gradient-to-b from-transparent to-[#0D0D0D] opacity-70"></div>
+            </div>
+            <div class="p-6 relative">
+              <div class="absolute top-0 left-0 w-full h-1 bg-[#F39C12]"></div>
+              <h3 class="font-bold text-xl text-white">Audiovisual Educativo "Casa del Bosque": Diseño y Narrativa Interactiva</h3>
+              <p class="text-gray-300 text-sm mt-2">Producción de contenido educativo audiovisual enfocado en diseño visual y narrativa.</p>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- TECNOLOGÍAS -->
+    <section class="w-full py-24 bg-[#0A0A0A]">
+      <div class="max-w-[1480px] mx-auto px-6 text-center">
+
+        <p class="text-[#F39C12] font-semibold tracking-wide mb-3">TECNOLOGÍAS</p>
+        <h2 class="text-4xl font-bold text-white mb-6">Herramientas de producción profesional</h2>
+
+        <p class="text-gray-300 max-w-2xl mx-auto mb-16">
+          Trabajamos con software de diseño, edición y animación de estándar profesional.
+        </p>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-10 text-white">
+
+          <div class="bg-[#151515] p-6 rounded-xl border border-[#1A1A1A]">Adobe Premiere</div>
+          <div class="bg-[#151515] p-6 rounded-xl border border-[#1A1A1A]">After Effects</div>
+          <div class="bg-[#151515] p-6 rounded-xl border border-[#1A1A1A]">Photoshop</div>
+          <div class="bg-[#151515] p-6 rounded-xl border border-[#1A1A1A]">Illustrator</div>
+          <div class="bg-[#151515] p-6 rounded-xl border border-[#1A1A1A]">DaVinci Resolve</div>
+          <div class="bg-[#151515] p-6 rounded-xl border border-[#1A1A1A]">Blender 3D</div>
+          <div class="bg-[#151515] p-6 rounded-xl border border-[#1A1A1A]">Canva Pro</div>
+          <div class="bg-[#151515] p-6 rounded-xl border border-[#1A1A1A]">Figma</div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="w-full py-24 bg-[#0A0A0A]">
+      <div class="max-w-[1480px] mx-auto px-6 flex flex-col items-center">
+
+        <h2 class="text-center text-4xl font-bold text-white mb-4">Preguntas frecuentes</h2>
+        <p class="text-center text-gray-400 max-w-2xl mx-auto mb-16">
+          Resolvemos las dudas más comunes sobre producción de contenido digital.
+        </p>
+
+        <div class="space-y-4 max-w-2xl w-full text-left" id="faq-container">
+
+          <div class="bg-[#111] w-full rounded-xl p-6 border border-gray-800">
+            <button class="w-full flex justify-between items-center faq-toggle">
+              <span class="text-white font-semibold text-lg">¿Pueden crear contenido para mis redes sociales?</span>
+              <svg class="w-6 h-6 text-[#F39C12]" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M10 12l-6-6h12l-6 6z"></path>
+              </svg>
+            </button>
+            <div class="faq-content hidden mt-4 text-gray-400 text-sm">
+              Sí, creamos contenido diseñado para Instagram, Facebook, TikTok, YouTube y campañas digitales.
+            </div>
+          </div>
+
+          <div class="bg-[#111] w-full rounded-xl p-6 border border-gray-800">
+            <button class="w-full flex justify-between items-center faq-toggle">
+              <span class="text-white font-semibold text-lg">¿También graban videos o solo editan?</span>
+              <svg class="w-6 h-6 text-[#F39C12]" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M10 12l-6-6h12l-6 6z"></path>
+              </svg>
+            </button>
+            <div class="faq-content hidden mt-4 text-gray-400 text-sm">
+              Podemos grabar, editar o trabajar con material que ya tengas según tu necesidad.
+            </div>
+          </div>
+
+          <div class="bg-[#111] w-full rounded-xl p-6 border border-gray-800">
+            <button class="w-full flex justify-between items-center faq-toggle">
+              <span class="text-white font-semibold text-lg">¿Qué tipo de contenido 3D pueden crear?</span>
+              <svg class="w-6 h-6 text-[#F39C12]" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M10 12l-6-6h12l-6 6z"></path>
+              </svg>
+            </button>
+            <div class="faq-content hidden mt-4 text-gray-400 text-sm">
+              Modelado 3D, animaciones de producto, renders y piezas para marketing o educación.
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section id="contacto" class="w-full bg-[#151515] text-white py-20 text-center">
+      <div class="max-w-2xl mx-auto px-6">
+        <h2 class="text-3xl font-bold mb-4">¿Listo para crear contenido profesional para tu marca?</h2>
+        <p class="text-gray-300 mb-8">
+          Agenda una sesión con nuestro equipo y descubre cómo mejorar tu presencia digital con contenido visual de alto impacto.
+        </p>
+        <a href="/contacto#formulario-contacto" class="bg-[#F39C12] text-black font-bold px-8 py-4 rounded-md hover:bg-[#FEB94CFA] transition duration-300">
+          Agenda una Sesión
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <Footer />
+
+</Layout>

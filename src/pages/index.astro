@@ -1,0 +1,157 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import Background from "../components/Background.astro";
+import Contact from "../components/Contact.astro";
+import { services } from "../data/siteData.ts";
+
+const pageTitle =
+	"INNOVA SYSTEMS CENTER | Desarrollo, Datos y Automatización para Empresas Modernas";
+const pageDescription =
+	"Ofrecemos soluciones tecnológicas en desarrollo web, automatización, análisis de datos y sistemas digitales que impulsan la eficiencia y crecimiento de tu empresa.";
+const pageKeywords =
+	"soluciones tecnológicas, transformación digital, desarrollo de software, desarrollo web, automatización...";
+---
+
+<Layout title={pageTitle} description={pageDescription} keywords={pageKeywords}>
+	<Background />
+	<Header />
+
+	<main
+		class="min-h-screen flex flex-col items-center justify-center text-center"
+	>
+		<!-- HERO -->
+		<section
+			class="w-full h-screen opacity-0 flex flex-col justify-center"
+			data-animation="animate-fade-in"
+		>
+			<div class="max-w-2xl mx-auto px-6 mt-10 mb-8">
+				<p class="text-white text-3xl lg:text-6xl font-bold mb-5">
+					Soluciones <span class="text-[#F39C12]">Tecnológicas</span> que
+					Impulsan tu Negocio
+				</p>
+
+				<h1 class="text-white text-xl lg:text-2xl mb-6">
+					Desarrollo, Datos y Automatización para Empresas Modernas
+				</h1>
+
+				<div class="flex flex-col sm:flex-row gap-4 justify-center">
+					<a
+						href="#contact-form"
+						class="bg-[#F39C12] font-bold px-6 py-3 rounded-md hover:bg-[#FEB94CFA] text-black"
+					>
+						Solicita tu Consultoría Gratuita
+					</a>
+
+					<a
+						href="#nuestros_servicios"
+						class="border border-[#F39C12] text-[#F39C12] px-6 py-3 rounded-md hover:bg-[#F39C12]/10 transition"
+					>
+						Ver Servicios
+					</a>
+				</div>
+			</div>
+		</section>
+
+		<!-- SERVICIOS -->
+		<section id="nuestros_servicios" class="w-full bg-[#151515] py-24">
+			<div class="max-w-6xl mx-auto px-6 text-center">
+				<p class="text-[#F39C12] font-semibold mb-3 tracking-wide">
+					¿QUÉ HACEMOS?
+				</p>
+
+				<h2
+					class="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight"
+				>
+					Impulsamos tu crecimiento con
+					<span class="text-[#F39C12]">soluciones digitales</span>
+				</h2>
+
+				<p class="text-lg text-gray-300 max-w-3xl mx-auto mb-14">
+					Desarrollamos sistemas, automatizaciones y plataformas
+					digitales diseñadas para optimizar procesos, potenciar
+					decisiones estratégicas y acelerar la evolución tecnológica
+					de tu organización.
+				</p>
+
+				<!-- GRID DE CARDS -->
+				<div
+					class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-left"
+				>
+					{
+						services.map((service) => (
+							<a
+								href={`/${service.title.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`}
+								class="group bg-[#1E1E1E]/80 backdrop-blur rounded-[0.5rem] border border-[#2A2A2A] shadow-xl hover:shadow-[0_0_20px_rgba(243,156,18,0.25)] hover:border-[#F39C12] transition-all flex flex-col justify-between"
+							>
+								<div>
+									<div
+										class="w-full flex justify-center p-3"
+										data-animation="animate-fade-in"
+									>
+										<img
+											src={service.logo}
+											alt="Imagen representativa"
+											class="w-full max-w-lg rounded-[0.5rem] object-cover border border-[#F39C12]"
+										/>
+									</div>
+									<div class="p-6">
+										<h3 class="text-xl font-bold text-white mb-4">
+											{service.title.replace(
+												/[^\w\s\u00C0-\u00FF]/g,
+												"",
+											)}
+										</h3>
+										<ul class="text-gray-300 space-y-2">
+											{service.items
+												.slice(0, 3)
+												.map((item) => (
+													<li class="flex items-start gap-3">
+														<span class="w-2 h-2 rounded-full bg-[#F39C12] mt-2 shrink-0" />{" "}
+														<span set:html={item} />
+													</li>
+												))}
+										</ul>
+									</div>
+								</div>
+								<div class="mt-10 p-6 pt-4 border-t border-[#2A2A2A]">
+									<span class="text-[#F39C12] font-semibold flex items-center gap-1 group-hover:underline">
+										Ver servicio
+										<span class="transition-transform group-hover:translate-x-1">
+											→
+										</span>
+									</span>
+								</div>
+							</a>
+						))
+					}
+				</div>
+			</div>
+		</section>
+
+		<!-- CONTACTO -->
+		<section
+			id="contact-form"
+			class="w-full bg-[#151515] pt-10 pb-16 px-6 text-white text-left"
+		>
+			<div class="max-w-4xl mx-auto">
+				<h2 class="text-3xl font-bold text-[#F39C12] mb-4">
+					¿Listo para impulsar tu transformación digital?
+				</h2>
+				<p class="text-gray-400 mb-6">
+					Déjanos tu mensaje y te responderemos lo antes posible.
+					Nuestro equipo está listo para ayudarte a mejorar tus
+					procesos, automatizar sistemas y aprovechar tus datos de una
+					forma más inteligente.
+				</p>
+				<Contact />
+			</div>
+		</section>
+	</main>
+
+	<Footer />
+
+	<!-- Scripts específicos de index si se requieren -->
+	<script src="/assets/js/index.js" is:inline></script>
+</Layout>

@@ -1,0 +1,36 @@
+---
+---
+<div class="max-w-4xl mx-auto text-center" id="formulario-contacto">
+  <form id="contactForm" method="POST" class="space-y-4">
+    <!-- Nombre -->
+    <div>
+      <input type="text" name="name" id="name" placeholder="Tu Nombre" required
+        class="w-full p-3 rounded-lg bg-[#1E1E1E] text-white placeholder-gray-500 border border-gray-700 focus:border-[#F39C12] focus:ring-2 focus:ring-[#F39C12] transition">
+    </div>
+
+    <!-- Telefono -->
+    <div>
+      <input type="number" name="phone" id="phone" placeholder="Tu numero de celular (Opcional)"
+        class="w-full p-3 rounded-lg bg-[#1E1E1E] text-white placeholder-gray-500 border border-gray-700 focus:border-[#F39C12] focus:ring-2 focus:ring-[#F39C12] transition">
+    </div>
+
+    <!-- Correo -->
+    <div>
+      <input type="email" name="email" id="email" placeholder="Tu Correo Electrónico" required
+        class="w-full p-3 rounded-lg bg-[#1E1E1E] text-white placeholder-gray-500 border border-gray-700 focus:border-[#F39C12] focus:ring-2 focus:ring-[#F39C12] transition">
+    </div>
+
+    <!-- Mensaje -->
+    <div>
+      <textarea name="message" id="message" placeholder="Tu Mensaje" rows="5" required
+        class="w-full p-3 rounded-lg bg-[#1E1E1E] text-white placeholder-gray-500 border border-gray-700 focus:border-[#F39C12] focus:ring-2 focus:ring-[#F39C12] transition"></textarea>
+    </div>
+
+    <p id="responseMessage" class="mt-4 text-sm text-gray-600"></p>
+    <!-- Botón Enviar -->
+    <button type="submit"
+      class="w-full bg-[#F39C12] hover:bg-[#FEB94CFA] text-black font-bold py-3 rounded-lg transition shadow-md">
+      Enviar Mensaje
+    </button>
+  </form>
+</div>

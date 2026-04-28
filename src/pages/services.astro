@@ -1,0 +1,85 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Background from '../components/Background.astro';
+import ModalViewImg from '../components/ModalViewImg.astro';
+import { category, services } from '../data/siteData.ts';
+
+const pageTitle = "Nuestros Servicios | INNOVA SYSTEMS CENTER - Soluciones Tecnológicas para tu Negocio";
+const pageDescription = "Descubre los servicios de INNOVA SYSTEMS CENTER: desarrollo web, inteligencia artificial, bases de datos, ciberseguridad, cloud computing y más. ¡Impulsa tu negocio con tecnología innovadora!";
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  <Background />
+  <Header />
+  <ModalViewImg />
+
+  <main class="min-h-screen flex flex-col items-center justify-center text-center pt-30">
+    <section class="bg-gradient-to-b from-[#111] to-[#222] text-white py-16 px-6 w-full">
+      <h1 class="text-5xl font-extrabold text-[#F39C12] text-center mb-12 uppercase tracking-wide">
+        Nuestros Servicios
+      </h1>
+      <p class="text-[#FFF] text-lg max-w-4xl mx-auto">En <strong class="text-[#F39C12]">Innova Systems Center</strong>, ofrecemos soluciones tecnológicas adaptadas a las necesidades de cada empresa. Nuestra experiencia nos permite desarrollar herramientas efectivas que optimizan operaciones, automatizan procesos y mejoran la gestión de datos.</p> <br>
+
+      <!-- Filtros de Categoría -->
+      <div class="text-center mb-12">
+        <p class="text-gray-400 text-lg">Filtra por categoría:</p>
+        <div class="flex flex-wrap justify-center gap-4 mt-4">
+          <button onclick="filterProjects('all')" class="bg-[#F39C12] font-bold text-dark-900 text-lg px-6 py-3 rounded-md hover:bg-[#FEB94CFA] text-black transition">Todos</button>
+          {Object.entries(category).map(([key, name]) => (
+            <button onclick={`filterProjects('${key}')`} class="border border-[#F39C12] text-[#F39C12] font-bold text-lg px-6 py-3 rounded-md hover:bg-[#F39C12]/10 transition">{name.title}</button>
+          ))}
+        </div>
+      </div>
+
+      <!-- Sección de Servicios -->
+      <div class="max-w-6xl mx-auto space-y-16">
+        {services.map((service) => (
+          <div id={service.id} class={`project-card ${service.category} transition duration-500`} data-animation="animate-fade-in-left">
+            <div class="grid md:grid-cols-2 gap-8 items-center text-left">
+              <div>
+                <h2 class="text-4xl font-bold text-[#F39C12] mb-4">{service.title}</h2>
+                <p class="text-[#FFF] text-lg mb-4 text-left" set:html={service.description}></p>
+                <p class="text-[#FFF] text-lg mb-4 text-left" set:html={service.aditional}></p>
+                <ul class="ml-4 list-disc text-[#FFF] pl-6 space-y-2 text-lg text-left">
+                  {service.items.map((item) => (
+                    <li set:html={item}></li>
+                  ))}
+                </ul>
+                <div class="flex flex-wrap items-center gap-3 ml-4 mt-4">
+                  <span class="font-semibold text-white whitespace-nowrap">Tecnologías:</span>
+                  {service.technologies.map((tecnology) => (
+                    tecnology.icono ? (
+                      <img src={tecnology.icono} class="w-8 h-8 tech-icon" alt={tecnology.name || tecnology.alt} />
+                    ) : (
+                      <span class="text-gray-400">{tecnology.name || tecnology.alt}</span>
+                    )
+                  ))}
+                </div>
+              </div>
+              <div class="grid grid-cols-2 gap-4">
+                {service.images.map((image) => (
+                  <img src={image.image} alt={image.alt} class="gallery-img cursor-pointer rounded-lg shadow-lg transition transform hover:scale-105 w-full h-auto object-cover" onclick={`openModal('${image.image}')`} />
+                ))}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <!-- CTA de Contacto -->
+      <div class="mt-15 py-12 text-center">
+        <p class="text-gray-400 text-lg mb-4">¿Quieres un proyecto similar? Contáctanos.</p>
+        <a href="/nosotros#contact-form" class="text-[#F39C12] font-bold text-xl hover:underline">
+          Escríbenos aquí
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+
+  <script src="/assets/js/services.js" is:inline></script>
+  <script src="/assets/js/modal_view_img.js" is:inline></script>
+</Layout>

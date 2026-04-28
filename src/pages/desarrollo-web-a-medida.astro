@@ -1,0 +1,376 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const pageTitle = "Desarrollo Web a Medida | INNOVA SYSTEMS CENTER – Sitios Modernos, Rápidos y Seguros";
+const pageDescription = "Creamos sitios web modernos, rápidos y seguros con diseño responsivo, SEO optimizado, integraciones empresariales y tecnología de alto rendimiento. Soluciones web a medida para impulsar tu negocio.";
+const pageKeywords = "desarrollo web a medida, páginas web corporativas, aplicaciones web, desarrollo frontend, desarrollo backend, full stack, JavaScript, PHP, Python, React, Vue, Tailwind, sistemas web personalizados, UX/UI, diseño web moderno, SEO técnico, optimización web, e-commerce, landing pages, plataformas web, integraciones con APIs, sistemas empresariales, desarrollo móvil híbrido, apps móviles, seguridad informática web, hosting, rendimiento web, mantenimiento web, desarrollo de software a medida";
+---
+
+<Layout title={pageTitle} description={pageDescription} keywords={pageKeywords}>
+  <Header />
+
+  <main class="min-h-screen flex flex-col items-center justify-center text-center">
+    <!-- Hero -->
+    <section class="w-full h-screen opacity-0 flex flex-col justify-center bg-center bg-cover bg-fixed" data-animation="animate-fade-in" style="background-image: url('/assets/images/fondohome.png');">
+      <div class="w-full max-w-[1480px] px-6 mx-auto flex flex-col items-start text-left mt-15 mb-10">
+
+        <!-- TÍTULO -->
+        <p class="text-white text-3xl lg:text-6xl font-bold max-w-3xl mb-6">
+          Diseño a medida que impulsan la presencia digital
+        </p>
+
+        <!-- SUBTÍTULO -->
+        <h1 class="text-[#ffffff] text-xl lg:text-2xl font-normal max-w-3xl mb-8">
+          Agencia de Diseño y Desarrollo Web
+        </h1>
+
+        <!-- BOTONES -->
+        <div class="flex flex-col sm:flex-row items-start">
+          <a href="/contacto#formulario-contacto"
+            class="w-full sm:w-auto text-center bg-[#F39C12] font-bold text-dark-900 text-lg px-6 py-3 rounded-md hover:bg-[#FEB94CFA] transition duration-300 text-black">
+              Solicita tu Consultoría Gratuita
+          </a>
+        </div>
+
+      </div>
+
+      <!-- LOGOS -->
+      <div class="w-full max-w-[1480px] px-6 mx-auto">
+        <div class="flex flex-wrap items-center justify-center gap-10 opacity-80">
+          <img src="/assets/images/projects/icrese.png"
+            alt="Fondo Emprender"
+            class="h-20 sm:h-30 object-contain hover:opacity-100 transition" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Beneficios rápidos -->
+    <section class="w-full bg-[#151515] text-white py-16">
+      <div class="max-w-2xl mx-auto text-left md:text-center">
+        <!-- Tag superior -->
+        <p class="text-[#F39C12] font-semibold tracking-wide mb-3">
+            SERVICIO DE DESARROLLO WEB A MEDIDA
+        </p>
+  
+        <!-- Título -->
+        <h2 class="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+            Tu sitio web diseñado para convertir, posicionar y escalar
+        </h2>
+  
+        <!-- Texto corto -->
+        <p class="text-lg text-gray-300 max-w-3xl mx-auto mb-14">
+            Desarrollamos páginas web modernas, funcionales y completamente a medida, creadas para transmitir profesionalismo, cargar rápido, posicionar en Google y ofrecer la mejor experiencia a tus usuarios desde cualquier dispositivo.
+        </p>
+      </div>
+      <div class="max-w-[1480px] mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-6 text-left md:text-center">
+        <div>
+          <i data-lucide="monitor-smartphone" class="w-12 h-12 text-[#F39C12] mx-auto mb-4 md:ml-auto md:mr-auto"></i>
+          <h3 class="text-xl font-semibold mb-2">Diseño profesional y responsivo</h3>
+          <p class="text-gray-400">Tu sitio web se adapta a móviles, tablets y computadores para ofrecer una experiencia impecable en cualquier pantalla.</p>
+        </div>
+        <div>
+          <i data-lucide="search-check" class="w-12 h-12 text-[#F39C12] mx-auto mb-4 md:ml-auto md:mr-auto"></i>
+          <h3 class="text-xl font-semibold mb-2">SEO optimizado desde el inicio</h3>
+          <p class="text-gray-400">Arquitectura pensada para posicionar mejor en Google: velocidad, estructura, etiquetas y contenido estratégico.</p>
+        </div>
+        <div>
+          <i data-lucide="shield-check" class="w-12 h-12 text-[#F39C12] mx-auto mb-4 md:ml-auto md:mr-auto"></i>
+          <h3 class="text-xl font-semibold mb-2">Seguridad robusta</h3>
+          <p class="text-gray-400">Implementación de HTTPS, certificados SSL, protección contra ataques y buenas prácticas de desarrollo seguro.</p>
+        </div>
+        <div>
+          <i data-lucide="plug-zap" class="w-12 h-12 text-[#F39C12] mx-auto mb-4 md:ml-auto md:mr-auto"></i>
+          <h3 class="text-xl font-semibold mb-2">Integraciones empresariales</h3>
+          <p class="text-gray-400">Conectamos tu web con bases de datos, CRM, ERPs, plataformas internas o APIs personalizadas.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Porque nosotros -->
+    <section class="w-full py-24 bg-[#0A0A0A] text-left">
+      <div class="max-w-[1480px] mx-auto px-6 space-y-24">
+
+        <!-- TÍTULO GENERAL -->
+        <h2 class="text-4xl lg:text-5xl text-white font-bold leading-tight">
+          Expertos en desarrollo web funcional, rápido y orientado al crecimiento
+        </h2>
+
+        <!-- BLOQUE 1 -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
+
+          <!-- TEXTO -->
+          <div>
+            <h3 class="text-4xl text-white font-bold mb-6">
+              Desarrollo enfocado en resultados
+            </h3>
+
+            <p class="text-gray-300 text-lg mb-4">
+              Creamos sitios web centrados en convertir visitantes en clientes, con estructuras pensadas para guiar al usuario y claridad en la propuesta de valor.
+            </p>
+
+            <a href="#contacto" class="text-[#F39C12] font-semibold hover:underline">
+              Conoce más sobre nuestro equipo →
+            </a>
+          </div>
+
+          <!-- IMAGEN -->
+          <div>
+            <img src="/assets/images/services/desarrollo_web_a_medida/desarrollo-enfocado.png"
+                alt="Equipo analizando datos"
+                class="rounded-xl w-full object-cover h-80" />
+          </div>
+        </div>
+
+
+        <!-- BLOQUE 2 (INTERCALADO) -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
+
+          <!-- IMAGEN -->
+          <div class="order-1 lg:order-1">
+            <img src="/assets/images/services/desarrollo_web_a_medida/codigo-limpio-esclabel.png"
+                alt="Procesos de recolección de datos"
+                class="rounded-xl w-full object-cover h-80" />
+          </div>
+
+          <!-- TEXTO -->
+          <div class="order-2 lg:order-2">
+            <h3 class="text-4xl text-white font-bold mb-6">
+              Código limpio, escalable y seguro
+            </h3>
+
+            <p class="text-gray-300 text-lg mb-4">
+              Desarrollamos con buenas prácticas, estándares modernos y arquitectura sólida para garantizar que tu sitio pueda crecer sin problemas futuros.
+            </p>
+
+            <a href="#servicios" class="text-[#F39C12] font-semibold hover:underline">
+              Ver cómo recolectamos datos →
+            </a>
+          </div>
+        </div>
+
+
+        <!-- BLOQUE 3 -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
+
+          <!-- TEXTO -->
+          <div>
+            <h3 class="text-4xl text-white font-bold mb-6">
+              Acompañamiento técnico continuo
+            </h3>
+
+            <p class="text-gray-300 text-lg mb-4">
+              No solo entregamos la web: te acompañamos en mejoras, actualizaciones y optimizaciones permanentes.
+            </p>
+          </div>
+
+          <!-- IMAGEN -->
+          <div>
+            <img src="/assets/images/services/desarrollo_web_a_medida/acompañamiento-tecnico-continuo.png"
+                alt="Estructura de datos organizada"
+                class="rounded-xl w-full object-cover h-80" />
+          </div>
+        </div>
+
+
+        <!-- BLOQUE 4 (INTERCALADO) -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
+
+          <!-- IMAGEN -->
+          <div class="order-1 lg:order-1">
+            <img src="/assets/images/services/desarrollo_web_a_medida/analisis-datos-integrado.png"
+                alt="Análisis de datos empresarial"
+                class="rounded-xl w-full object-cover h-80" />
+          </div>
+
+          <!-- TEXTO -->
+          <div class="order-2 lg:order-2">
+            <h3 class="text-4xl text-white font-bold mb-6">
+              Análisis de datos integrado
+            </h3>
+
+            <p class="text-gray-300 text-lg mb-4">
+              Podemos integrar dashboards de medición, analítica avanzada y seguimiento de KPIs directamente dentro de tu sitio.
+            </p>
+
+            <a href="#analisis" class="text-[#F39C12] font-semibold hover:underline">
+              Ver ejemplos de análisis →
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CASOS DE ÉXITO -->
+    <section class="w-full py-24 bg-[#151515]">
+      <div class="max-w-[1480px] mx-auto px-6">
+
+        <div class="text-center mb-16">
+          <p class="text-[#F39C12] font-semibold tracking-wide mb-2">CASOS DE ÉXITO</p>
+          <h2 class="text-4xl font-bold text-white mb-4">Desarrollos web que generan resultados reales</h2>
+          <p class="text-gray-300 max-w-3xl mx-auto">
+            Estos proyectos muestran cómo un desarrollo web profesional mejora el rendimiento, incrementa la conversión y optimiza procesos clave dentro de distintas organizaciones.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+
+          <!-- CARD 1 -->
+          <a href="/redciclar-gestion-residuos-cali" class="group bg-[#0D0D0D] rounded-xl overflow-hidden relative shadow-lg border border-[#1A1A1A] text-left">
+            <div class="relative h-64 overflow-hidden">
+              <img src="/assets/images/projects/icrese.png"
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+              <div class="absolute inset-0 bg-gradient-to-b from-transparent to-[#0D0D0D] opacity-70"></div>
+            </div>
+
+            <div class="p-6 relative">
+              <div class="absolute top-0 left-0 w-full h-1 bg-[#F39C12]"></div>
+              <h3 class="font-bold text-xl text-white">Crese: Solución Integral de Trazabilidad y Procesos de Residuos</h3>
+              <p class="text-gray-300 text-sm mt-2">Plataforma integral para optimizar la trazabilidad y la gestión operativa de residuos.</p>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- TECNOLOGÍAS -->
+    <section class="w-full py-24 bg-[#0A0A0A]">
+      <div class="max-w-[1480px] mx-auto px-6 text-center">
+
+        <p class="text-[#F39C12] font-semibold tracking-wide mb-3">TECNOLOGÍAS</p>
+        <h2 class="text-4xl font-bold text-white mb-6">Tecnologías modernas y confiables</h2>
+
+        <p class="text-gray-300 max-w-2xl mx-auto mb-16">
+          Trabajamos con tecnologías seguras, rápidas y escalables para garantizar un sitio web moderno, estable y listo para crecer con tu empresa.
+        </p>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-10 text-white">
+
+          <div class="bg-[#151515] p-6 rounded-xl border border-[#1A1A1A]">Python</div>
+          <div class="bg-[#151515] p-6 rounded-xl border border-[#1A1A1A]">JavaScript</div>
+          <div class="bg-[#151515] p-6 rounded-xl border border-[#1A1A1A]">HTML</div>
+          <div class="bg-[#151515] p-6 rounded-xl border border-[#1A1A1A]">CSS</div>
+          <div class="bg-[#151515] p-6 rounded-xl border border-[#1A1A1A]">PHP</div>
+          <div class="bg-[#151515] p-6 rounded-xl border border-[#1A1A1A]">React</div>
+          <div class="bg-[#151515] p-6 rounded-xl border border-[#1A1A1A]">Angular</div>
+          <div class="bg-[#151515] p-6 rounded-xl border border-[#1A1A1A]">Node.js</div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- NUESTRO MÉTODO -->
+    <section class="w-full py-24 bg-[#151515]">
+      <div class="max-w-[1480px] mx-auto px-6">
+
+        <p class="text-center text-[#F39C12] font-semibold tracking-wide mb-3">NUESTRO MÉTODO</p>
+        <h2 class="text-center text-4xl font-bold text-white mb-6">
+          Un proceso claro para un desarrollo web profesional
+        </h2>
+
+        <p class="text-center text-white max-w-2xl mx-auto mb-16">
+          Nuestro proceso de desarrollo garantiza un sitio web personalizado, seguro, rápido y optimizado para buscadores.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+
+          <div class="bg-[#0A0A0A] p-8 rounded-xl text-center text-white border-t-4 border-[#F39C12]">
+            <div class="text-4xl mb-4 text-[#F39C12]">①</div>
+            <h3 class="font-bold text-xl mb-3">Arquitectura y Análisis</h3>
+            <p class="text-sm">Definimos objetivos, funcionalidades y estructura ideal para tu sitio web.</p>
+          </div>
+
+          <div class="bg-[#0A0A0A] p-8 rounded-xl text-center text-white border-t-4 border-[#F39C12]">
+            <div class="text-4xl mb-4 text-[#F39C12]">②</div>
+            <h3 class="font-bold text-xl mb-3">Diseño UX/UI</h3>
+            <p class="text-sm">Creamos una interfaz moderna, intuitiva y adaptada a tu marca.</p>
+          </div>
+
+          <div class="bg-[#0A0A0A] p-8 rounded-xl text-center text-white border-t-4 border-[#F39C12]">
+            <div class="text-4xl mb-4 text-[#F39C12]">③</div>
+            <h3 class="font-bold text-xl mb-3">Desarrollo Funcional</h3>
+            <p class="text-sm">Construimos el sitio con tecnologías modernas y código escalable.</p>
+          </div>
+
+          <div class="bg-[#0A0A0A] p-8 rounded-xl text-center text-white border-t-4 border-[#F39C12]">
+            <div class="text-4xl mb-4 text-[#F39C12]">④</div>
+            <h3 class="font-bold text-xl mb-3">Optimización y Lanzamiento</h3>
+            <p class="text-sm">SEO técnico, velocidad, seguridad y pruebas antes de publicar.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="w-full py-24 bg-[#0A0A0A]">
+      <div class="max-w-[1480px] mx-auto px-6 flex flex-col items-center text-left">
+
+        <h2 class="text-center text-4xl font-bold text-white mb-4">Preguntas frecuentes</h2>
+        <p class="text-center text-gray-400 max-w-2xl mx-auto mb-16">
+          Resolvemos las dudas más comunes antes de iniciar tu proyecto de desarrollo web.
+        </p>
+
+        <div class="space-y-4 max-w-2xl items-center w-full" id="faq-container">
+
+          <div class="bg-[#111] w-full rounded-xl p-6 border border-gray-800">
+            <button class="w-full flex justify-between items-center faq-toggle">
+              <span class="text-white font-semibold text-lg">¿Cuánto tarda un desarrollo web a medida?</span>
+              <svg class="w-6 h-6 text-[#F39C12] transition-transform" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M10 12l-6-6h12l-6 6z" />
+              </svg>
+            </button>
+            <div class="faq-content hidden mt-4 text-gray-400 text-sm leading-relaxed">
+              Dependiendo del alcance, entre 2 y 8 semanas. Proyectos avanzados pueden requerir más tiempo.
+            </div>
+          </div>
+
+          <div class="bg-[#111] w-full rounded-xl p-6 border border-gray-800">
+            <button class="w-full flex justify-between items-center faq-toggle">
+              <span class="text-white font-semibold text-lg">¿Incluye SEO técnico?</span>
+              <svg class="w-6 h-6 text-[#F39C12] transition-transform" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M10 12l-6-6h12l-6 6z" />
+              </svg>
+            </button>
+            <div class="faq-content hidden mt-4 text-gray-400 text-sm leading-relaxed">
+              Sí. Todas las webs incluyen optimización técnica: velocidad, etiquetas, estructura e indexación.
+            </div>
+          </div>
+
+          <div class="bg-[#111] w-full rounded-xl p-6 border border-gray-800">
+            <button class="w-full flex justify-between items-center faq-toggle">
+              <span class="text-white font-semibold text-lg">¿Se integra con mis sistemas actuales?</span>
+              <svg class="w-6 h-6 text-[#F39C12] transition-transform" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M10 12l-6-6h12l-6 6z" />
+              </svg>
+            </button>
+            <div class="faq-content hidden mt-4 text-gray-400 text-sm leading-relaxed">
+              Sí. Podemos conectarla con APIs, CRMs, ERPs, bases de datos internas o sistemas personalizados.
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA final -->
+    <section id="contacto" class="w-full bg-[#151515] text-white py-20 text-center">
+      <div class="max-w-2xl mx-auto px-6">
+        <h2 class="text-3xl font-bold mb-4">¿Listo para crear un sitio web profesional y escalable?</h2>
+        <p class="text-gray-300 mb-8">
+          Agenda una sesión con nuestro equipo y descubre cómo transformar tu presencia digital con un desarrollo web moderno y optimizado.
+        </p>
+        <a href="/contacto#formulario-contacto" class="bg-[#F39C12] text-black font-bold px-8 py-4 rounded-md hover:bg-[#FEB94CFA] transition duration-300">
+          Agenda una Sesión
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <Footer />
+
+</Layout>
