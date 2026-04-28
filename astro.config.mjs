@@ -3,7 +3,7 @@ import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
-  site: 'https://github.com/DiegoAlexanderBenavides',
+  site: 'https://DiegoAlexanderBenavides.github.io',
   base: '/innova',
 
   output: 'static',
