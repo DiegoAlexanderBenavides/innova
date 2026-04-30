@@ -73,6 +73,32 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 		</div>
 
 		<style is:global>
+			/* Custom Scrollbar Moderno */
+			* {
+				scrollbar-width: thin;
+				scrollbar-color: #F39C12 #111111;
+			}
+
+			::-webkit-scrollbar {
+				width: 10px;
+				height: 10px;
+			}
+
+			::-webkit-scrollbar-track {
+				background: #0a0a0a;
+				border-left: 1px solid #1a1a1a;
+			}
+
+			::-webkit-scrollbar-thumb {
+				background: linear-gradient(180deg, #E67E22 0%, #F39C12 100%);
+				border-radius: 10px;
+				border: 2px solid #0a0a0a; /* Crea un efecto de margen dentro del track */
+			}
+
+			::-webkit-scrollbar-thumb:hover {
+				background: linear-gradient(180deg, #F39C12 0%, #FEB94C 100%);
+			}
+
 			@media (pointer: fine) and (min-width: 768px) {
 				*, a, button, input, textarea, select, [role="button"],
 				a:hover, button:hover, [role="button"]:hover {
