@@ -1,0 +1,46 @@
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 1s ease-out;
+}
+
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-slide-in {
+  animation: slide-in 1s ease-out;
+}
+
+.tech-icon {
+  width: 48px;
+  height: 48px;
+  filter: drop-shadow(0px 4px 6px rgba(255, 255, 255, 0.2));
+  transition: transform 0.3s ease-in-out;
+  max-width: 12.5%;
+  /* 100% / 8 columnas */
+  flex: 1 1 calc(12.5% - 1.5rem);
+  /* Restamos gap para evitar desbordes */
+}
+
+.tech-icon:hover {
+  transform: scale(1.2);
+}

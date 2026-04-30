@@ -1,101 +1,169 @@
 ---
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 ---
-<header id="main-header" 
-        class="fixed top-0 left-0 w-full h-16 bg-transparent z-50 transition-all duration-300">
 
-  <div class="max-w-[1480px] mx-auto w-full h-full px-8 flex items-center justify-between">
-
+<header
+  id="main-header"
+  class="fixed top-0 left-0 w-full h-16 bg-transparent z-50 transition-all duration-300"
+>
+  <div
+    class="max-w-[1480px] mx-auto w-full h-full px-8 flex items-center justify-between"
+  >
     <!-- Logo -->
     <div class="flex items-center">
-      <a href="/" aria-label="Ir al inicio">
-        <img src="/assets/images/logo.png" alt="Logo de la empresa" class="h-12">
+      <a href={`${base}/`} aria-label="Ir al inicio">
+        <img
+          src={`${base}/assets/images/logo.png`}
+          alt="Logo de la empresa"
+          class="h-12"
+        />
       </a>
     </div>
 
     <!-- Navegación principal -->
     <nav class="hidden lg:flex space-x-6 text-white font-bold relative">
-
-      <a href="/" class="nav-link">Inicio</a>
+      <a href={`${base}/`} class="nav-link inline-block hover:text-[#F39C12] hover:scale-[1.15] transition-all duration-300">Inicio</a>
 
       <!-- Dropdown Servicios -->
       <div class="relative group">
-
         <!-- Trigger -->
-        <button class="nav-link flex items-center gap-1">
+        <button class="nav-link flex items-center gap-1 hover:text-[#F39C12] hover:scale-[1.15] transition-all duration-300">
           Servicios
-          <span class="text-xs transition-transform group-hover:rotate-180">▼</span>
+          <span class="text-xs transition-transform group-hover:rotate-180"
+            >▼</span
+          >
         </button>
 
         <!-- Dropdown -->
-        <div class="absolute left-0 top-full w-64 bg-black/90 backdrop-blur-md
-                    rounded-lg shadow-lg opacity-0 pointer-events-none
+        <div
+          class="absolute left-0 top-full w-80 bg-[#0A0A0A]/95 backdrop-blur-md
+                    rounded-2xl shadow-2xl overflow-hidden opacity-0 pointer-events-none
                     group-hover:opacity-100 group-hover:pointer-events-auto
-                    transition-all duration-300">
-
-          <a href="/recoleccion-y-analisis-de-datos" class="block px-5 py-3 hover:bg-[#F39C12] transition">Recolección y Análisis de Datos</a>
-          <a href="/desarrollo-web-a-medida" class="block px-5 py-3 hover:bg-[#F39C12] transition">Desarrollo Web y Móvil</a>
-          <a href="/automatizacion-bases-de-datos" class="block px-5 py-3 hover:bg-[#F39C12] transition">Automatización y Bases de Datos</a>
-          <a href="/produccion-contenido-digital" class="block px-5 py-3 hover:bg-[#F39C12] transition">Marketing y Contenido Digital</a>
-
+                    transition-all duration-300 border border-white/5 py-2"
+        >
+          <a
+            href={`${base}/recoleccion-y-analisis-de-datos`}
+            class="block px-4 py-2 mx-2 my-1 rounded-xl hover:bg-[#F39C12] hover:text-black hover:scale-[1.05] origin-left transition-all duration-300"
+            >Recolección y Análisis de Datos</a
+          >
+          <a
+            href={`${base}/desarrollo-web-a-medida`}
+            class="block px-4 py-2 mx-2 my-1 rounded-xl hover:bg-[#F39C12] hover:text-black hover:scale-[1.05] origin-left transition-all duration-300"
+            >Desarrollo Web y Móvil</a
+          >
+          <a
+            href={`${base}/automatizacion-bases-de-datos`}
+            class="block px-4 py-2 mx-2 my-1 rounded-xl hover:bg-[#F39C12] hover:text-black hover:scale-[1.05] origin-left transition-all duration-300"
+            >Automatización y Bases de Datos</a
+          >
+          <a
+            href={`${base}/produccion-contenido-digital`}
+            class="block px-4 py-2 mx-2 my-1 rounded-xl hover:bg-[#F39C12] hover:text-black hover:scale-[1.05] origin-left transition-all duration-300"
+            >Marketing y Contenido Digital</a
+          >
         </div>
       </div>
 
-      <a href="/nosotros" class="nav-link">Nosotros</a>
-      <a href="/convocatorias" class="nav-link">Convocatorias</a>
+      <a href={`${base}/nosotros`} class="nav-link inline-block hover:text-[#F39C12] hover:scale-[1.15] transition-all duration-300">Nosotros</a>
+      <a href={`${base}/convocatorias`} class="nav-link inline-block hover:text-[#F39C12] hover:scale-[1.15] transition-all duration-300">Convocatorias</a>
     </nav>
 
     <!-- Botón Contacto -->
     <div class="hidden lg:block">
-      <a href="/contacto#formulario-contacto" target="_blank"
-         class="bg-[#F39C12] font-bold text-dark-900 text-lg px-6 py-3 rounded-md
-                hover:bg-[#FEB94CFA] transition duration-300">
+      <a
+        href={`${base}/contacto#formulario-contacto`}
+        target="_blank"
+        class="bg-[#F39C12] font-bold text-dark-900 text-lg px-6 py-3 rounded-md
+                hover:bg-[#FEB94CFA] transition duration-300"
+      >
         Hablemos
       </a>
     </div>
 
     <!-- Botón menú móvil -->
-    <button onclick="toggleMenu()" class="lg:hidden text-white" aria-label="Abrir menú">
-      <svg id="hamburger-icon" class="w-8 h-8" fill="none" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M4 6h16M4 12h16m-7 6h7" />
+    <button
+      onclick="toggleMenu()"
+      class="lg:hidden text-white"
+      aria-label="Abrir menú"
+    >
+      <svg
+        id="hamburger-icon"
+        class="w-8 h-8"
+        fill="none"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M4 6h16M4 12h16m-7 6h7"></path>
       </svg>
-      <svg id="close-icon" class="w-8 h-8 hidden" fill="none" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M6 18L18 6M6 6l12 12" />
+      <svg
+        id="close-icon"
+        class="w-8 h-8 hidden"
+        fill="none"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M6 18L18 6M6 6l12 12"></path>
       </svg>
     </button>
-
   </div>
 </header>
 
-
-<div id="mobile-menu" 
-     class="lg:hidden fixed top-0 left-0 w-full h-screen bg-black/60 backdrop-blur z-40 
-            flex items-center justify-center transition-all duration-500 transform translate-y-full">
-
-  <nav class="flex flex-col items-center space-y-6 text-center text-white font-bold">
-
-    <a href="/" class="mobile-link text-2xl">Inicio</a>
+<div
+  id="mobile-menu"
+  class="lg:hidden fixed top-0 left-0 w-full h-screen bg-black/60 backdrop-blur z-40
+            flex items-center justify-center transition-all duration-500 transform translate-y-full"
+>
+  <nav
+    class="flex flex-col items-center space-y-6 text-center text-white font-bold"
+  >
+    <a href={`${base}/`} class="mobile-link text-2xl inline-block hover:text-[#F39C12] hover:scale-[1.15] transition-all duration-300">Inicio</a>
 
     <!-- Servicios Desplegable -->
     <div class="flex flex-col items-center">
-      <button onclick="toggleSubmenu()"
-              class="flex items-center gap-2 text-2xl">
+      <button
+        onclick="toggleSubmenu()"
+        class="flex items-center gap-2 text-2xl hover:text-[#F39C12] hover:scale-[1.15] transition-all duration-300"
+      >
         Servicios
         <span id="submenu-arrow" class="text-sm transition-transform">▼</span>
       </button>
 
-      <div id="submenu" class="hidden flex flex-col mt-3 space-y-2">
-        <a href="/recoleccion-y-analisis-de-datos" class="text-lg hover:text-[#F39C12] transition">Recolección y Análisis de Datos</a>
-        <a href="/desarrollo-web-a-medida" class="text-lg hover:text-[#F39C12] transition">Desarrollo Web y Móvil</a>
-        <a href="/automatizacion-bases-de-datos" class="text-lg hover:text-[#F39C12] transition">Automatización y Bases de Datos</a>
-        <a href="/produccion-contenido-digital" class="text-lg hover:text-[#F39C12] transition">Marketing y Contenido Digital</a>
+      <div id="submenu" class="hidden flex flex-col mt-3 space-y-2 w-full px-4">
+        <a
+          href={`${base}/recoleccion-y-analisis-de-datos`}
+          class="text-lg hover:text-[#F39C12] hover:scale-[1.15] transition-all duration-300 inline-block"
+          >Recolección y Análisis de Datos</a
+        >
+        <a
+          href={`${base}/desarrollo-web-a-medida`}
+          class="text-lg hover:text-[#F39C12] hover:scale-[1.15] transition-all duration-300 inline-block"
+          >Desarrollo Web y Móvil</a
+        >
+        <a
+          href={`${base}/automatizacion-bases-de-datos`}
+          class="text-lg hover:text-[#F39C12] hover:scale-[1.15] transition-all duration-300 inline-block"
+          >Automatización y Bases de Datos</a
+        >
+        <a
+          href={`${base}/produccion-contenido-digital`}
+          class="text-lg hover:text-[#F39C12] hover:scale-[1.15] transition-all duration-300 inline-block"
+          >Marketing y Contenido Digital</a
+        >
       </div>
     </div>
 
-    <a href="/nosotros" class="mobile-link text-2xl">Nosotros</a>
-    <a href="/convocatorias" class="mobile-link text-2xl">Convocatorias</a>
-    <a href="/nosotros#contact-form" class="mobile-link text-2xl">Hablemos</a>
-
+    <a href={`${base}/nosotros`} class="mobile-link text-2xl inline-block hover:text-[#F39C12] hover:scale-[1.15] transition-all duration-300">Nosotros</a>
+    <a href={`${base}/convocatorias`} class="mobile-link text-2xl inline-block hover:text-[#F39C12] hover:scale-[1.15] transition-all duration-300"
+      >Convocatorias</a
+    >
+    <a href={`${base}/nosotros#contact-form`} class="mobile-link text-2xl inline-block hover:text-[#F39C12] hover:scale-[1.15] transition-all duration-300"
+      >Hablemos</a
+    >
   </nav>
 </div>

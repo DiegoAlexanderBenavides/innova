@@ -1,1 +1,43 @@
 @import "tailwindcss";
+
+@theme {
+  --font-jakarta: "Plus Jakarta Sans", sans-serif;
+  --color-primary-orange: #F39C12;
+  --color-dark-bg: #050505;
+  --color-dark-card: #0A0A0A;
+  --color-dark-border: #1F1F1F;
+}
+
+@layer utilities {
+  .bg-glass {
+    @apply bg-white/5 backdrop-blur-xl border border-white/10;
+  }
+  
+  .bg-glass-dark {
+    @apply bg-black/40 backdrop-blur-2xl border border-white/5;
+  }
+  
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-orange-400 to-rose-500;
+  }
+  
+  .text-gradient-gold {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-[#F39C12] to-amber-300;
+  }
+  
+  .btn-primary {
+    @apply bg-gradient-to-r from-orange-500 to-amber-500 text-black font-bold px-6 py-3 rounded-full hover:from-orange-400 hover:to-amber-400 hover:shadow-[0_0_20px_rgba(243,156,18,0.4)] transition-all duration-300 transform hover:-translate-y-1;
+  }
+  
+  .btn-outline {
+    @apply border border-[#F39C12] text-[#F39C12] px-6 py-3 rounded-full hover:bg-[#F39C12]/10 hover:shadow-[0_0_15px_rgba(243,156,18,0.2)] transition-all duration-300;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-jakarta);
+}

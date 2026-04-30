@@ -8,6 +8,7 @@ import { category, services } from '../data/siteData.ts';
 
 const pageTitle = "Nuestros Servicios | INNOVA SYSTEMS CENTER - Soluciones Tecnológicas para tu Negocio";
 const pageDescription = "Descubre los servicios de INNOVA SYSTEMS CENTER: desarrollo web, inteligencia artificial, bases de datos, ciberseguridad, cloud computing y más. ¡Impulsa tu negocio con tecnología innovadora!";
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 ---
 
 <Layout title={pageTitle} description={pageDescription}>
@@ -51,17 +52,37 @@ const pageDescription = "Descubre los servicios de INNOVA SYSTEMS CENTER: desarr
                   <span class="font-semibold text-white whitespace-nowrap">Tecnologías:</span>
                   {service.technologies.map((tecnology) => (
                     tecnology.icono ? (
-                      <img src={tecnology.icono} class="w-8 h-8 tech-icon" alt={tecnology.name || tecnology.alt} />
+                      <img src={tecnology.icono} class="w-8 h-8 tech-icon" alt={tecnology.name} />
                     ) : (
-                      <span class="text-gray-400">{tecnology.name || tecnology.alt}</span>
+                      <span class="text-gray-400">{tecnology.name}</span>
                     )
                   ))}
                 </div>
               </div>
-              <div class="grid grid-cols-2 gap-4">
-                {service.images.map((image) => (
-                  <img src={image.image} alt={image.alt} class="gallery-img cursor-pointer rounded-lg shadow-lg transition transform hover:scale-105 w-full h-auto object-cover" onclick={`openModal('${image.image}')`} />
-                ))}
+              <!-- Mini carrusel automático de imágenes -->
+              <div class="relative w-full overflow-hidden rounded-xl" data-service-carousel>
+                <div class="flex transition-transform duration-700 ease-in-out" data-carousel-track>
+                  {service.images.map((image) => (
+                    <div class="min-w-full">
+                      <img
+                        src={image.image}
+                        alt={image.alt}
+                        class="gallery-img cursor-pointer w-full h-64 object-cover rounded-xl shadow-lg"
+                        onclick={`openModal('${image.image}')`}
+                      />
+                    </div>
+                  ))}
+                </div>
+                <!-- Indicadores de puntos -->
+                <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2" data-carousel-dots>
+                  {service.images.map((_, i) => (
+                    <button
+                      class={`w-2 h-2 rounded-full transition-all duration-300 ${i === 0 ? 'bg-[#F39C12] w-4' : 'bg-white/50'}`}
+                      data-dot={i}
+                      aria-label={`Imagen ${i + 1}`}
+                    />
+                  ))}
+                </div>
               </div>
             </div>
           </div>
@@ -71,7 +92,7 @@ const pageDescription = "Descubre los servicios de INNOVA SYSTEMS CENTER: desarr
       <!-- CTA de Contacto -->
       <div class="mt-15 py-12 text-center">
         <p class="text-gray-400 text-lg mb-4">¿Quieres un proyecto similar? Contáctanos.</p>
-        <a href="/nosotros#contact-form" class="text-[#F39C12] font-bold text-xl hover:underline">
+        <a href={`${base}/nosotros#contact-form`} class="text-[#F39C12] font-bold text-xl hover:underline">
           Escríbenos aquí
         </a>
       </div>
@@ -80,6 +101,64 @@ const pageDescription = "Descubre los servicios de INNOVA SYSTEMS CENTER: desarr
 
   <Footer />
 
-  <script src="/assets/js/services.js" is:inline></script>
-  <script src="/assets/js/modal_view_img.js" is:inline></script>
+  <script src={`${base}/assets/js/services.js`} is:inline></script>
+  <script src={`${base}/assets/js/modal_view_img.js`} is:inline></script>
+
+  <script>
+    function initServiceCarousels() {
+      const carousels = document.querySelectorAll('[data-service-carousel]');
+
+      carousels.forEach((carousel) => {
+        const track = carousel.querySelector('[data-carousel-track]') as HTMLElement;
+        const dots = carousel.querySelectorAll('[data-dot]');
+        if (!track) return;
+
+        const slides = track.children;
+        const total = slides.length;
+        let current = 0;
+        let interval: ReturnType<typeof setInterval>;
+
+        const goTo = (index: number) => {
+          current = (index + total) % total;
+          track.style.transform = `translateX(-${current * 100}%)`;
+          dots.forEach((dot, i) => {
+            const el = dot as HTMLElement;
+            if (i === current) {
+              el.classList.add('bg-[#F39C12]', 'w-4');
+              el.classList.remove('bg-white/50', 'w-2');
+            } else {
+              el.classList.remove('bg-[#F39C12]', 'w-4');
+              el.classList.add('bg-white/50', 'w-2');
+            }
+          });
+        };
+
+        const start = () => {
+          clearInterval(interval);
+          interval = setInterval(() => goTo(current + 1), 3000);
+        };
+
+        const stop = () => clearInterval(interval);
+
+        // Pausar al pasar el cursor
+        carousel.addEventListener('mouseenter', stop);
+        carousel.addEventListener('mouseleave', start);
+
+        // Clicks en los puntos
+        dots.forEach((dot) => {
+          dot.addEventListener('click', () => {
+            const i = parseInt((dot as HTMLElement).dataset.dot || '0');
+            goTo(i);
+          });
+        });
+
+        // Iniciar
+        goTo(0);
+        start();
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', initServiceCarousels);
+    document.addEventListener('astro:page-load', initServiceCarousels);
+  </script>
 </Layout>
