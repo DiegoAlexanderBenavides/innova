@@ -59,6 +59,7 @@ export const category = {
 export const services = [
   {
     id: "1",
+    slug: "recoleccion-y-analisis-de-datos",
     category: "data-analysis",
     title: "🔎 Análisis de Datos para Empresas",
     logo: `${base}/assets/images/pagina13.webp`,
@@ -89,6 +90,7 @@ export const services = [
   },
   {
     id: "2",
+    slug: "desarrollo-web-a-medida",
     category: "web",
     title: "🌐 Desarrollo Web a Medida",
     logo: `${base}/assets/images/pagina4.webp`,
@@ -120,6 +122,7 @@ export const services = [
   },
   {
     id: "3",
+    slug: "automatizacion-bases-de-datos",
     category: "base-de-datos",
     title: "🗂 Gestión y Administración de Bases de Datos",
     logo: `${base}/assets/images/pagina19.webp`,
@@ -147,6 +150,7 @@ export const services = [
   },
   {
     id: "4",
+    slug: "produccion-contenido-digital",
     category: "advertising",
     title: "🎨 Producción de Contenido Digital",
     logo: `${base}/assets/images/pagina23.webp`,
