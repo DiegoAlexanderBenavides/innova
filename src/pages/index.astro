@@ -8,6 +8,7 @@ import { services } from "../data/siteData.ts";
 import queSomosImg from "../assets/images/somos/innova_principal.png";
 import fondoEmprender from "../assets/images/empresas_aliadas/fondo_emprender.png";
 import senaImg from "../assets/images/empresas_aliadas/sena.png";
+import sectoresImg from "../assets/images/sectores_donde_trabajamos.png";
 
 const pageTitle =
 	"INNOVA SYSTEMS CENTER | Desarrollo, Datos y Automatización para Empresas Modernas";
@@ -85,7 +86,9 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 		<!-- EMPRESAS ALIADAS -->
 		<section class="w-full overflow-hidden relative z-10 -my-16">
 			<div class="max-w-4xl mx-auto px-6 text-center">
-				<div class="flex flex-col sm:flex-row items-center justify-center gap-6 md:gap-16">
+				<div
+					class="flex flex-col sm:flex-row items-center justify-center gap-6 md:gap-16"
+				>
 					<img
 						src={fondoEmprender.src}
 						alt="Fondo Emprender"
@@ -95,6 +98,36 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 						src={senaImg.src}
 						alt="SENA"
 						class="h-40 sm:h-52 lg:h-64 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity duration-300"
+					/>
+				</div>
+			</div>
+		</section>
+
+		<!-- SECTORES DONDE TRABAJAMOS -->
+		<section class="w-full bg-[#0d0d0d] py-24 relative z-10">
+			<div class="max-w-7xl mx-auto px-6">
+				<!-- TEXTO centrado arriba -->
+				<div class="text-center mb-12">
+					<p class="text-[#F39C12] font-semibold tracking-wide mb-3">
+						Sectores donde trabajamos
+					</p>
+					<h2
+						class="text-4xl font-extrabold text-white leading-tight mb-5"
+					>
+						Soluciones adaptadas a cada tipo de organización.
+					</h2>
+					<p class="text-gray-300 text-lg max-w-3xl mx-auto">
+						Transformamos tus datos en soluciones inteligentes según
+						las necesidades de tu negocio.
+					</p>
+				</div>
+
+				<!-- IMAGEN sectores -->
+				<div class="flex justify-center">
+					<img
+						src={sectoresImg.src}
+						alt="Sectores donde trabajamos"
+						class="w-full max-w-2xl rounded-2xl shadow-xl border border-[#2a2a2a] object-cover"
 					/>
 				</div>
 			</div>
@@ -130,6 +163,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 						overflow: hidden;
 						width: 100%;
 						position: relative;
+						padding: 4rem 0; /* espacio para que el scale no se corte */
 						/* desvanecimiento en los bordes */
 						-webkit-mask-image: linear-gradient(
 							to right,
@@ -156,6 +190,11 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 						width: 320px;
 						position: relative;
 						z-index: 1;
+						transition: transform 0.3s ease;
+					}
+					.marquee-card:hover {
+						transform: scale(1.06);
+						z-index: 20;
 					}
 					.marquee-card a {
 						transition:
@@ -164,13 +203,19 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 							background-color 0.3s ease,
 							box-shadow 0.3s ease;
 					}
-					.marquee-card:hover a {
-						border-width: 4px;
-						border-color: rgba(243, 156, 18, 0.55);
-						background-color: rgba(243, 156, 18, 0.05);
-						box-shadow:
-							inset 0 0 30px rgba(243, 156, 18, 0.06),
-							0 0 18px rgba(243, 156, 18, 0.18);
+					.marquee-card:hover .card-link {
+						border-color: #f39c12;
+						border-width: 2px;
+						background: linear-gradient(
+							160deg,
+							#f39c12 0%,
+							#1a0e00 55%,
+							#0a0a0a 75%
+						);
+						box-shadow: 0 0 40px rgba(243, 156, 18, 0.55);
+					}
+					.marquee-card:hover .card-img {
+						border-color: transparent;
 					}
 					@media (max-width: 640px) {
 						.marquee-card {
@@ -187,14 +232,14 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 								<div class="marquee-card">
 									<a
 										href={`${base}/${service.slug}`}
-										class="w-full h-full group/card bg-[#1A1A1A] backdrop-blur rounded-xl border-2 border-[#F39C12]/40 shadow-[0_0_12px_rgba(243,156,18,0.15)] hover:border-[#F39C12] hover:shadow-[0_0_28px_rgba(243,156,18,0.4)] transition-all duration-300 flex flex-col justify-between block"
+										class="card-link w-full h-full bg-[#1A1A1A] backdrop-blur rounded-xl border-2 border-[#F39C12]/40 shadow-[0_0_12px_rgba(243,156,18,0.15)] transition-all duration-300 flex flex-col justify-between block"
 									>
 										<div>
 											<div class="w-full flex justify-center p-3">
 												<img
 													src={service.logo}
 													alt="Imagen representativa"
-													class="w-full h-48 rounded-lg object-cover border-2 border-[#F39C12]/60"
+													class="card-img w-full h-48 rounded-lg object-cover border-2 border-[#F39C12]/60 transition-all duration-300"
 												/>
 											</div>
 											<div class="p-5">
