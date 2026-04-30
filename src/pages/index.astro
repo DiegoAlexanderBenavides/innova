@@ -9,6 +9,7 @@ import queSomosImg from "../assets/images/somos/innova_principal.png";
 import fondoEmprender from "../assets/images/empresas_aliadas/fondo_emprender.png";
 import senaImg from "../assets/images/empresas_aliadas/sena.png";
 import sectoresImg from "../assets/images/sectores_donde_trabajamos.png";
+import principalImg from "../assets/images/principal3.png";
 
 const pageTitle =
 	"INNOVA SYSTEMS CENTER | Desarrollo, Datos y Automatización para Empresas Modernas";
@@ -31,17 +32,18 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 			class="w-full min-h-screen opacity-0 flex flex-col justify-center pt-24 pb-12 relative"
 			data-animation="animate-fade-in"
 		>
-			<!-- Fondo de imagen con opacidad (dimmed) -->
-			<div 
-				class="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat opacity-[0.15]"
-				style={`background-image: url('${queSomosImg.src}')`}
-			></div>
+			<!-- Fondo de imagen principal -->
+			<div
+				class="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat opacity-20"
+				style={`background-image: url('${principalImg.src}')`}
+			>
+			</div>
 
 			<div
-				class="max-w-5xl mx-auto px-6 w-full flex flex-col items-center justify-center gap-8 relative z-10"
+				class="max-w-7xl mx-auto px-6 w-full flex flex-col lg:flex-row items-center justify-between gap-12 relative z-10"
 			>
 				<!-- Text Column -->
-				<div class="w-full text-center">
+				<div class="flex-1 text-left lg:pr-8">
 					<p
 						class="text-white text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 leading-tight"
 					>
@@ -51,13 +53,13 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 					</p>
 
 					<h1
-						class="text-gray-300 text-lg lg:text-xl xl:text-2xl mb-10 font-light max-w-3xl mx-auto"
+						class="text-gray-300 text-lg lg:text-xl xl:text-2xl mb-8 font-light"
 					>
 						Desarrollo, Datos y Automatización para Empresas
 						Modernas
 					</h1>
 
-					<div class="flex flex-col sm:flex-row gap-4 justify-center">
+					<div class="flex flex-col sm:flex-row gap-4 justify-start">
 						<a
 							href="#contact-form"
 							class="bg-[#F39C12] font-bold px-8 py-3 rounded-md hover:bg-[#FEB94CFA] text-black text-center transition-all hover:scale-105"
@@ -71,6 +73,19 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 						>
 							Ver Servicios
 						</a>
+					</div>
+				</div>
+
+				<!-- Image Column -->
+				<div
+					class="flex-1 w-full mt-12 lg:mt-0 flex justify-center lg:justify-end"
+				>
+					<div class="relative w-full max-w-lg group">
+						<img
+							src={queSomosImg.src}
+							alt="Qué Somos - Innova Systems Center"
+							class="relative w-full h-auto object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+						/>
 					</div>
 				</div>
 			</div>
