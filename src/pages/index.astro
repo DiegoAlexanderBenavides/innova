@@ -14,45 +14,83 @@ import fondoEmprender from "../assets/images/empresas_aliadas/fondo_emprender.pn
 import senaImg from "../assets/images/empresas_aliadas/sena.png";
 
 // Imágenes de servicios (IMÁGENES)
-import imgBaseDatos    from "../assets/images/IMÁGENES/bases de datos stock.jpg";
+import imgBaseDatos from "../assets/images/IMÁGENES/bases de datos stock.jpg";
 import imgDesarrolloWeb from "../assets/images/IMÁGENES/desarrollo web profesional chat gpt.png";
-import imgContenido    from "../assets/images/IMÁGENES/producción de contenido digital chat gpt.png";
-import imgAnalisis     from "../assets/images/IMÁGENES/análisis de datos stock.png";
+import imgContenido from "../assets/images/IMÁGENES/producción de contenido digital chat gpt.png";
+import imgAnalisis from "../assets/images/IMÁGENES/análisis de datos stock.png";
 
 // Iconos de sectores (ÍCONOS)
-import iconSalud       from "../assets/images/ÍCONOS/latido-del-corazon amarillo.png";
-import iconEducacion   from "../assets/images/ÍCONOS/birrete amarillo.png";
-import iconLogistica   from "../assets/images/ÍCONOS/camión amarillo.png";
-import iconComercio    from "../assets/images/ÍCONOS/el-comercio-internacional.png";
-import iconEmpresas    from "../assets/images/ÍCONOS/edificio amarillo.png";
-import iconIndustria   from "../assets/images/ÍCONOS/industria amarillo.png";
-import iconCheck       from "../assets/images/ÍCONOS/marca-de-verificacion amarillo.png";
+import iconSalud from "../assets/images/ÍCONOS/latido-del-corazon amarillo.png";
+import iconEducacion from "../assets/images/ÍCONOS/birrete amarillo.png";
+import iconLogistica from "../assets/images/ÍCONOS/camión amarillo.png";
+import iconComercio from "../assets/images/ÍCONOS/el-comercio-internacional.png";
+import iconEmpresas from "../assets/images/ÍCONOS/edificio amarillo.png";
+import iconIndustria from "../assets/images/ÍCONOS/industria amarillo.png";
+import iconCheck from "../assets/images/ÍCONOS/marca-de-verificacion amarillo.png";
 
 // Imágenes de proyectos (IMÁGENES)
-import imgRedciclar    from "../assets/images/IMÁGENES/redciclarr.png";
-import imgMakikuna     from "../assets/images/IMÁGENES/makikuna.png";
-import imgCasaBosque   from "../assets/images/IMÁGENES/casa del bosque.png";
+import imgRedciclar from "../assets/images/IMÁGENES/redciclarr.png";
+import imgMakikuna from "../assets/images/IMÁGENES/makikuna.png";
+import imgCasaBosque from "../assets/images/IMÁGENES/casa del bosque.png";
 
-const pageTitle = "INNOVA SYSTEMS CENTER | Desarrollo, Datos y Automatización para Empresas Modernas";
-const pageDescription = "Ofrecemos soluciones tecnológicas en desarrollo web, automatización, análisis de datos y sistemas digitales que impulsan la eficiencia y crecimiento de tu empresa.";
-const pageKeywords = "soluciones tecnológicas, transformación digital, desarrollo de software, desarrollo web, automatización";
+const pageTitle =
+  "INNOVA SYSTEMS CENTER | Desarrollo, Datos y Automatización para Empresas Modernas";
+const pageDescription =
+  "Ofrecemos soluciones tecnológicas en desarrollo web, automatización, análisis de datos y sistemas digitales que impulsan la eficiencia y crecimiento de tu empresa.";
+const pageKeywords =
+  "soluciones tecnológicas, transformación digital, desarrollo de software, desarrollo web, automatización";
 const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 
-const serviceImages = [imgBaseDatos.src, imgDesarrolloWeb.src, imgContenido.src, imgAnalisis.src];
+const serviceImages = [
+  imgBaseDatos.src,
+  imgDesarrolloWeb.src,
+  imgContenido.src,
+  imgAnalisis.src,
+];
 
 const sectores = [
-  { nombre: "Salud",      icono: iconSalud.src,     desc: "Hospitales, clínicas, IPS y EPS" },
-  { nombre: "Educación",  icono: iconEducacion.src,  desc: "Colegios, universidades, institutos" },
-  { nombre: "Logística",  icono: iconLogistica.src,  desc: "Transporte, distribución, supply chain" },
-  { nombre: "Comercio",   icono: iconComercio.src,   desc: "Tiendas, e-commerce, retail" },
-  { nombre: "Empresas",   icono: iconEmpresas.src,   desc: "Pymes, startups, corporaciones" },
-  { nombre: "Industria",  icono: iconIndustria.src,  desc: "Manufactura, producción, fabricación" },
+  {
+    nombre: "Salud",
+    icono: iconSalud.src,
+    desc: "Hospitales, clínicas, IPS y EPS",
+  },
+  {
+    nombre: "Educación",
+    icono: iconEducacion.src,
+    desc: "Colegios, universidades, institutos",
+  },
+  {
+    nombre: "Logística",
+    icono: iconLogistica.src,
+    desc: "Transporte, distribución, supply chain",
+  },
+  {
+    nombre: "Comercio",
+    icono: iconComercio.src,
+    desc: "Tiendas, e-commerce, retail",
+  },
+  {
+    nombre: "Empresas",
+    icono: iconEmpresas.src,
+    desc: "Pymes, startups, corporaciones",
+  },
+  {
+    nombre: "Industria",
+    icono: iconIndustria.src,
+    desc: "Manufactura, producción, fabricación",
+  },
 ];
 
 const projectsData = [
-  { title: "Redciclar - Plataforma de Gestión de Residuos",           img: imgRedciclar.src  },
-  { title: "Fundación Makikuna - Gestión de Datos",                   img: imgMakikuna.src   },
-  { title: "Casa del Bosque - Video Educativo (Muestra Infantil)",    img: imgCasaBosque.src },
+  {
+    title: "Redciclar - Plataforma de Gestión de Residuos",
+    img: imgRedciclar.src,
+  },
+  { title: "Fundación Makikuna - Gestión de Datos", img: imgMakikuna.src },
+  {
+    title: "Casa del Bosque - Video Educativo (Muestra Infantil)",
+    img: imgCasaBosque.src,
+  },
 ];
 ---
 
@@ -60,41 +98,61 @@ const projectsData = [
   <Background />
   <Header />
 
-  <main class="min-h-screen flex flex-col items-center justify-center text-center bg-gradient-to-br from-[#050505] via-[#2A1604] to-[#050505] relative z-10">
-
+  <main
+    class="min-h-screen flex flex-col items-center justify-center text-center bg-gradient-to-br from-[#050505] via-[#2A1604] to-[#050505] relative z-10"
+  >
     <!-- ═══════════════ HERO ═══════════════ -->
     <section
       class="w-full min-h-screen opacity-0 flex flex-col justify-center pt-24 pb-12 relative"
       data-animation="animate-fade-in"
     >
-      <div class="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat opacity-20"
-           style={`background-image: url('${principalImg.src}')`}></div>
+      <div
+        class="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat opacity-20"
+        style={`background-image: url('${principalImg.src}')`}
+      >
+      </div>
 
-      <div class="max-w-7xl mx-auto px-6 w-full flex flex-col lg:flex-row items-center justify-between gap-12 relative z-10">
+      <div
+        class="max-w-7xl mx-auto px-6 w-full flex flex-col lg:flex-row items-center justify-between gap-12 relative z-10"
+      >
         <!-- Texto -->
         <div class="flex-1 text-left lg:pr-8">
-          <p class="text-white text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 leading-tight">
-            Soluciones <span class="text-[#F39C12]">Tecnológicas</span> que Impulsan tu Negocio
+          <p
+            class="text-white text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 leading-tight"
+          >
+            Soluciones <span class="text-[#F39C12]">Tecnológicas</span> que Impulsan
+            tu Negocio
           </p>
-          <h1 class="text-gray-300 text-lg lg:text-xl xl:text-2xl mb-8 font-light">
+          <h1
+            class="text-gray-300 text-lg lg:text-xl xl:text-2xl mb-8 font-light"
+          >
             Desarrollo, Datos y Automatización para Empresas Modernas
           </h1>
           <div class="flex flex-col sm:flex-row gap-4 justify-start">
-            <a href="#contact-form"
-               class="bg-[#F39C12] font-bold px-8 py-3 rounded-md hover:bg-[#ffc04a] text-black text-center transition-all hover:scale-105">
+            <a
+              href="#contact-form"
+              class="bg-[#F39C12] font-bold px-8 py-3 rounded-md hover:bg-[#ffc04a] text-black text-center transition-all hover:scale-105"
+            >
               Solicita tu Consultoría Gratuita
             </a>
-            <a href="#nuestros_servicios"
-               class="border border-[#F39C12] text-[#F39C12] font-semibold px-8 py-3 rounded-md hover:bg-[#F39C12]/10 transition-all text-center hover:scale-105">
+            <a
+              href="#nuestros_servicios"
+              class="border border-[#F39C12] text-[#F39C12] font-semibold px-8 py-3 rounded-md hover:bg-[#F39C12]/10 transition-all text-center hover:scale-105"
+            >
               Ver Servicios
             </a>
           </div>
         </div>
         <!-- Imagen -->
-        <div class="flex-1 w-full mt-12 lg:mt-0 flex justify-center lg:justify-end">
+        <div
+          class="flex-1 w-full mt-12 lg:mt-0 flex justify-center lg:justify-end"
+        >
           <div class="relative w-full max-w-lg group">
-            <img src={queSomosImg.src} alt="Innova Systems Center"
-                 class="relative w-full h-auto object-cover transition-transform duration-500 group-hover:scale-[1.02]" />
+            <img
+              src={queSomosImg.src}
+              alt="Innova Systems Center"
+              class="relative w-full h-auto object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+            />
           </div>
         </div>
       </div>
@@ -102,52 +160,80 @@ const projectsData = [
 
     <!-- ═══════════════ EMPRESAS ALIADAS ═══════════════ -->
     <section class="w-full relative z-10 emprender-section">
-      <div class="max-w-4xl mx-auto px-6 text-center">
-        <div class="flex flex-col sm:flex-row items-center justify-center gap-8 md:gap-20">
-          <img src={fondoEmprender.src} alt="Fondo Emprender"
-               class="h-28 sm:h-36 lg:h-44 w-auto object-contain opacity-85 hover:opacity-100 transition-opacity duration-300" />
-          <img src={senaImg.src} alt="SENA"
-               class="h-28 sm:h-36 lg:h-44 w-auto object-contain opacity-85 hover:opacity-100 transition-opacity duration-300" />
+      <div class="max-w-5xl mx-auto px-6">
+        <div class="aliadas-row">
+          <!-- SENA a la izquierda -->
+          <img src={senaImg.src} alt="SENA" class="aliada-logo" />
+          <!-- Fondo Emprender a la derecha -->
+          <img
+            src={fondoEmprender.src}
+            alt="Fondo Emprender"
+            class="aliada-logo"
+          />
         </div>
       </div>
     </section>
 
-    <!-- ═══════════════ SERVICIOS — Grid 4 tarjetas ═══════════════ -->
-    <section id="nuestros_servicios" class="w-full bg-[#111] py-20 relative z-10">
+    <!-- ═══════════════ SERVICIOS — Carrusel automático ═══════════════ -->
+    <section
+      id="nuestros_servicios"
+      class="w-full bg-[#111] py-20 relative z-10"
+    >
       <div class="max-w-7xl mx-auto px-6">
-
         <div class="text-center mb-14">
           <p class="label-tag">¿QUÉ HACEMOS?</p>
           <h2 class="section-heading">
-            Impulsamos tu crecimiento con <span class="text-[#F39C12]">soluciones digitales</span>
+            Impulsamos tu crecimiento con <span class="text-[#F39C12]"
+              >soluciones digitales</span
+            >
           </h2>
           <p class="text-gray-300 text-lg max-w-3xl mx-auto">
-            Desarrollamos sistemas, automatizaciones y plataformas digitales diseñadas para optimizar procesos, potenciar
-            decisiones estratégicas y acelerar la evolución tecnológica de tu organización.
+            Desarrollamos sistemas, automatizaciones y plataformas digitales
+            diseñadas para optimizar procesos, potenciar decisiones estratégicas
+            y acelerar la evolución tecnológica de tu organización.
           </p>
         </div>
 
-        <div class="svc-grid">
-          {services.map((svc, i) => (
-            <div class={`svc-card${i === 1 ? ' svc-card--active' : ''}`}>
-              <div class="svc-card__img-wrap">
-                <img src={serviceImages[i] ?? svc.logo} alt={svc.title} class="svc-card__img" />
-              </div>
-              <div class="svc-card__body">
-                <div class="svc-card__title">{svc.title.replace(/[^\w\s\u00C0-\u00FF]/g, "")}</div>
-                <div class="svc-card__desc">{svc.description.replace(/<[^>]+>/g, "").slice(0, 100)}...</div>
-                {svc.items.slice(0, 3).map(item => (
-                  <div class="svc-bullet">
-                    <img src={iconCheck.src} alt="✓" class="svc-bullet__icon" />
-                    <span>{item.replace(/<[^>]+>/g, "").slice(0, 65)}</span>
+        <!-- Carrusel automático derecha → izquierda -->
+        <div class="svc-carousel-outer" id="svcCarouselOuter">
+          <div class="svc-carousel-track" id="svcTrack">
+            {
+              [...services, ...services].map((svc, i) => (
+                <div class="svc-card">
+                  <div class="svc-card__img-wrap">
+                    <img
+                      src={serviceImages[i % services.length] ?? svc.logo}
+                      alt={svc.title}
+                      class="svc-card__img"
+                    />
                   </div>
-                ))}
-              </div>
-              <div class="svc-card__footer">
-                <a href={`${base}/${svc.slug}`} class="svc-btn">Ver servicio →</a>
-              </div>
-            </div>
-          ))}
+                  <div class="svc-card__body">
+                    <div class="svc-card__title">
+                      {svc.title.replace(/[^\w\s\u00C0-\u00FF]/g, "")}
+                    </div>
+                    <div class="svc-card__desc">
+                      {svc.description.replace(/<[^>]+>/g, "").slice(0, 100)}...
+                    </div>
+                    {svc.items.slice(0, 3).map((item) => (
+                      <div class="svc-bullet">
+                        <img
+                          src={iconCheck.src}
+                          alt="✓"
+                          class="svc-bullet__icon"
+                        />
+                        <span>{item.replace(/<[^>]+>/g, "").slice(0, 65)}</span>
+                      </div>
+                    ))}
+                  </div>
+                  <div class="svc-card__footer">
+                    <a href={`${base}/${svc.slug}`} class="svc-btn">
+                      Ver servicio →
+                    </a>
+                  </div>
+                </div>
+              ))
+            }
+          </div>
         </div>
       </div>
     </section>
@@ -155,33 +241,42 @@ const projectsData = [
     <!-- ═══════════════ SECTORES ═══════════════ -->
     <section class="w-full bg-[#0d0d0d] py-20 relative z-10">
       <div class="max-w-7xl mx-auto px-6">
-        <p class="label-tag">SECTORES DONDE TRABAJAMOS</p>
-        <div class="sectors-layout">
-          <!-- Texto izquierda -->
-          <div class="sectors-text">
-            <h2 class="section-heading text-left">
-              Soluciones adaptadas a cada tipo de organización.
-            </h2>
+        <p class="label-tag text-center">SECTORES DONDE TRABAJAMOS</p>
+
+        <!-- Título centrado en 2 renglones -->
+        <div class="sectors-title-block">
+          <h2 class="section-heading">
+            Soluciones adaptadas a cada tipo de<br />​organización.
+          </h2>
+        </div>
+
+        <!-- 2 columnas: texto | tarjetas -->
+        <div class="sectors-two-col">
+          <!-- Columna izquierda: texto -->
+          <div class="sectors-col-text">
             <p class="text-gray-300 text-base leading-relaxed">
-              Transformamos recursos, datos e inteligencia en soluciones de software relevantes,
-              optimizando la tecnología y los negocios. Sabemos que cada sector tiene sus propias
-              exigencias, por eso adaptamos nuestras soluciones para que se integren de manera
+              Transformamos recursos, datos e inteligencia en soluciones de
+              software relevantes, optimizando la tecnología y los negocios.
+              Sabemos que cada sector tiene sus propias exigencias, por eso
+              adaptamos nuestras soluciones para que se integren de manera
               óptima con la naturaleza de cada tipo de organización.
             </p>
           </div>
-          <!-- Grid sectores derecha -->
-          <div class="sectors-grid">
-            {sectores.map(s => (
-              <div class="sector-item">
-                <div class="sector-icon-wrap">
-                  <img src={s.icono} alt={s.nombre} />
+          <!-- Columna derecha: tarjetas de sectores -->
+          <div class="sectors-col-grid">
+            {
+              sectores.map((s) => (
+                <div class="sector-item">
+                  <div class="sector-icon-wrap">
+                    <img src={s.icono} alt={s.nombre} />
+                  </div>
+                  <div>
+                    <div class="sector-name">{s.nombre}</div>
+                    <div class="sector-desc">{s.desc}</div>
+                  </div>
                 </div>
-                <div>
-                  <div class="sector-name">{s.nombre}</div>
-                  <div class="sector-desc">{s.desc}</div>
-                </div>
-              </div>
-            ))}
+              ))
+            }
           </div>
         </div>
       </div>
@@ -193,56 +288,78 @@ const projectsData = [
         <div class="text-center mb-14">
           <p class="label-tag">A NUESTROS CLIENTES</p>
           <h2 class="section-heading">
-            Las empresas nos eligen por <span class="text-[#F39C12]">nuestros resultados</span>
+            Las empresas nos eligen por <span class="text-[#F39C12]"
+              >nuestros resultados</span
+            >
           </h2>
           <p class="text-gray-300 text-base max-w-3xl mx-auto">
-            Con innovación, diseño y tecnología digital que potencia sus objetivos y mejora sus resultados.
-            Nos comprometemos con el éxito de cada organización, brindando soluciones que hacen la diferencia
-            para las empresas que confían en nosotros.
+            Con innovación, diseño y tecnología digital que potencia sus
+            objetivos y mejora sus resultados. Nos comprometemos con el éxito de
+            cada organización, brindando soluciones que hacen la diferencia para
+            las empresas que confían en nosotros.
           </p>
         </div>
 
         <div class="proj-outer">
-          <button class="proj-arrow proj-arrow--left" id="projPrev" aria-label="Anterior">&#8592;</button>
+          <button
+            class="proj-arrow proj-arrow--left"
+            id="projPrev"
+            aria-label="Anterior">&#8592;</button
+          >
           <div class="proj-viewport">
             <div class="proj-track" id="projTrack">
-              {projectsData.map(p => (
-                <div class="proj-card">
-                  <div class="proj-card__img-wrap">
-                    <img src={p.img} alt={p.title} class="proj-card__img" />
+              {
+                projectsData.map((p) => (
+                  <div class="proj-card">
+                    <div class="proj-card__img-wrap">
+                      <img src={p.img} alt={p.title} class="proj-card__img" />
+                    </div>
+                    <div class="proj-card__body">
+                      <p class="proj-card__title">{p.title}</p>
+                    </div>
                   </div>
-                  <div class="proj-card__body">
-                    <p class="proj-card__title">{p.title}</p>
-                  </div>
-                </div>
-              ))}
+                ))
+              }
             </div>
           </div>
-          <button class="proj-arrow proj-arrow--right" id="projNext" aria-label="Siguiente">&#8594;</button>
+          <button
+            class="proj-arrow proj-arrow--right"
+            id="projNext"
+            aria-label="Siguiente">&#8594;</button
+          >
         </div>
       </div>
     </section>
 
     <!-- ═══════════════ CTA FINAL ═══════════════ -->
-    <section id="contact-form" class="w-full bg-[#0d0d0d] py-24 px-6 text-center relative z-10">
+    <section
+      id="contact-form"
+      class="w-full bg-[#0d0d0d] py-24 px-6 text-center relative z-10"
+    >
       <div class="max-w-2xl mx-auto">
         <h2 class="text-4xl font-bold text-white mb-6 leading-tight">
-          ¿Listo para impulsar tu <span class="text-[#F39C12]">transformación digital?</span>
+          ¿Listo para impulsar tu <span class="text-[#F39C12]"
+            >transformación digital?</span
+          >
         </h2>
         <p class="text-gray-300 text-base mb-10 leading-relaxed">
-          Hay un mundo de posibilidades esperándote. Cuéntanos tu proyecto, tienes una idea que impulsar
-          y estás listo para crecer, este es el primer paso. Cuéntanos qué necesitas, no dudes en dejarnos
-          tus datos, te atenderemos a la brevedad posible.
+          Hay un mundo de posibilidades esperándote. Cuéntanos tu proyecto,
+          tienes una idea que impulsar y estás listo para crecer, este es el
+          primer paso. Cuéntanos qué necesitas, no dudes en dejarnos tus datos,
+          te atenderemos a la brevedad posible.
         </p>
-        <a href="https://wa.me/573000000000" target="_blank" id="cta-hablemos"
-           class="inline-block bg-[#F39C12] text-black font-bold px-14 py-4 rounded-lg text-lg
+        <a
+          href="https://wa.me/573000000000"
+          target="_blank"
+          id="cta-hablemos"
+          class="inline-block bg-[#F39C12] text-black font-bold px-14 py-4 rounded-lg text-lg
                   hover:bg-[#ffc04a] transition-all hover:scale-105
-                  shadow-[0_0_30px_rgba(243,156,18,0.4)]">
+                  shadow-[0_0_30px_rgba(243,156,18,0.4)]"
+        >
           Hablemos
         </a>
       </div>
     </section>
-
   </main>
 
   <Footer />
@@ -252,7 +369,7 @@ const projectsData = [
 <style is:global>
   /* Label pequeño tipo "¿QUÉ HACEMOS?" */
   .label-tag {
-    color: #F39C12;
+    color: #f39c12;
     font-weight: 700;
     font-size: 0.8rem;
     letter-spacing: 0.15em;
@@ -269,187 +386,462 @@ const projectsData = [
 
   /* ── Emprender / SENA ── */
   .emprender-section {
-    background: linear-gradient(180deg, #050505 0%, #1a0e00 45%, #2a1a00 65%, #111 100%);
-    padding: 3.5rem 1.5rem 5rem;
+    background: linear-gradient(
+      to right,
+      #1a0900 0%,
+      #b0763d 20%,
+      #f5c200 50%,
+      #c38f5b 80%,
+      #1a0900 100%
+    );
+    height: 140px; /* altura fija, no crece con las imágenes */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding: 0 1.5rem;
+  }
+  .aliadas-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    width: 100%;
+  }
+  @media (max-width: 600px) {
+    .aliadas-row {
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+  }
+  .aliada-logo {
+    height: 6rem;
+    width: auto;
+    object-fit: contain;
+    opacity: 0.9;
+    transition:
+      opacity 0.3s,
+      transform 0.3s;
+    filter: drop-shadow(0 0 14px rgba(255, 200, 0, 0.45));
+  }
+  .aliada-logo:hover {
+    opacity: 1;
+    transform: scale(1.06);
+  }
+  @media (min-width: 640px) {
+    .aliada-logo {
+      height: 8rem;
+    }
+  }
+  @media (min-width: 1024px) {
+    .aliada-logo {
+      height: 10rem;
+    }
   }
 
-  /* ── Servicios grid ── */
-  .svc-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.2rem;
-    overflow: visible;
-    padding: 0.5rem;   /* espacio para que el scale no se corte */
+  /* ── Servicios carrusel automático ── */
+  .svc-carousel-outer {
+    overflow: hidden;
+    cursor: grab;
+    padding: 0.5rem 0 1rem;
   }
-  @media (max-width: 1100px) { .svc-grid { grid-template-columns: repeat(2, 1fr); } }
-  @media (max-width: 600px)  { .svc-grid { grid-template-columns: 1fr; } }
+  .svc-carousel-outer:active {
+    cursor: grabbing;
+  }
+  .svc-carousel-track {
+    display: flex;
+    gap: 1.2rem;
+    will-change: transform;
+    transition: none;
+  }
+  /* Tarjetas con ancho fijo igual al tamaño original del grid de 4 columnas */
+  .svc-carousel-track .svc-card {
+    flex-shrink: 0;
+    width: 280px;
+  }
 
   .svc-card {
     background: #1a1a1a;
-    border: 1px solid rgba(243,156,18,0.2);
+    border: 1px solid rgba(243, 156, 18, 0.2);
     border-radius: 1rem;
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    transition: transform 0.35s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.35s, border-color 0.35s, background 0.35s;
+    transition:
+      transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
+      box-shadow 0.35s,
+      border-color 0.35s,
+      background 0.35s;
   }
   .svc-card:hover {
     transform: scale(1.07);
-    box-shadow: 0 12px 50px rgba(243,156,18,0.55);
-    border-color: #F39C12;
-    background: #F39C12;
+    box-shadow: 0 12px 50px rgba(243, 156, 18, 0.55);
+    border-color: #f39c12;
+    background: #f39c12;
     z-index: 10;
     position: relative;
   }
-  .svc-card--active      { border-color: #F39C12; box-shadow: 0 0 25px rgba(243,156,18,0.2); }
+  .svc-card--active {
+    border-color: #f39c12;
+    box-shadow: 0 0 25px rgba(243, 156, 18, 0.2);
+  }
 
-  .svc-card__img-wrap { overflow: hidden; }
-  .svc-card__img      { width: 100%; height: 155px; object-fit: cover; transition: transform 0.4s; }
-  .svc-card:hover .svc-card__img { transform: scale(1.06); }
+  .svc-card__img-wrap {
+    overflow: hidden;
+  }
+  .svc-card__img {
+    width: 100%;
+    height: 155px;
+    object-fit: cover;
+    transition: transform 0.4s;
+  }
+  .svc-card:hover .svc-card__img {
+    transform: scale(1.06);
+  }
 
-  .svc-card__body  { padding: 1rem 1rem 0.4rem; flex: 1; }
-  .svc-card__title { color: #F39C12; font-weight: 700; font-size: 0.95rem; margin-bottom: 0.5rem; transition: color 0.35s; }
-  .svc-card__desc  { color: #aaa; font-size: 0.8rem; margin-bottom: 0.7rem; line-height: 1.5; transition: color 0.35s; }
+  .svc-card__body {
+    padding: 1rem 1rem 0.4rem;
+    flex: 1;
+  }
+  .svc-card__title {
+    color: #f39c12;
+    font-weight: 700;
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+    transition: color 0.35s;
+  }
+  .svc-card__desc {
+    color: #aaa;
+    font-size: 0.8rem;
+    margin-bottom: 0.7rem;
+    line-height: 1.5;
+    transition: color 0.35s;
+  }
 
-  .svc-bullet       { display: flex; align-items: flex-start; gap: 0.4rem; color: #ccc; font-size: 0.78rem; margin-bottom: 0.35rem; transition: color 0.35s; }
-  .svc-bullet__icon { width: 13px; height: 13px; object-fit: contain; margin-top: 2px; flex-shrink: 0; transition: filter 0.35s; }
+  .svc-bullet {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.4rem;
+    color: #ccc;
+    font-size: 0.78rem;
+    margin-bottom: 0.35rem;
+    transition: color 0.35s;
+  }
+  .svc-bullet__icon {
+    width: 13px;
+    height: 13px;
+    object-fit: contain;
+    margin-top: 2px;
+    flex-shrink: 0;
+    transition: filter 0.35s;
+  }
 
   /* Hover: todo se invierte a negro sobre amarillo */
-  .svc-card:hover .svc-card__title { color: #000; }
-  .svc-card:hover .svc-card__desc  { color: #111; }
-  .svc-card:hover .svc-bullet      { color: #111; }
-  .svc-card:hover .svc-bullet__icon { filter: brightness(0); }
+  .svc-card:hover .svc-card__title {
+    color: #000;
+  }
+  .svc-card:hover .svc-card__desc {
+    color: #111;
+  }
+  .svc-card:hover .svc-bullet {
+    color: #111;
+  }
+  .svc-card:hover .svc-bullet__icon {
+    filter: brightness(0);
+  }
 
-  .svc-card__footer { padding: 0.75rem 1rem 1rem; border-top: 1px solid rgba(243,156,18,0.12); transition: border-color 0.35s; }
-  .svc-card:hover .svc-card__footer { border-top-color: rgba(0,0,0,0.15); }
+  .svc-card__footer {
+    padding: 0.75rem 1rem 1rem;
+    border-top: 1px solid rgba(243, 156, 18, 0.12);
+    transition: border-color 0.35s;
+  }
+  .svc-card:hover .svc-card__footer {
+    border-top-color: rgba(0, 0, 0, 0.15);
+  }
   .svc-btn {
     display: inline-block;
-    background: #F39C12; color: #000;
-    font-weight: 700; font-size: 0.8rem;
+    background: #f39c12;
+    color: #000;
+    font-weight: 700;
+    font-size: 0.8rem;
     padding: 0.42rem 1.1rem;
-    border-radius: 0.4rem; text-decoration: none;
-    transition: background 0.35s, color 0.35s, transform 0.2s;
+    border-radius: 0.4rem;
+    text-decoration: none;
+    transition:
+      background 0.35s,
+      color 0.35s,
+      transform 0.2s;
   }
-  .svc-btn:hover { background: #ffc04a; transform: scale(1.04); }
+  .svc-btn:hover {
+    background: #ffc04a;
+    transform: scale(1.04);
+  }
   /* Cuando la CARD está en hover, el botón se invierte */
   .svc-card:hover .svc-btn {
     background: #000;
-    color: #F39C12;
+    color: #f39c12;
   }
   .svc-card:hover .svc-btn:hover {
     background: #1a1a1a;
     color: #ffc04a;
   }
 
-  /* ── Sectores layout ── */
-  .sectors-layout {
+  /* ── Sectores ── */
+  .sectors-title-block {
+    text-align: center;
+    margin-top: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  .sectors-title-block .section-heading {
+    text-align: center;
+    line-height: 1.25;
+  }
+
+  /* 2 columnas: texto | grid */
+  .sectors-two-col {
     display: flex;
     flex-direction: row;
     gap: 3rem;
     align-items: flex-start;
-    margin-top: 1.5rem;
   }
-  @media (max-width: 900px) { .sectors-layout { flex-direction: column; } }
-  .sectors-text { flex: 1; max-width: 44%; text-align: left; }
-  @media (max-width: 900px) { .sectors-text { max-width: 100%; text-align: left; } }
+  @media (max-width: 900px) {
+    .sectors-two-col {
+      flex-direction: column;
+      gap: 2rem;
+    }
+  }
 
-  .sectors-grid {
+  .sectors-col-text {
+    flex: 1;
+    max-width: 42%;
+    padding-top: 0.4rem;
+  }
+  @media (max-width: 900px) {
+    .sectors-col-text {
+      max-width: 100%;
+    }
+  }
+
+  .sectors-col-grid {
     flex: 1;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 0.9rem;
+    gap: 0.85rem;
   }
-  @media (max-width: 480px) { .sectors-grid { grid-template-columns: 1fr; } }
+  @media (max-width: 480px) {
+    .sectors-col-grid {
+      grid-template-columns: 1fr;
+    }
+  }
 
   .sector-item {
-    display: flex; align-items: center; gap: 0.8rem;
-    background: rgba(255,255,255,0.03);
-    border: 1px solid rgba(243,156,18,0.15);
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(243, 156, 18, 0.15);
     border-radius: 0.75rem;
     padding: 0.8rem 0.9rem;
-    transition: background 0.3s, border-color 0.3s, transform 0.3s;
+    transition:
+      background 0.3s,
+      border-color 0.3s,
+      transform 0.3s;
     cursor: default;
   }
   .sector-item:hover {
-    background: rgba(243,156,18,0.07);
-    border-color: rgba(243,156,18,0.45);
+    background: rgba(243, 156, 18, 0.07);
+    border-color: rgba(243, 156, 18, 0.45);
     transform: translateY(-3px);
   }
   .sector-icon-wrap {
-    width: 42px; height: 42px;
-    background: rgba(243,156,18,0.1);
+    width: 42px;
+    height: 42px;
+    background: rgba(243, 156, 18, 0.1);
     border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     flex-shrink: 0;
   }
-  .sector-icon-wrap img { width: 24px; height: 24px; object-fit: contain; }
-  .sector-name { color: #F39C12; font-weight: 700; font-size: 0.88rem; }
-  .sector-desc { color: #9ca3af; font-size: 0.75rem; margin-top: 2px; }
+  .sector-icon-wrap img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+  }
+  .sector-name {
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 0.88rem;
+  }
+  .sector-desc {
+    color: #d1d5db;
+    font-size: 0.75rem;
+    margin-top: 2px;
+  }
 
   /* ── Proyectos carousel ── */
-  .proj-outer    { position: relative; padding: 0 2.5rem; }
-  .proj-viewport { overflow: hidden; }
-  .proj-track    {
-    display: flex; gap: 1.4rem;
-    transition: transform 0.5s cubic-bezier(0.4,0,0.2,1);
+  .proj-outer {
+    position: relative;
+    padding: 0 2.5rem;
+  }
+  .proj-viewport {
+    overflow: hidden;
+  }
+  .proj-track {
+    display: flex;
+    gap: 1.4rem;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   }
   .proj-card {
     flex-shrink: 0;
     width: calc(33.333% - 0.95rem);
     background: #1a1a1a;
-    border: 1px solid rgba(243,156,18,0.2);
-    border-radius: 1rem; overflow: hidden;
-    transition: box-shadow 0.3s, transform 0.3s;
+    border: 1px solid rgba(243, 156, 18, 0.2);
+    border-radius: 1rem;
+    overflow: hidden;
+    transition:
+      box-shadow 0.3s,
+      transform 0.3s;
   }
-  .proj-card:hover { box-shadow: 0 0 30px rgba(243,156,18,0.28); transform: translateY(-4px); }
+  .proj-card:hover {
+    box-shadow: 0 0 30px rgba(243, 156, 18, 0.28);
+    transform: translateY(-4px);
+  }
 
-  .proj-card__img-wrap { overflow: hidden; }
-  .proj-card__img { width: 100%; height: 175px; object-fit: cover; transition: transform 0.4s; }
-  .proj-card:hover .proj-card__img { transform: scale(1.05); }
-  .proj-card__body  { padding: 0.85rem 1rem; }
-  .proj-card__title { color: #ddd; font-size: 0.85rem; font-weight: 600; line-height: 1.4; }
+  .proj-card__img-wrap {
+    overflow: hidden;
+  }
+  .proj-card__img {
+    width: 100%;
+    height: 175px;
+    object-fit: cover;
+    transition: transform 0.4s;
+  }
+  .proj-card:hover .proj-card__img {
+    transform: scale(1.05);
+  }
+  .proj-card__body {
+    padding: 0.85rem 1rem;
+  }
+  .proj-card__title {
+    color: #ddd;
+    font-size: 0.85rem;
+    font-weight: 600;
+    line-height: 1.4;
+  }
 
-  @media (max-width: 900px) { .proj-card { width: calc(50% - 0.7rem); } }
-  @media (max-width: 540px) { .proj-card { width: 80vw; } }
+  @media (max-width: 900px) {
+    .proj-card {
+      width: calc(50% - 0.7rem);
+    }
+  }
+  @media (max-width: 540px) {
+    .proj-card {
+      width: 80vw;
+    }
+  }
 
   .proj-arrow {
-    position: absolute; top: 50%; transform: translateY(-50%);
-    width: 42px; height: 42px;
-    background: rgba(243,156,18,0.12);
-    border: 1px solid rgba(243,156,18,0.4);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 42px;
+    height: 42px;
+    background: rgba(243, 156, 18, 0.12);
+    border: 1px solid rgba(243, 156, 18, 0.4);
     border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    cursor: pointer; z-index: 10; color: #F39C12;
-    font-size: 1.15rem; font-weight: bold;
-    transition: background 0.2s, transform 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    color: #f39c12;
+    font-size: 1.15rem;
+    font-weight: bold;
+    transition:
+      background 0.2s,
+      transform 0.2s;
   }
-  .proj-arrow:hover { background: rgba(243,156,18,0.32); transform: translateY(-50%) scale(1.12); }
-  .proj-arrow--left  { left: 0; }
-  .proj-arrow--right { right: 0; }
+  .proj-arrow:hover {
+    background: rgba(243, 156, 18, 0.32);
+    transform: translateY(-50%) scale(1.12);
+  }
+  .proj-arrow--left {
+    left: 0;
+  }
+  .proj-arrow--right {
+    right: 0;
+  }
 </style>
 
 <script>
-  // Carousel de proyectos
-  const track  = document.getElementById('projTrack') as HTMLElement | null;
-  const cards  = track ? (Array.from(track.children) as HTMLElement[]) : [];
+  // ── Carousel de proyectos (flechas manuales) ──
+  const track = document.getElementById("projTrack") as HTMLElement | null;
+  const cards = track ? (Array.from(track.children) as HTMLElement[]) : [];
   let idx = 0;
 
   function slideProj() {
     if (!track || !cards.length) return;
-    const gap  = 22;
-    const w    = (cards[0] as HTMLElement).offsetWidth + gap;
+    const gap = 22;
+    const w = (cards[0] as HTMLElement).offsetWidth + gap;
     track.style.transform = `translateX(-${idx * w}px)`;
   }
 
-  document.getElementById('projNext')?.addEventListener('click', () => {
+  document.getElementById("projNext")?.addEventListener("click", () => {
     idx = (idx + 1) % cards.length;
     slideProj();
   });
-  document.getElementById('projPrev')?.addEventListener('click', () => {
+  document.getElementById("projPrev")?.addEventListener("click", () => {
     idx = (idx - 1 + cards.length) % cards.length;
     slideProj();
   });
 
-  window.addEventListener('resize', slideProj);
-  document.addEventListener('astro:page-load', slideProj);
+  window.addEventListener("resize", slideProj);
+  document.addEventListener("astro:page-load", slideProj);
+
+  // ── Carrusel automático de servicios (derecha → izquierda) ──
+  (function () {
+    const outer = document.getElementById(
+      "svcCarouselOuter",
+    ) as HTMLElement | null;
+    const svcTrack = document.getElementById("svcTrack") as HTMLElement | null;
+    if (!outer || !svcTrack) return;
+
+    const SPEED = 0.55; // px por frame (velocidad)
+    let offset = 0;
+    let paused = false;
+    let rafId: number;
+
+    // Ancho total de la mitad del track (las tarjetas originales)
+    function getHalfWidth(): number {
+      const children = Array.from(svcTrack.children) as HTMLElement[];
+      const half = Math.floor(children.length / 2);
+      const gap = 19; // aprox gap en px (1.2rem)
+      let w = 0;
+      for (let i = 0; i < half; i++) {
+        w += children[i].offsetWidth + gap;
+      }
+      return w;
+    }
+
+    function animate() {
+      if (!paused) {
+        offset += SPEED;
+        const halfW = getHalfWidth();
+        if (offset >= halfW) offset = 0; // loop perfecto
+        svcTrack.style.transform = `translateX(-${offset}px)`;
+      }
+      rafId = requestAnimationFrame(animate);
+    }
+
+    // Pausar al hover sobre cualquier tarjeta
+    outer.addEventListener("mouseenter", () => {
+      paused = true;
+    });
+    outer.addEventListener("mouseleave", () => {
+      paused = false;
+    });
+
+    rafId = requestAnimationFrame(animate);
+  })();
 </script>
