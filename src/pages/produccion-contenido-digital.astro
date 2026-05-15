@@ -3,294 +3,279 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 
+// Hero background
+import heroBg from '../assets/images/IMÁGENES/producción de contenido digital chat gpt.png';
+
+// Galería "Soluciones diseñadas"
+import galImg1 from '../assets/images/services/produccion_contenido_digital/contenio-mejora-visibilidad.png';
+import galImg2 from '../assets/images/services/produccion_contenido_digital/material-audiovisual-para-redes.png';
+import galImg3 from '../assets/images/services/produccion_contenido_digital/proceso-agil-colaborativo.png';
+
+// Iconos features
+import iconVideo   from '../assets/images/RECURSOS/camara-de-video amarillo.png';
+import iconRedes   from '../assets/images/RECURSOS/redes sociales amarillo.png';
+import iconDiseno  from '../assets/images/RECURSOS/diseño gráfico amarillo.png';
+import icon3d      from '../assets/images/RECURSOS/3d amarillo.png';
+
+// Caso de uso
+import casoImg from '../assets/images/IMÁGENES/casa del bosque.png';
+
 const pageTitle = "Producción de Contenido Digital | INNOVA SYSTEMS CENTER – Videos, Diseño y Contenidos Profesionales";
-const pageDescription = "Servicio profesional de producción de contenido digital: videos corporativos, piezas para redes sociales, animación 3D y diseño gráfico. Impulsa la presencia visual de tu marca con contenido creativo y de alto impacto.";
-const pageKeywords = "marketing digital, producción de contenido, contenido audiovisual, video corporativo, animación 2D, animación 3D, diseño gráfico, contenido para redes, estrategias de contenido, branding visual, publicidad digital, campañas digitales, fotografía profesional, storytelling visual, creación de contenido para empresas, edición de video, diseño de piezas para redes, marketing de marca, contenido multimedia, videos institucionales, creatividad digital";
+const pageDescription = "Servicio profesional de producción de contenido digital: videos corporativos, piezas para redes sociales, animación 3D y diseño gráfico. Impulsa tu presencia visual con contenido creativo de alto impacto.";
+const pageKeywords = "marketing digital, producción de contenido, contenido audiovisual, video corporativo, animación 2D, animación 3D, diseño gráfico, contenido para redes, branding visual, publicidad digital, edición de video, diseño de piezas para redes, marketing de marca";
+
+const galeria = [
+  { img: galImg1.src, label: "Contenido que mejora tu visibilidad" },
+  { img: galImg2.src, label: "Material audiovisual para redes" },
+  { img: galImg3.src, label: "Proceso ágil y colaborativo" },
+];
+
+const pasos = [
+  { num: "01", titulo: "Análisis de marca y audiencia",     desc: "Entendemos tu identidad, objetivos y público para crear contenido que realmente conecta con quien importa." },
+  { num: "02", titulo: "Estrategia de contenido y guion",   desc: "Diseñamos el concepto creativo, guion y formatos adaptados a cada plataforma y campaña." },
+  { num: "03", titulo: "Creación y publicación de contenido", desc: "Producimos videos, diseños y piezas audiovisuales con estándares profesionales listos para publicar." },
+  { num: "04", titulo: "Optimización y seguimiento",        desc: "Medimos resultados, ajustamos formatos y optimizamos para mejorar el impacto en cada entrega." },
+];
+
+const herramientas = [
+  "Adobe Premiere", "After Effects",
+  "Photoshop",      "Illustrator",
+  "DaVinci Resolve","Blender 3D",
+  "Canva Pro",      "Figma",
+];
+
+const faqs = [
+  { q: "¿Pueden crear contenido para mis redes sociales?",  a: "Sí, creamos contenido diseñado para Instagram, Facebook, TikTok, YouTube y campañas digitales con formatos optimizados para cada plataforma." },
+  { q: "¿También graban videos o solo editan?",             a: "Podemos grabar, editar o trabajar con el material que ya tengas según tu necesidad y presupuesto." },
+  { q: "¿Qué tipo de contenido 3D pueden crear?",           a: "Modelado 3D, animaciones de producto, renders fotorrealistas y piezas audiovisuales para marketing o educación." },
+];
 ---
 
 <Layout title={pageTitle} description={pageDescription} keywords={pageKeywords}>
   <Header />
 
-  <main class="min-h-screen flex flex-col items-center justify-center text-center">
+  <main class="mk-main">
 
-    <!-- HERO -->
-    <section class="w-full h-screen flex flex-col justify-center bg-center bg-cover bg-fixed" data-animation="animate-fade-in"
-      style="background-image: url('/assets/images/fondohome.png');">
-
-      <div class="w-full max-w-[1480px] px-6 mx-auto flex flex-col items-start text-left mt-10 mb-15">
-
-        <!-- TEXTO CORTO HERO -->
-        <p class="text-white text-3xl lg:text-6xl font-bold max-w-3xl mb-6">
-          Contenido visual que conecta y posiciona tu marca
-        </p>
-
-        <!-- H1 SEO -->
-        <h1 class="text-white text-xl lg:text-2xl font-normal max-w-3xl mb-8">
-          Agencia de contenido digital
+    <!-- ══════════════ HERO ══════════════ -->
+    <section class="mk-hero" style={`background-image:url('${heroBg.src}')`}>
+      <div class="mk-hero__overlay"></div>
+      <div class="mk-hero__content">
+        <p class="mk-tag">PRODUCCIÓN DE CONTENIDO DIGITAL</p>
+        <h1 class="mk-hero__title">
+          Contenido visual que conecta<br />
+          <span class="text-[#F39C12]">y posiciona tu marca</span>
         </h1>
-
-        <!-- BOTÓN CTA -->
-        <div class="flex flex-col sm:flex-row items-start">
-          <a href="/contacto#formulario-contacto"
-            class="w-full sm:w-auto text-center bg-[#F39C12] font-bold text-dark-900 text-lg px-6 py-3 rounded-md hover:bg-[#FEB94CFA] transition duration-300 text-black">
-            Solicita tu Consultoría Gratuita
-          </a>
-        </div>
-
+        <p class="mk-hero__sub">
+          Agencia de contenido digital
+        </p>
+        <a href="/contacto#formulario-contacto" class="mk-btn-primary">
+          Solicita tu Consultoría Gratuita
+        </a>
       </div>
+    </section>
 
-      <!-- LOGOS -->
-      <div class="w-full max-w-[1480px] px-6 mx-auto">
-        <div class="flex flex-wrap items-center gap-10 opacity-80">
-          <img src="/assets/images/projects/icasa_de_bosque.png" class="h-20 sm:h-30 object-contain hover:opacity-100 transition" />
+    <!-- ══════════════ NUESTRO SERVICIO ══════════════ -->
+    <section class="mk-section bg-[#111]">
+      <div class="mk-container">
+        <p class="mk-tag text-center">PRODUCCIÓN AUDIOVISUAL Y CONTENIDO DIGITAL</p>
+
+        <div class="mk-service-grid">
+          <!-- Columna izquierda: título + texto -->
+          <div class="mk-service-text">
+            <h2 class="mk-heading">
+              Contenido profesional que inspira, comunica
+              <span class="text-[#F39C12]"> y atrae clientes</span>
+            </h2>
+            <p class="text-gray-300 text-base leading-relaxed">
+              Creamos contenido visual de alto impacto: videos, animaciones, diseños y piezas digitales
+              que elevan tu identidad de marca y mejoran tu presencia en redes, plataformas educativas
+              y campañas digitales.
+            </p>
+          </div>
+
+          <!-- Columna derecha: 4 feature cards -->
+          <div class="mk-features">
+            <div class="mk-feature-card">
+              <img src={iconVideo.src} alt="" class="mk-feature-icon" />
+              <div>
+                <h3 class="mk-feature-title">Videos profesionales</h3>
+                <p class="mk-feature-desc">Producción, grabación y edición de videos corporativos, educativos y publicitarios de alto impacto.</p>
+              </div>
+            </div>
+            <div class="mk-feature-card">
+              <img src={iconRedes.src} alt="" class="mk-feature-icon" />
+              <div>
+                <h3 class="mk-feature-title">Contenido para redes</h3>
+                <p class="mk-feature-desc">Piezas creativas, reels, animaciones y contenido listo para convertir en campañas digitales.</p>
+              </div>
+            </div>
+            <div class="mk-feature-card">
+              <img src={iconDiseno.src} alt="" class="mk-feature-icon" />
+              <div>
+                <h3 class="mk-feature-title">Diseño gráfico</h3>
+                <p class="mk-feature-desc">Diseños profesionales, retoque fotográfico y branding visual que comunica tu identidad con fuerza.</p>
+              </div>
+            </div>
+            <div class="mk-feature-card">
+              <img src={icon3d.src} alt="" class="mk-feature-icon" />
+              <div>
+                <h3 class="mk-feature-title">Animación y 3D</h3>
+                <p class="mk-feature-desc">Modelado, renders y animaciones 3D para productos, proyectos o campañas de marketing.</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- BENEFICIOS -->
-    <section class="w-full bg-[#151515] text-white py-20">
-      <div class="max-w-2xl mx-auto">
-        <p class="text-[#F39C12] font-semibold text-center tracking-wide mb-3">
-          PRODUCCIÓN AUDIOVISUAL Y CONTENIDO DIGITAL
-        </p>
-
-        <h2 class="text-4xl md:text-5xl font-bold text-center mb-6">
-          Contenido profesional que inspira, comunica y atrae clientes
+    <!-- ══════════════ GALERÍA — SOLUCIONES ══════════════ -->
+    <section class="mk-section bg-[#0a0a0a]">
+      <div class="mk-container">
+        <p class="mk-tag text-center">A NUESTROS CLIENTES</p>
+        <h2 class="mk-heading text-center mb-12">
+          Soluciones diseñadas para hacer tu<br />información más útil
         </h2>
 
-        <p class="text-lg text-gray-300 text-center max-w-3xl mx-auto mb-14">
-          Creamos contenido visual de alto impacto: videos, animaciones, diseños y piezas digitales que elevan tu identidad de marca y mejoran tu presencia en redes, plataformas educativas y campañas digitales.
-        </p>
-      </div>
-
-      <div class="max-w-[1480px] mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
-
-        <div class="text-center">
-          <i data-lucide="video" class="w-12 h-12 text-[#F39C12] mx-auto mb-4"></i>
-          <h3 class="text-xl font-semibold mb-2">Videos profesionales</h3>
-          <p class="text-gray-400">Producción, grabación y edición de videos corporativos, educativos y publicitarios.</p>
+        <div class="mk-gallery">
+          {galeria.map(g => (
+            <div class="mk-gallery-card">
+              <div class="mk-gallery-img-wrap">
+                <img src={g.img} alt={g.label} class="mk-gallery-img" />
+              </div>
+              <div class="mk-gallery-badge-wrap">
+                <span class="mk-gallery-badge">{g.label}</span>
+              </div>
+            </div>
+          ))}
         </div>
-
-        <div class="text-center">
-          <i data-lucide="instagram" class="w-12 h-12 text-[#F39C12] mx-auto mb-4"></i>
-          <h3 class="text-xl font-semibold mb-2">Contenido para redes</h3>
-          <p class="text-gray-400">Piezas creativas, reels, animaciones y contenido listo para campañas digitales.</p>
-        </div>
-
-        <div class="text-center">
-          <i data-lucide="palette" class="w-12 h-12 text-[#F39C12] mx-auto mb-4"></i>
-          <h3 class="text-xl font-semibold mb-2">Diseño gráfico</h3>
-          <p class="text-gray-400">Diseños profesionales, retoque fotográfico y branding visual.</p>
-        </div>
-
-        <div class="text-center">
-          <i data-lucide="boxes" class="w-12 h-12 text-[#F39C12] mx-auto mb-4"></i>
-          <h3 class="text-xl font-semibold mb-2">Animación y 3D</h3>
-          <p class="text-gray-400">Modelado, renders y animaciones 3D para productos, proyectos o marketing.</p>
-        </div>
-
       </div>
     </section>
 
-    <!-- SERVICIOS ESPECÍFICOS -->
-    <section class="w-full py-24 bg-[#0A0A0A]">
-      <div class="max-w-[1480px] mx-auto px-6 space-y-16 text-left">
-
-        <h2 class="text-4xl lg:text-5xl text-white font-bold">
-          Servicios de contenido digital diseñados para tu marca
+    <!-- ══════════════ NUESTRO PROCESO ══════════════ -->
+    <section class="mk-section bg-[#111]">
+      <div class="mk-container">
+        <p class="mk-tag text-center">NUESTRO PROCESO</p>
+        <h2 class="mk-heading text-center">
+          Un proceso claro para potenciar tu marca<br />con marketing y contenido digital
         </h2>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-
-          <div class="flex items-start gap-4">
-            <i data-lucide="film" class="w-6 h-6 text-[#F39C12] mt-1"></i>
-            <p class="text-gray-300 text-lg">
-              Edición de videos corporativos, educativos y publicitarios.
-            </p>
-          </div>
-
-          <div class="flex items-start gap-4">
-            <i data-lucide="sparkles" class="w-6 h-6 text-[#F39C12] mt-1"></i>
-            <p class="text-gray-300 text-lg">
-              Creación de contenido para redes sociales y campañas digitales.
-            </p>
-          </div>
-
-          <div class="flex items-start gap-4">
-            <i data-lucide="brush" class="w-6 h-6 text-[#F39C12] mt-1"></i>
-            <p class="text-gray-300 text-lg">
-              Diseño gráfico, branding visual y retoque fotográfico profesional.
-            </p>
-          </div>
-
-          <div class="flex items-start gap-4">
-            <i data-lucide="box" class="w-6 h-6 text-[#F39C12] mt-1"></i>
-            <p class="text-gray-300 text-lg">
-              Animación y producción de objetos 3D para contenido digital.
-            </p>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- POR QUÉ NOSOTROS -->
-    <section class="w-full py-24 bg-[#0A0A0A]">
-      <div class="max-w-[1480px] mx-auto px-6 space-y-24 text-left">
-
-        <h2 class="text-4xl lg:text-5xl text-white font-bold">Creatividad, técnica y estrategia en cada pieza</h2>
-
-        <!-- BLOQUE 1 -->
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
-          <div>
-            <h3 class="text-4xl text-white font-bold mb-6">Contenido que mejora tu visibilidad</h3>
-            <p class="text-gray-300 text-lg mb-6">
-              Creamos contenido que no solo se ve bien, sino que mejora tu presencia digital y refuerza tu mensaje.
-            </p>
-          </div>
-          <img src="/assets/images/services/produccion_contenido_digital/contenio-mejora-visibilidad.png" class="rounded-xl w-full object-cover h-80" />
-        </div>
-
-        <!-- BLOQUE 2 -->
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
-          <img src="/assets/images/services/produccion_contenido_digital/material-audiovisual-para-redes.png" class="rounded-xl w-full object-cover h-80 order-2 lg:order-1" />
-          <div class="order-1 lg:order-2">
-            <h3 class="text-4xl text-white font-bold mb-6">Material audiovisual optimizado para redes</h3>
-            <p class="text-gray-300 text-lg mb-6">
-              Videos cortos, animaciones y piezas visuales diseñadas para convertir mejor en redes sociales.
-            </p>
-          </div>
-        </div>
-
-        <!-- BLOQUE 3 -->
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
-          <div>
-            <h3 class="text-4xl text-white font-bold mb-6">Proceso ágil y colaborativo</h3>
-            <p class="text-gray-300 text-lg mb-6">
-              Gestionamos la producción de principio a fin, con entregas rápidas y revisiones claras.
-            </p>
-          </div>
-          <img src="/assets/images/services/produccion_contenido_digital/proceso-agil-colaborativo.png" class="rounded-xl w-full object-cover h-80" />
-        </div>
-
-      </div>
-    </section>
-
-    <!-- CASOS DE ÉXITO -->
-    <section class="w-full py-24 bg-[#151515]">
-      <div class="max-w-[1480px] mx-auto px-6">
-
-        <div class="text-center mb-16">
-          <p class="text-[#F39C12] font-semibold tracking-wide mb-2">CASOS DE ÉXITO</p>
-          <h2 class="text-4xl font-bold text-white mb-4">Contenido digital que genera impacto real</h2>
-          <p class="text-gray-300 max-w-3xl mx-auto">
-            Historias de marcas que mejoraron su presencia digital con contenido profesional y creativo.
-          </p>
-        </div>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-
-          <a href="/casa-del-bosque-video-educativo" class="group bg-[#0D0D0D] rounded-xl overflow-hidden relative shadow-lg border border-[#1A1A1A] text-left">
-            <div class="relative h-64 overflow-hidden">
-              <img src="/assets/images/projects/icasa_de_bosque.png" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
-              <div class="absolute inset-0 bg-gradient-to-b from-transparent to-[#0D0D0D] opacity-70"></div>
-            </div>
-            <div class="p-6 relative">
-              <div class="absolute top-0 left-0 w-full h-1 bg-[#F39C12]"></div>
-              <h3 class="font-bold text-xl text-white">Audiovisual Educativo "Casa del Bosque": Diseño y Narrativa Interactiva</h3>
-              <p class="text-gray-300 text-sm mt-2">Producción de contenido educativo audiovisual enfocado en diseño visual y narrativa.</p>
-            </div>
-          </a>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- TECNOLOGÍAS -->
-    <section class="w-full py-24 bg-[#0A0A0A]">
-      <div class="max-w-[1480px] mx-auto px-6 text-center">
-
-        <p class="text-[#F39C12] font-semibold tracking-wide mb-3">TECNOLOGÍAS</p>
-        <h2 class="text-4xl font-bold text-white mb-6">Herramientas de producción profesional</h2>
-
-        <p class="text-gray-300 max-w-2xl mx-auto mb-16">
-          Trabajamos con software de diseño, edición y animación de estándar profesional.
+        <p class="text-center text-gray-300 max-w-2xl mx-auto mb-12">
+          Nuestro flujo de trabajo está diseñado para crear contenido auténtico, alineado con tu marca
+          y optimizado para cada plataforma digital.
         </p>
 
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-10 text-white">
-
-          <div class="bg-[#151515] p-6 rounded-xl border border-[#1A1A1A]">Adobe Premiere</div>
-          <div class="bg-[#151515] p-6 rounded-xl border border-[#1A1A1A]">After Effects</div>
-          <div class="bg-[#151515] p-6 rounded-xl border border-[#1A1A1A]">Photoshop</div>
-          <div class="bg-[#151515] p-6 rounded-xl border border-[#1A1A1A]">Illustrator</div>
-          <div class="bg-[#151515] p-6 rounded-xl border border-[#1A1A1A]">DaVinci Resolve</div>
-          <div class="bg-[#151515] p-6 rounded-xl border border-[#1A1A1A]">Blender 3D</div>
-          <div class="bg-[#151515] p-6 rounded-xl border border-[#1A1A1A]">Canva Pro</div>
-          <div class="bg-[#151515] p-6 rounded-xl border border-[#1A1A1A]">Figma</div>
-
+        <div class="mk-steps">
+          {pasos.map(p => (
+            <div class="mk-step-card">
+              <span class="mk-step-num">{p.num}</span>
+              <div class="mk-step-text">
+                <h3 class="mk-step-title">{p.titulo}</h3>
+                <p class="mk-step-desc">{p.desc}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
 
-    <!-- FAQ -->
-    <section class="w-full py-24 bg-[#0A0A0A]">
-      <div class="max-w-[1480px] mx-auto px-6 flex flex-col items-center">
+    <!-- ══════════════ HERRAMIENTAS ══════════════ -->
+    <section class="mk-section bg-[#0a0a0a]">
+      <div class="mk-container">
+        <div class="mk-tech-grid">
+          <!-- Texto izquierda -->
+          <div class="mk-tech-text">
+            <p class="mk-tag">TECNOLOGÍAS</p>
+            <h2 class="mk-heading">
+              Herramientas de producción<br />profesional
+            </h2>
+            <p class="text-gray-300 text-base leading-relaxed">
+              Trabajamos con software de diseño, edición y animación de estándar profesional,
+              garantizando la más alta calidad en cada pieza que entregamos para tu marca
+              y tus campañas digitales.
+            </p>
+          </div>
 
-        <h2 class="text-center text-4xl font-bold text-white mb-4">Preguntas frecuentes</h2>
-        <p class="text-center text-gray-400 max-w-2xl mx-auto mb-16">
+          <!-- Grid de herramientas derecha -->
+          <div class="mk-tech-badges">
+            {herramientas.map(t => (
+              <div class="mk-tech-badge">{t}</div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════ CASO DE USO ══════════════ -->
+    <section class="mk-section bg-[#111]">
+      <div class="mk-container">
+        <p class="mk-tag text-center">CASOS DE ÉXITO</p>
+        <h2 class="mk-heading text-center mb-12">
+          Contenido digital que genera impacto real
+        </h2>
+        <p class="text-center text-gray-300 max-w-2xl mx-auto mb-12">
+          Historias de marcas que mejoraron su presencia digital con contenido profesional
+          y creativo que conecta, emociona y convierte.
+        </p>
+
+        <div class="mk-caso">
+          <div class="mk-caso-img-wrap">
+            <img src={casoImg.src} alt="Casa del Bosque" class="mk-caso-img" />
+          </div>
+          <div class="mk-caso-body">
+            <div class="mk-caso-bar"></div>
+            <h3 class="mk-caso-title">
+              Audiovisual Educativo "Casa del Bosque": Diseño y Narrativa Interactiva
+            </h3>
+            <p class="mk-caso-client">Casa del Bosque — Muestra Infantil</p>
+            <p class="mk-caso-desc">
+              Producción de contenido educativo audiovisual enfocado en diseño visual y narrativa
+              interactiva, creando una experiencia inmersiva para el público infantil con animaciones
+              y piezas gráficas de alto impacto.
+            </p>
+            <a href="/casa-del-bosque-video-educativo" class="mk-link mt-4 inline-block">
+              Ver caso completo →
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════ FAQ ══════════════ -->
+    <section class="mk-section bg-[#0a0a0a]">
+      <div class="mk-container mk-container--narrow">
+        <h2 class="mk-heading text-center mb-4">Preguntas frecuentes</h2>
+        <p class="text-center text-gray-400 mb-12">
           Resolvemos las dudas más comunes sobre producción de contenido digital.
         </p>
 
-        <div class="space-y-4 max-w-2xl w-full text-left" id="faq-container">
-
-          <div class="bg-[#111] w-full rounded-xl p-6 border border-gray-800">
-            <button class="w-full flex justify-between items-center faq-toggle">
-              <span class="text-white font-semibold text-lg">¿Pueden crear contenido para mis redes sociales?</span>
-              <svg class="w-6 h-6 text-[#F39C12]" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M10 12l-6-6h12l-6 6z"></path>
-              </svg>
-            </button>
-            <div class="faq-content hidden mt-4 text-gray-400 text-sm">
-              Sí, creamos contenido diseñado para Instagram, Facebook, TikTok, YouTube y campañas digitales.
+        <div id="mk-faq-list" class="space-y-4">
+          {faqs.map((f, i) => (
+            <div class="mk-faq-item" data-faq={i}>
+              <button class="mk-faq-btn" type="button">
+                <span>{f.q}</span>
+                <svg class="mk-faq-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                </svg>
+              </button>
+              <div class="mk-faq-answer">{f.a}</div>
             </div>
-          </div>
-
-          <div class="bg-[#111] w-full rounded-xl p-6 border border-gray-800">
-            <button class="w-full flex justify-between items-center faq-toggle">
-              <span class="text-white font-semibold text-lg">¿También graban videos o solo editan?</span>
-              <svg class="w-6 h-6 text-[#F39C12]" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M10 12l-6-6h12l-6 6z"></path>
-              </svg>
-            </button>
-            <div class="faq-content hidden mt-4 text-gray-400 text-sm">
-              Podemos grabar, editar o trabajar con material que ya tengas según tu necesidad.
-            </div>
-          </div>
-
-          <div class="bg-[#111] w-full rounded-xl p-6 border border-gray-800">
-            <button class="w-full flex justify-between items-center faq-toggle">
-              <span class="text-white font-semibold text-lg">¿Qué tipo de contenido 3D pueden crear?</span>
-              <svg class="w-6 h-6 text-[#F39C12]" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M10 12l-6-6h12l-6 6z"></path>
-              </svg>
-            </button>
-            <div class="faq-content hidden mt-4 text-gray-400 text-sm">
-              Modelado 3D, animaciones de producto, renders y piezas para marketing o educación.
-            </div>
-          </div>
-
+          ))}
         </div>
       </div>
     </section>
 
-    <!-- CTA FINAL -->
-    <section id="contacto" class="w-full bg-[#151515] text-white py-20 text-center">
-      <div class="max-w-2xl mx-auto px-6">
-        <h2 class="text-3xl font-bold mb-4">¿Listo para crear contenido profesional para tu marca?</h2>
-        <p class="text-gray-300 mb-8">
-          Agenda una sesión con nuestro equipo y descubre cómo mejorar tu presencia digital con contenido visual de alto impacto.
+    <!-- ══════════════ CTA FINAL ══════════════ -->
+    <section class="mk-cta">
+      <div class="mk-container text-center">
+        <p class="mk-tag" style="display:flex; justify-content:center;">¿LISTO PARA AUTOMATIZAR Y OPTIMIZAR TUS DATOS?</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+          Agenda una sesión con nuestro equipo y descubre cómo<br />
+          <span class="text-[#F39C12]">elevar tu presencia digital con contenido profesional</span>
+        </h2>
+        <p class="text-gray-300 max-w-2xl mx-auto mb-10">
+          Hay un mundo de posibilidades esperándote. Cuéntanos tu proyecto y te ayudamos
+          a crear contenido que conecte con tu audiencia y potencie tu marca.
         </p>
-        <a href="/contacto#formulario-contacto" class="bg-[#F39C12] text-black font-bold px-8 py-4 rounded-md hover:bg-[#FEB94CFA] transition duration-300">
+        <a href="/contacto#formulario-contacto" class="mk-btn-primary mk-btn-primary--lg">
           Agenda una Sesión
         </a>
       </div>
@@ -299,5 +284,222 @@ const pageKeywords = "marketing digital, producción de contenido, contenido aud
   </main>
 
   <Footer />
-
 </Layout>
+
+<style is:global>
+  /* ── Base ── */
+  .mk-main        { min-height: 100vh; display: flex; flex-direction: column; background: #0a0a0a; color: #fff; }
+  .mk-container   { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; width: 100%; }
+  .mk-container--narrow { max-width: 780px; }
+  .mk-section     { padding: 5rem 1.5rem; }
+
+  .mk-tag {
+    color: #F39C12; font-weight: 700; font-size: 0.78rem;
+    letter-spacing: 0.15em; text-transform: uppercase;
+    margin-bottom: 0.75rem; display: block;
+  }
+  .mk-heading {
+    font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+    font-weight: 800; color: #fff; line-height: 1.2; margin-bottom: 1.25rem;
+  }
+  .mk-link       { color: #F39C12; font-weight: 600; text-decoration: none; }
+  .mk-link:hover { text-decoration: underline; }
+
+  /* ── Botón primario ── */
+  .mk-btn-primary {
+    display: inline-block;
+    background: #F39C12; color: #000;
+    font-weight: 700; font-size: 0.95rem;
+    padding: 0.85rem 2rem; border-radius: 0.5rem;
+    text-decoration: none;
+    transition: background 0.25s, transform 0.2s;
+  }
+  .mk-btn-primary:hover { background: #ffc04a; transform: scale(1.04); }
+  .mk-btn-primary--lg   { font-size: 1.05rem; padding: 1rem 2.8rem; }
+
+  /* ── Hero ── */
+  .mk-hero {
+    position: relative; min-height: 100vh;
+    background-size: cover; background-position: center top;
+    background-repeat: no-repeat;
+    display: flex; align-items: center;
+  }
+  .mk-hero__overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(120deg, rgba(0,0,0,0.78) 50%, rgba(0,0,0,0.35) 100%);
+    z-index: 1;
+  }
+  .mk-hero__content {
+    position: relative; z-index: 2;
+    max-width: 1200px; margin: 0 auto; padding: 8rem 1.5rem 4rem;
+    text-align: left;
+  }
+  .mk-hero__title {
+    font-size: clamp(2rem, 5vw, 3.8rem);
+    font-weight: 900; line-height: 1.15; margin-bottom: 1rem; color: #fff;
+  }
+  .mk-hero__sub {
+    color: #ddd; font-size: 1.15rem; margin-bottom: 2rem; max-width: 480px;
+  }
+
+  /* ── Servicio grid ── */
+  .mk-service-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 3.5rem; align-items: start; margin-top: 1.5rem;
+  }
+  @media (max-width: 860px) { .mk-service-grid { grid-template-columns: 1fr; gap: 2rem; } }
+
+  /* ── Feature cards ── */
+  .mk-features { display: flex; flex-direction: column; gap: 1rem; }
+  .mk-feature-card {
+    display: flex; align-items: flex-start; gap: 1rem;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(243,156,18,0.18);
+    border-radius: 0.9rem; padding: 1rem 1.2rem;
+    transition: border-color 0.3s, background 0.3s;
+  }
+  .mk-feature-card:hover {
+    border-color: rgba(243,156,18,0.5);
+    background: rgba(243,156,18,0.06);
+  }
+  .mk-feature-icon  { width: 36px; height: 36px; object-fit: contain; flex-shrink: 0; margin-top: 2px; }
+  .mk-feature-title { color: #fff; font-weight: 700; font-size: 0.93rem; margin-bottom: 0.25rem; }
+  .mk-feature-desc  { color: #9ca3af; font-size: 0.8rem; line-height: 1.5; }
+
+  /* ── Galería 3 imágenes ── */
+  .mk-gallery {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem;
+  }
+  @media (max-width: 768px) { .mk-gallery { grid-template-columns: 1fr; } }
+
+  .mk-gallery-card {
+    border-radius: 0.85rem; overflow: hidden;
+    background: #1a1a1a; border: 1px solid rgba(243,156,18,0.15);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex; flex-direction: column;
+  }
+  .mk-gallery-card:hover { transform: translateY(-5px); box-shadow: 0 8px 32px rgba(243,156,18,0.2); }
+  .mk-gallery-img-wrap { overflow: hidden; }
+  .mk-gallery-img   { width: 100%; height: 200px; object-fit: cover; display: block; transition: transform 0.4s; }
+  .mk-gallery-card:hover .mk-gallery-img { transform: scale(1.06); }
+  .mk-gallery-badge-wrap { padding: 0.8rem 1rem; }
+  .mk-gallery-badge {
+    display: inline-block; background: #F39C12; color: #fff;
+    font-size: 0.73rem; font-weight: 700;
+    padding: 0.3rem 0.8rem; border-radius: 999px;
+    line-height: 1.4; text-align: center;
+  }
+
+  /* ── Pasos del proceso 2×2 ── */
+  .mk-steps {
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.2rem;
+  }
+  @media (max-width: 640px) { .mk-steps { grid-template-columns: 1fr; } }
+
+  .mk-step-card {
+    background: #1a1a1a;
+    border: 1px solid rgba(243,156,18,0.15);
+    border-radius: 1rem;
+    display: flex; align-items: center; gap: 1.2rem;
+    padding: 1.5rem 1.4rem;
+    transition: border-color 0.3s, transform 0.3s;
+  }
+  .mk-step-card:hover { border-color: #F39C12; transform: translateY(-4px); }
+
+  .mk-step-num {
+    font-size: 2.2rem; font-weight: 900; color: #F39C12;
+    line-height: 1; flex-shrink: 0; min-width: 52px;
+  }
+  .mk-step-title { color: #fff; font-size: 0.98rem; font-weight: 700; margin-bottom: 0.4rem; }
+  .mk-step-desc  { color: #9ca3af; font-size: 0.82rem; line-height: 1.5; }
+
+  /* ── Herramientas ── */
+  .mk-tech-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 4rem; align-items: center;
+  }
+  @media (max-width: 768px) { .mk-tech-grid { grid-template-columns: 1fr; gap: 2.5rem; } }
+
+  .mk-tech-badges {
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.9rem;
+  }
+  .mk-tech-badge {
+    background: #1a1a1a;
+    border: 1px solid rgba(243,156,18,0.2);
+    border-radius: 0.75rem;
+    padding: 1rem 1.2rem;
+    color: #fff; font-weight: 600; font-size: 0.93rem;
+    text-align: center;
+    transition: border-color 0.3s, background 0.3s, transform 0.3s;
+    cursor: default;
+  }
+  .mk-tech-badge:hover {
+    border-color: #F39C12;
+    background: rgba(243,156,18,0.08);
+    transform: translateY(-3px);
+  }
+
+  /* ── Caso de uso ── */
+  .mk-caso {
+    display: grid; grid-template-columns: 340px 1fr;
+    gap: 2.5rem; align-items: center;
+    background: #1a1a1a;
+    border: 1px solid rgba(243,156,18,0.2);
+    border-radius: 1.1rem; overflow: hidden;
+    max-width: 860px; margin: 0 auto;
+  }
+  @media (max-width: 700px) { .mk-caso { grid-template-columns: 1fr; } }
+  .mk-caso-img-wrap { overflow: hidden; height: 100%; min-height: 260px; }
+  .mk-caso-img      { width: 100%; height: 100%; object-fit: cover; min-height: 260px; transition: transform 0.4s; }
+  .mk-caso-img-wrap:hover .mk-caso-img { transform: scale(1.05); }
+  .mk-caso-body  { padding: 2rem 2rem 2rem 0.5rem; position: relative; }
+  @media (max-width: 700px) { .mk-caso-body { padding: 1.5rem; } }
+  .mk-caso-bar   { width: 100%; height: 3px; background: #F39C12; margin-bottom: 1.25rem; border-radius: 2px; }
+  .mk-caso-title  { color: #fff; font-size: 1.15rem; font-weight: 800; margin-bottom: 0.4rem; line-height: 1.35; }
+  .mk-caso-client { color: #F39C12; font-weight: 600; font-size: 0.9rem; margin-bottom: 0.75rem; }
+  .mk-caso-desc   { color: #9ca3af; font-size: 0.88rem; line-height: 1.6; }
+
+  /* ── FAQ ── */
+  .mk-faq-item {
+    background: #1a1a1a;
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 0.8rem; overflow: hidden;
+    transition: border-color 0.3s;
+  }
+  .mk-faq-item.open { border-color: rgba(243,156,18,0.4); }
+  .mk-faq-btn {
+    width: 100%; display: flex; justify-content: space-between; align-items: center;
+    padding: 1.1rem 1.25rem; background: none; border: none; cursor: pointer;
+    color: #fff; font-size: 0.97rem; font-weight: 600; text-align: left; gap: 1rem;
+  }
+  .mk-faq-arrow {
+    width: 20px; height: 20px; color: #F39C12; flex-shrink: 0; transition: transform 0.3s;
+  }
+  .mk-faq-item.open .mk-faq-arrow { transform: rotate(180deg); }
+  .mk-faq-answer {
+    max-height: 0; overflow: hidden;
+    color: #9ca3af; font-size: 0.88rem; line-height: 1.6;
+    transition: max-height 0.35s ease, padding 0.3s;
+    padding: 0 1.25rem;
+  }
+  .mk-faq-item.open .mk-faq-answer { max-height: 200px; padding: 0 1.25rem 1.1rem; }
+
+  /* ── CTA Final ── */
+  .mk-cta {
+    padding: 5rem 1.5rem;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a0d00 50%, #0a0a0a 100%);
+    text-align: center;
+  }
+</style>
+
+<script>
+  document.querySelectorAll('.mk-faq-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.closest('.mk-faq-item');
+      if (!item) return;
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.mk-faq-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+</script>
