@@ -12,10 +12,16 @@ import iconTuercas   from '../assets/images/ÍCONOS IMÁGENES SERVICIOS ANÁLISI
 import iconVerificado from '../assets/images/ÍCONOS IMÁGENES SERVICIOS ANÁLISIS DE DATOS/verificado amarillo.png';
 
 // Galería "Expertos"
-import galImg1 from '../assets/images/ÍCONOS IMÁGENES SERVICIOS ANÁLISIS DE DATOS/1.png';
-import galImg2 from '../assets/images/ÍCONOS IMÁGENES SERVICIOS ANÁLISIS DE DATOS/2.png';
-import galImg3 from '../assets/images/ÍCONOS IMÁGENES SERVICIOS ANÁLISIS DE DATOS/3.png';
-import galImg4 from '../assets/images/ÍCONOS IMÁGENES SERVICIOS ANÁLISIS DE DATOS/4.png';
+import galImg1 from '../assets/images/RECURSOS/equipo-recoleccion-analisis-datos.png';
+import galImg2 from '../assets/images/RECURSOS/procesos-recoleccion-claros-personalizables.png';
+import galImg3 from '../assets/images/RECURSOS/analisis-estrategico-revela-oportunidades.png';
+import galImg4 from '../assets/images/RECURSOS/analisis-datos-integrado.png';
+
+// Imágenes de números para pasos
+import numImg1 from '../assets/images/RECURSOS/1.png';
+import numImg2 from '../assets/images/RECURSOS/2.png';
+import numImg3 from '../assets/images/RECURSOS/3.png';
+import numImg4 from '../assets/images/RECURSOS/4.png';
 
 // Caso de uso
 import casoImg from '../assets/images/ÍCONOS IMÁGENES SERVICIOS ANÁLISIS DE DATOS/makikuna.png';
@@ -32,10 +38,10 @@ const galeria = [
 ];
 
 const pasos = [
-  { num: "01", img: galImg1.src, titulo: "Recolección de datos",    desc: "Procesos claros y adaptados a tus sistemas para capturar información confiable desde el origen." },
-  { num: "02", img: galImg2.src, titulo: "Limpieza y organización", desc: "Depuramos, validamos y estructuramos tus datos para convertirlos en información útil y confiable." },
-  { num: "03", img: galImg3.src, titulo: "Análisis profundo",        desc: "Detectamos patrones, oportunidades, fallos y comportamientos clave en tu operación." },
-  { num: "04", img: galImg4.src, titulo: "Entrega estratégica",      desc: "Recibes reportes visuales, insights accionables y recomendaciones claras para mejorar decisiones." },
+  { num: "01", img: numImg1.src, titulo: "Recolección de datos",    desc: "Procesos claros y adaptados a tus sistemas para capturar información confiable desde el origen." },
+  { num: "02", img: numImg2.src, titulo: "Limpieza y organización", desc: "Depuramos, validamos y estructuramos tus datos para convertirlos en información útil y confiable." },
+  { num: "03", img: numImg3.src, titulo: "Análisis profundo",        desc: "Detectamos patrones, oportunidades, fallos y comportamientos clave en tu operación." },
+  { num: "04", img: numImg4.src, titulo: "Entrega estratégica",      desc: "Recibes reportes visuales, insights accionables y recomendaciones claras para mejorar decisiones." },
 ];
 
 const faqs = [
@@ -156,7 +162,6 @@ const faqs = [
               <!-- Imagen izquierda -->
               <div class="ad-step-img-wrap">
                 <img src={p.img} alt={p.titulo} class="ad-step-img" />
-                <span class="ad-step-num-badge">{p.num}</span>
               </div>
               <!-- Texto derecha -->
               <div class="ad-step-text">
@@ -373,15 +378,6 @@ const faqs = [
     display: block; transition: transform 0.4s;
   }
   .ad-step-card:hover .ad-step-img { transform: scale(1.07); }
-  .ad-step-num-badge {
-    position: absolute; top: 10px; left: 10px;
-    background: #F39C12; color: #000;
-    font-size: 1.1rem; font-weight: 900;
-    padding: 0.25rem 0.6rem;
-    border-radius: 0.45rem;
-    line-height: 1;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.4);
-  }
 
   /* Texto derecha */
   .ad-step-text  { padding: 1.25rem 1.1rem; flex: 1; display: flex; flex-direction: column; justify-content: center; }
