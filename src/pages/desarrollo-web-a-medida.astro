@@ -18,6 +18,12 @@ import iconSeo      from '../assets/images/ÍCONOS/marca-de-verificacion amarill
 import iconSeguro   from '../assets/images/RECURSOS/verificado amarillo.png';
 import iconInteg    from '../assets/images/RECURSOS/conexión amarillo.png';
 
+// Imagenes de números para pasos
+import numImg1 from '../assets/images/RECURSOS/1.png';
+import numImg2 from '../assets/images/RECURSOS/2.png';
+import numImg3 from '../assets/images/RECURSOS/3.png';
+import numImg4 from '../assets/images/RECURSOS/4.png';
+
 // Caso de uso
 import casoImg from '../assets/images/IMÁGENES/redciclarr.png';
 
@@ -33,10 +39,10 @@ const galeria = [
 ];
 
 const pasos = [
-  { num: "01", titulo: "Arquitectura y análisis", desc: "Definimos objetivos, funcionalidades clave y la estructura ideal para tu sitio web desde el inicio." },
-  { num: "02", titulo: "Diseño UX/UI", desc: "Creamos una interfaz moderna, intuitiva y adaptada a tu marca y a tus usuarios objetivo." },
-  { num: "03", titulo: "Desarrollo funcional", desc: "Construimos el sitio con tecnologías modernas, código escalable y buenas prácticas de ingeniería." },
-  { num: "04", titulo: "Optimización y lanzamiento", desc: "SEO técnico, velocidad, seguridad y pruebas exhaustivas antes de publicar al mundo." },
+  { num: "01", img: numImg1.src, titulo: "Arquitectura y análisis", desc: "Definimos objetivos, funcionalidades clave y la estructura ideal para tu sitio web desde el inicio." },
+  { num: "02", img: numImg2.src, titulo: "Diseño UX/UI", desc: "Creamos una interfaz moderna, intuitiva y adaptada a tu marca y a tus usuarios objetivo." },
+  { num: "03", img: numImg3.src, titulo: "Desarrollo funcional", desc: "Construimos el sitio con tecnologías modernas, código escalable y buenas prácticas de ingeniería." },
+  { num: "04", img: numImg4.src, titulo: "Optimización y lanzamiento", desc: "SEO técnico, velocidad, seguridad y pruebas exhaustivas antes de publicar al mundo." },
 ];
 
 const tecnologias = [
@@ -165,7 +171,11 @@ const faqs = [
         <div class="dw-steps">
           {pasos.map(p => (
             <div class="dw-step-card">
-              <span class="dw-step-num">{p.num}</span>
+              <!-- Imagen izquierda -->
+              <div class="dw-step-img-wrap">
+                <img src={p.img} alt={p.titulo} class="dw-step-img" />
+              </div>
+              <!-- Texto derecha -->
               <div class="dw-step-text">
                 <h3 class="dw-step-title">{p.titulo}</h3>
                 <p class="dw-step-desc">{p.desc}</p>
@@ -393,24 +403,44 @@ const faqs = [
   .dw-steps {
     display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.2rem;
   }
-  @media (max-width: 640px) { .dw-steps { grid-template-columns: 1fr; } }
+  @media (max-width: 768px) { .dw-steps { grid-template-columns: 1fr; } }
 
   .dw-step-card {
     background: #1a1a1a;
     border: 1px solid rgba(243,156,18,0.15);
     border-radius: 1rem; overflow: hidden;
-    display: flex; align-items: center; gap: 1.2rem;
-    padding: 1.5rem 1.4rem;
+    display: flex; flex-direction: row; align-items: stretch;
     transition: border-color 0.3s, transform 0.3s;
   }
   .dw-step-card:hover { border-color: #F39C12; transform: translateY(-4px); }
 
-  .dw-step-num {
-    font-size: 2.2rem; font-weight: 900; color: #F39C12;
-    line-height: 1; flex-shrink: 0; min-width: 52px;
+  .dw-step-img-wrap {
+    position: relative;
+    width: 130px; flex-shrink: 0;
+    overflow: hidden;
   }
+  .dw-step-img {
+    width: 100%; height: 100%; object-fit: cover;
+    display: block; transition: transform 0.4s;
+  }
+  .dw-step-card:hover .dw-step-img { transform: scale(1.07); }
+
+  .dw-step-text { padding: 1.25rem 1.1rem; flex: 1; display: flex; flex-direction: column; justify-content: center; }
   .dw-step-title { color: #fff; font-size: 0.98rem; font-weight: 700; margin-bottom: 0.4rem; }
   .dw-step-desc  { color: #9ca3af; font-size: 0.82rem; line-height: 1.5; }
+
+  @media (max-width: 480px) {
+    .dw-step-card {
+      flex-direction: column;
+    }
+    .dw-step-img-wrap {
+      width: 100%;
+      height: 150px;
+    }
+    .dw-step-text {
+      padding: 1.25rem 1rem;
+    }
+  }
 
   /* ── Tecnologías ── */
   .dw-tech-grid {
@@ -421,6 +451,9 @@ const faqs = [
 
   .dw-tech-badges {
     display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.9rem;
+  }
+  @media (max-width: 480px) {
+    .dw-tech-badges { grid-template-columns: 1fr; }
   }
   .dw-tech-badge {
     background: #1a1a1a;

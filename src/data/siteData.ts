@@ -44,15 +44,6 @@ export const category = {
       { image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/blender/blender-original.svg", alt: "Blender", class: "" },
       { image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg", alt: "Canva", class: "" },
     ]
-  },
-  "base-de-datos": {
-    title: "Base de datos",
-    images: [
-      { image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg", alt: "MySQL", class: "" },
-      { image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg", alt: "MongoDB", class: "" },
-      { image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg", alt: "PostgreSQL", class: "" },
-      { image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg", alt: "SQLite", class: "" },
-    ]
   }
 };
 
@@ -121,34 +112,6 @@ export const services = [
     ],
   },
   {
-    id: "3",
-    slug: "automatizacion-bases-de-datos",
-    category: "base-de-datos",
-    title: "🗂 Gestión y Administración de Bases de Datos",
-    logo: `${base}/assets/images/pagina19.webp`,
-    description: "Una base de datos eficiente mejora la organización y la seguridad de la información empresarial. En <strong>Innova Systems Center</strong>, diseñamos sistemas robustos para almacenar, gestionar y proteger datos clave de tu negocio.",
-    aditional: "<br><br>📌 <strong>Servicios de administración de bases de datos:</strong>",
-    items: [
-      "<strong>Análisis, diseño e implementación de bases de datos</strong> personalizadas.",
-      "<strong>Integración con aplicaciones y plataformas</strong> para optimizar procesos.",
-      "<strong>Automatización de copias de seguridad</strong> para evitar pérdida de información.",
-      "<strong>Seguridad y control de acceso</strong> para proteger datos confidenciales.",
-      "<strong>Optimización del rendimiento</strong> para una gestión más rápida y eficiente."
-    ],
-    technologies: [
-      { name: "MySql", icono: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" },
-      { name: "ODK", icono: `${base}/assets/icons/odk.svg` },
-      { name: "Enketo", icono: `${base}/assets/icons/enketo.svg` },
-      { name: "PostgreSQL", icono: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" },
-    ],
-    images: [
-      { image: `${base}/assets/images/pagina20.webp`, alt: "Interfaz de inicio de sesión seguro para plataforma" },
-      { image: `${base}/assets/images/pagina19.webp`, alt: "Panel de análisis de datos con gráficos y reportes estadísticos" },
-      { image: `${base}/assets/images/pagina18.webp`, alt: "Sistema de administración de bases de datos con visualización de registros" },
-      { image: `${base}/assets/images/pagina17.webp`, alt: "Diagrama entidad-relación para modelado y diseño de bases de datos" },
-    ],
-  },
-  {
     id: "4",
     slug: "produccion-contenido-digital",
     category: "advertising",
@@ -198,7 +161,7 @@ export const projects = [
   },
   {
     id: "3",
-    category: "base-de-datos",
+    category: "data-analysis",
     title: "Gestión de datos",
     logo: `${base}/assets/images/projects/imakikuna.png`,
     name_client: "Fundación Makikuna",
