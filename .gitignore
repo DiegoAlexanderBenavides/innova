@@ -22,3 +22,8 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# Archivos grandes excluidos de git
+*.zip
+src/assets/images/empresas_aliadas/RECURSOS-*.zip
+src/assets/images/RECURSOS-*.zip
