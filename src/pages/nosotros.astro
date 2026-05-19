@@ -5,8 +5,11 @@ import Footer from "../components/Footer.astro";
 import Contact from "../components/Contact.astro";
 
 import heroBg from "../assets/images/RECURSOS/equipoInnova.png";
-import fotoEquipo1 from "../assets/images/somos/innova_principal.png";
-import fotoEquipo2 from "../assets/images/somos/jf.png";
+import fotoCol40 from "../assets/images/RECURSOS/col40.png";
+import fotoEquipoProg from "../assets/images/RECURSOS/equipo_programando.jpg";
+import foto2Fondo from "../assets/images/RECURSOS/foto 2 fondoooo.png";
+import fotoJovenesRurales from "../assets/images/RECURSOS/foto jovenes rurales.png";
+import imgNuestrosValores from "../assets/images/RECURSOS/nuestros-valores.png";
 import imgMision from "../assets/images/RECURSOS/mision amarillo.png";
 import imgVision from "../assets/images/RECURSOS/vision amarillo.png";
 import imgValores1 from "../assets/images/RECURSOS/marca-de-verificacion amarillo.png";
@@ -163,13 +166,13 @@ const tecnologias = [
           <!-- Fotos -->
           <div class="ns-historia-imgs">
             <img
-              src={fotoEquipo1.src}
-              alt="Equipo Innova"
+              src={fotoCol40.src}
+              alt="Equipo Innova en campo"
               class="ns-hist-img ns-hist-img--top"
             />
             <img
-              src={fotoEquipo2.src}
-              alt="Oficina Innova"
+              src={fotoEquipoProg.src}
+              alt="Equipo programando"
               class="ns-hist-img ns-hist-img--bot"
             />
           </div>
@@ -180,74 +183,60 @@ const tecnologias = [
     <!-- ═══════════ MISIÓN / VISIÓN / VALORES ═══════════ -->
     <section class="ns-section bg-[#151515]">
       <div class="ns-container">
-        <div class="ns-mvv-grid">
-          <!-- MISIÓN -->
-          <div class="ns-mvv-card">
-            <div class="ns-mvv-top">
-              <img src={imgMision.src} alt="Misión" class="ns-mvv-icon" />
-              <span class="ns-tag" style="margin:0">NUESTRA MISIÓN</span>
+        <div class="ns-mvv3-grid">
+
+          <!-- ── MISIÓN (izquierda, fondo oscuro) ── -->
+          <div class="ns-mvv3-card ns-mvv3-dark">
+            <img src={fotoCol40.src} alt="Equipo Innova" class="ns-mvv3-topimg" />
+            <div class="ns-mvv3-header">
+              <img src={imgMision.src} alt="Misión" class="ns-mvv3-icon" />
+              <span class="ns-mvv3-title">NUESTRA MISIÓN</span>
             </div>
-            <p class="ns-body mt-3">
-              Brindar soluciones informáticas innovadoras que optimicen
-              procesos, aumenten la eficiencia y potencien el crecimiento de las
-              empresas mediante tecnología avanzada y acompañamiento continuo.
+            <p class="ns-mvv3-body">
+              Brindar <strong class="ns-mvv3-highlight">soluciones informáticas innovadoras</strong>
+              que optimicen procesos, aumenten la eficiencia y potencien el crecimiento de las
+              empresas mediante tecnología avanzada, enfoque estratégico y acompañamiento continuo.
             </p>
           </div>
 
-          <!-- IMAGEN CENTRAL GRANDE -->
-          <div class="ns-mvv-center">
-            <img
-              src={fotoEquipo1.src}
-              alt="Equipo trabajando"
-              class="ns-mvv-big-img"
-            />
+          <!-- ── VISIÓN (centro, fondo oscuro) ── -->
+          <div class="ns-mvv3-card ns-mvv3-dark">
+            <img src={fotoJovenesRurales.src} alt="Jóvenes rurales" class="ns-mvv3-topimg" />
+            <div class="ns-mvv3-header">
+              <img src={imgVision.src} alt="Visión" class="ns-mvv3-icon" />
+              <span class="ns-mvv3-title">NUESTRA VISIÓN (2028)</span>
+            </div>
+            <p class="ns-mvv3-body">
+              Ser <strong class="ns-mvv3-highlight">líderes en innovación tecnológica en Colombia</strong>, desarrollando
+              soluciones avanzadas en IA, automatización, plataformas inteligentes y digitalización
+              empresarial para impactar sectores clave y transformar su productividad.
+            </p>
           </div>
 
-          <!-- VISIÓN -->
-          <div class="ns-mvv-card">
-            <div class="ns-mvv-top">
-              <img src={imgVision.src} alt="Visión" class="ns-mvv-icon" />
-              <span class="ns-tag" style="margin:0">NUESTROS VALORES</span>
-            </div>
-            <ul class="ns-valores-list">
+          <!-- ── VALORES (derecha, fondo oscuro) ── -->
+          <div class="ns-mvv3-card ns-mvv3-dark">
+            <img src={imgNuestrosValores.src} alt="Nuestros valores" class="ns-mvv3-topimg" />
+            <span class="ns-mvv3-title ns-mvv3-title--solo">NUESTROS VALORES</span>
+            <ul class="ns-mvv3-list">
               <li>
-                <img src={imgValores1.src} alt="" class="ns-val-icon" /><span
-                  ><strong>Innovación:</strong> mejoramos continuamente nuestras soluciones.</span
-                >
+                <img src={imgValores1.src} alt="" class="ns-mvv3-listicon" />
+                <span><strong>Innovación:</strong> mejoramos continuamente nuestras soluciones.</span>
               </li>
               <li>
-                <img src={imgValores1.src} alt="" class="ns-val-icon" /><span
-                  ><strong>Compromiso:</strong> resultados reales y medibles.</span
-                >
+                <img src={imgValores1.src} alt="" class="ns-mvv3-listicon" />
+                <span><strong>Compromiso:</strong> resultados reales y medibles para nuestros clientes.</span>
               </li>
               <li>
-                <img src={imgValores1.src} alt="" class="ns-val-icon" /><span
-                  ><strong>Transparencia:</strong> procesos claros y comunicación
-                  constante.</span
-                >
+                <img src={imgValores1.src} alt="" class="ns-mvv3-listicon" />
+                <span><strong>Transparencia:</strong> procesos claros, reportes y comunicación constante.</span>
               </li>
               <li>
-                <img src={imgValores1.src} alt="" class="ns-val-icon" /><span
-                  ><strong>Calidad:</strong> soluciones robustas, seguras y escalables.</span
-                >
+                <img src={imgValores1.src} alt="" class="ns-mvv3-listicon" />
+                <span><strong>Calidad:</strong> soluciones robustas, seguras y diseñadas para escalar.</span>
               </li>
             </ul>
           </div>
-        </div>
 
-        <!-- Visión abajo -->
-        <div class="ns-vision-bar">
-          <div class="ns-vision-content">
-            <img src={imgVision.src} alt="Visión" class="ns-mvv-icon" />
-            <div>
-              <p class="ns-tag" style="margin:0">NUESTRA VISIÓN (2028)</p>
-              <p class="ns-body" style="margin-top:0.5rem">
-                Ser líderes en innovación tecnológica en Colombia, desarrollando
-                soluciones avanzadas en IA, automatización y digitalización
-                empresarial para transformar sectores clave.
-              </p>
-            </div>
-          </div>
         </div>
       </div>
     </section>
@@ -274,8 +263,8 @@ const tecnologias = [
             </p>
           </div>
 
-          <div class="ns-team-card ns-team-card--featured">
-            <div class="ns-team-avatar ns-team-avatar--lg">
+          <div class="ns-team-card">
+            <div class="ns-team-avatar">
               <img src={imgBrayan.src} alt="Brayan Jamanoy" />
             </div>
             <h3 class="ns-team-name">Brayan Jamanoy</h3>
@@ -566,14 +555,9 @@ const tecnologias = [
     }
   }
   .ns-historia-imgs {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: column;
     gap: 1rem;
-  }
-  @media (max-width: 500px) {
-    .ns-historia-imgs {
-      grid-template-columns: 1fr;
-    }
   }
   .ns-hist-img {
     width: 100%;
@@ -581,17 +565,16 @@ const tecnologias = [
     object-fit: cover;
   }
   .ns-hist-img--top {
-    height: 260px;
+    height: 240px;
   }
   .ns-hist-img--bot {
-    height: 180px;
-    align-self: end;
+    height: 200px;
   }
 
   /* ─── Misión/Visión/Valores ─── */
   .ns-mvv-grid {
     display: grid;
-    grid-template-columns: 1fr 280px 1fr;
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     align-items: start;
     margin-bottom: 2rem;
@@ -655,8 +638,28 @@ const tecnologias = [
     flex-shrink: 0;
     margin-top: 2px;
   }
+  .ns-valores-hero-img {
+    width: 100%;
+    border-radius: 0.75rem;
+    object-fit: cover;
+    max-height: 150px;
+    margin-bottom: 1rem;
+    border: 1px solid rgba(243, 156, 18, 0.2);
+  }
+  .ns-vision-img {
+    width: 200px;
+    min-width: 160px;
+    height: 130px;
+    border-radius: 0.75rem;
+    object-fit: cover;
+    flex-shrink: 0;
+    border: 1px solid rgba(243, 156, 18, 0.25);
+  }
+  @media (max-width: 600px) {
+    .ns-vision-img { display: none; }
+  }
 
-  /* Visión bar */
+  /* Visión bar (legacy, kept for safety) */
   .ns-vision-bar {
     background: #1a1a1a;
     border: 1px solid rgba(243, 156, 18, 0.2);
@@ -669,7 +672,182 @@ const tecnologias = [
     align-items: flex-start;
   }
 
+  /* ─── MVV 3-columnas (nueva sección) ─── */
+  .ns-mvv3-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    align-items: stretch;
+  }
+  @media (max-width: 900px) {
+    .ns-mvv3-grid { grid-template-columns: 1fr; }
+  }
+
+  .ns-mvv3-card {
+    border-radius: 1.25rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Tarjeta oscura (Misión y Valores) */
+  .ns-mvv3-dark {
+    background: #1a1a1a;
+    border: 1px solid rgba(243,156,18,0.18);
+    padding-bottom: 1.5rem;
+  }
+
+  /* Tarjeta ámbar/naranja (Visión) */
+  .ns-mvv3-amber {
+    background: #E87C1E;
+    background: linear-gradient(160deg,#f39c12 0%,#d47c00 100%);
+  }
+
+  /* Imagen superior (ocupa todo el ancho de la tarjeta) */
+  .ns-mvv3-topimg {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+
+  /* Imagen inferior (Visión) */
+  .ns-mvv3-botimg {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    flex-shrink: 0;
+    margin-top: auto;
+  }
+
+  /* Cabecera icono + título (tarjetas oscuras) */
+  .ns-mvv3-header {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    padding: 1.1rem 1.25rem 0.25rem;
+  }
+
+  /* Cabecera ámbar */
+  .ns-mvv3-amber-top {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 1.25rem 1.25rem 0.5rem;
+  }
+
+  .ns-mvv3-icon {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+    flex-shrink: 0;
+  }
+  .ns-mvv3-icon--lg {
+    width: 52px;
+    height: 52px;
+  }
+
+  .ns-mvv3-title {
+    color: #f39c12;
+    font-weight: 800;
+    font-size: 0.95rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    line-height: 1.25;
+  }
+  .ns-mvv3-title--dark {
+    color: #1a0d00;
+    font-size: 1.1rem;
+  }
+  .ns-mvv3-title--solo {
+    display: block;
+    padding: 1rem 1.25rem 0.25rem;
+    color: #f39c12;
+    font-weight: 800;
+    font-size: 0.95rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  /* Texto párrafo tarjeta oscura */
+  .ns-mvv3-body {
+    color: #9ca3af;
+    font-size: 0.88rem;
+    line-height: 1.65;
+    padding: 0.5rem 1.25rem 1rem;
+    margin: 0;
+    transition: color 0.35s;
+  }
+  .ns-mvv3-highlight { color: #f39c12; transition: color 0.35s; }
+
+  /* Texto párrafo tarjeta ámbar (legacy) */
+  .ns-mvv3-amber-body {
+    color: #1a0d00;
+    font-size: 0.9rem;
+    line-height: 1.65;
+    padding: 0 1.25rem 1rem;
+    margin: 0;
+    text-align: justify;
+  }
+  .ns-mvv3-amber-body strong { color: #1a0d00; font-weight: 800; }
+
+  /* Lista Valores */
+  .ns-mvv3-list {
+    list-style: none;
+    padding: 0 1.25rem;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+  .ns-mvv3-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.55rem;
+    color: #9ca3af;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    transition: color 0.35s;
+  }
+  .ns-mvv3-list li strong { color: #f39c12; transition: color 0.35s; }
+  .ns-mvv3-listicon {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  /* ─── HOVER: tarjeta oscura MVV vira a ámbar ─── */
+  .ns-mvv3-dark {
+    transition: background 0.35s, border-color 0.35s, transform 0.3s, box-shadow 0.3s;
+  }
+  .ns-mvv3-dark:hover {
+    background: linear-gradient(160deg, #f39c12 0%, #d47c00 100%);
+    border-color: transparent;
+    transform: translateY(-6px);
+    box-shadow: 0 16px 40px rgba(243,156,18,0.35);
+  }
+  .ns-mvv3-dark:hover .ns-mvv3-title,
+  .ns-mvv3-dark:hover .ns-mvv3-title--solo {
+    color: #1a0d00;
+  }
+  .ns-mvv3-dark:hover .ns-mvv3-body {
+    color: #1a0d00;
+  }
+  .ns-mvv3-dark:hover .ns-mvv3-highlight {
+    color: #1a0d00;
+    font-weight: 900;
+  }
+  .ns-mvv3-dark:hover .ns-mvv3-list li {
+    color: #1a0d00;
+  }
+  .ns-mvv3-dark:hover .ns-mvv3-list li strong {
+    color: #1a0d00;
+  }
+
   /* ─── Equipo ─── */
+
   .ns-team-grid {
     display: flex;
     gap: 2rem;
@@ -687,18 +865,23 @@ const tecnologias = [
     min-width: 220px;
     max-width: 300px;
     transition:
+      background 0.35s,
+      border-color 0.35s,
       transform 0.3s,
       box-shadow 0.3s;
   }
   .ns-team-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 12px 40px rgba(243, 156, 18, 0.2);
-  }
-  .ns-team-card--featured {
-    border-color: #f39c12;
     background: #1f1700;
-    max-width: 320px;
-    padding: 2.5rem 1.5rem;
+    border-color: #f39c12;
+    transform: translateY(-8px);
+    box-shadow: 0 16px 40px rgba(243, 156, 18, 0.35);
+  }
+  /* featured class no longer used, kept for safety */
+  .ns-team-card--featured {
+    border-color: rgba(243, 156, 18, 0.15);
+    background: #1a1a1a;
+    max-width: 300px;
+    padding: 2rem 1.5rem;
   }
   .ns-team-avatar {
     width: 110px;
