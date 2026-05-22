@@ -25,6 +25,7 @@ import numImg4 from '../assets/images/RECURSOS/4.png';
 
 // Caso de uso
 import casoImg from '../assets/images/ÍCONOS IMÁGENES SERVICIOS ANÁLISIS DE DATOS/makikuna.png';
+import casoImg2 from '../assets/images/ven_y_juega.png';
 
 const pageTitle = "Recolección y Análisis de Datos | INNOVA SYSTEMS CENTER";
 const pageDescription = "Servicio especializado en recolección y análisis de datos. Dashboards, automatización y datos confiables para empresas modernas.";
@@ -182,24 +183,46 @@ const faqs = [
           Resultados reales con datos reales
         </h2>
 
-        <div class="ad-caso">
-          <div class="ad-caso-img-wrap">
-            <img src={casoImg.src} alt="Fundación Makikuna" class="ad-caso-img" />
+        <div class="ad-casos-grid">
+          <!-- Tarjeta 1: Makikuna Analítica -->
+          <div class="ad-caso-card">
+            <div class="ad-caso-card-img-wrap">
+              <img src={casoImg.src} alt="Fundación Makikuna" class="ad-caso-card-img" />
+            </div>
+            <div class="ad-caso-card-body">
+              <div class="ad-caso-card-bar"></div>
+              <h3 class="ad-caso-card-title">
+                Automatización para la Recolección y Analítica de Datos
+              </h3>
+              <p class="text-[#F39C12] font-semibold mb-2 text-sm">Fundación Makikuna</p>
+              <p class="ad-caso-card-desc mb-4">
+                Desarrollo de sistemas de datos (registro, análisis y visualización) para la
+                recolección eficiente y el entendimiento profundo de la información estratégica
+                de la fundación.
+              </p>
+              <div class="mt-auto">
+                <a href="/fundacion-makikuna-gestion-de-datos" class="ad-link inline-block">
+                  Ver caso completo →
+                </a>
+              </div>
+            </div>
           </div>
-          <div class="ad-caso-body">
-            <div class="ad-caso-bar"></div>
-            <h3 class="ad-caso-title">
-              Automatización para la Recolección y Analítica de Datos
-            </h3>
-            <p class="ad-caso-desc text-[#F39C12] font-semibold mb-2">Fundación Makikuna</p>
-            <p class="ad-caso-desc">
-              Desarrollo de sistemas de datos (registro, análisis y visualización) para la
-              recolección eficiente y el entendimiento profundo de la información estratégica
-              de la fundación.
-            </p>
-            <a href="/fundacion-makikuna-gestion-de-datos" class="ad-link mt-4 inline-block">
-              Ver caso completo →
-            </a>
+
+          <!-- Tarjeta 2: Ven y Juega -->
+          <div class="ad-caso-card">
+            <div class="ad-caso-card-img-wrap">
+              <img src={casoImg2.src} alt="Programa Ven y Juega" class="ad-caso-card-img" />
+            </div>
+            <div class="ad-caso-card-body">
+              <div class="ad-caso-card-bar"></div>
+              <h3 class="ad-caso-card-title">
+                Estructuración y Limpieza de Bases de Datos
+              </h3>
+              <p class="text-[#F39C12] font-semibold mb-2 text-sm">Fundación Makikuna (Programa Ven y Juega)</p>
+              <p class="ad-caso-card-desc mb-4">
+                La Fundación Makikuna enfrentaba una base de datos desorganizada y con registros duplicados en su programa “Ven y Juega”, dificultando la generación de reportes confiables y la evaluación del impacto del proyecto.
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -385,24 +408,72 @@ const faqs = [
   .ad-step-desc  { color: #9ca3af; font-size: 0.82rem; line-height: 1.5; }
 
   /* ── Caso de uso ── */
-  .ad-caso {
+  .ad-casos-grid {
     display: grid;
-    grid-template-columns: 340px 1fr;
-    gap: 2.5rem; align-items: center;
-    background: #1a1a1a;
-    border: 1px solid rgba(243,156,18,0.2);
-    border-radius: 1.1rem; overflow: hidden;
-    max-width: 860px; margin: 0 auto;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
   }
-  @media (max-width: 700px) { .ad-caso { grid-template-columns: 1fr; } }
-  .ad-caso-img-wrap { overflow: hidden; height: 100%; min-height: 260px; }
-  .ad-caso-img      { width: 100%; height: 100%; object-fit: cover; min-height: 260px; transition: transform 0.4s; }
-  .ad-caso-img-wrap:hover .ad-caso-img { transform: scale(1.05); }
-  .ad-caso-body  { padding: 2rem 2rem 2rem 0.5rem; position: relative; }
-  @media (max-width: 700px) { .ad-caso-body { padding: 1.5rem; } }
-  .ad-caso-bar   { width: 100%; height: 3px; background: #F39C12; margin-bottom: 1.25rem; border-radius: 2px; }
-  .ad-caso-title { color: #fff; font-size: 1.15rem; font-weight: 800; margin-bottom: 0.5rem; line-height: 1.35; }
-  .ad-caso-desc  { color: #9ca3af; font-size: 0.88rem; line-height: 1.6; }
+  @media (max-width: 860px) {
+    .ad-casos-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .ad-caso-card {
+    background: #1a1a1a;
+    border: 1px solid rgba(243,156,18,0.25);
+    border-radius: 1.1rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s, border-color 0.3s;
+    height: 100%;
+  }
+  .ad-caso-card:hover {
+    transform: translateY(-5px);
+    border-color: #F39C12;
+  }
+  .ad-caso-card-img-wrap {
+    overflow: hidden;
+    height: 240px;
+    width: 100%;
+  }
+  .ad-caso-card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s;
+  }
+  .ad-caso-card:hover .ad-caso-card-img {
+    transform: scale(1.05);
+  }
+  .ad-caso-card-body {
+    padding: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+  .ad-caso-card-bar {
+    width: 60px;
+    height: 3px;
+    background: #F39C12;
+    margin-bottom: 1.25rem;
+    border-radius: 2px;
+  }
+  .ad-caso-card-title {
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+    line-height: 1.35;
+  }
+  .ad-caso-card-desc {
+    color: #9ca3af;
+    font-size: 0.88rem;
+    line-height: 1.6;
+  }
 
   /* ── FAQ ── */
   .ad-faq-item {
