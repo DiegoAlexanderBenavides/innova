@@ -1,0 +1,374 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+// Import images
+import dashboardPrincipal from '../assets/images/venyjuega/dashboard_principal.png';
+import laptopDashboard from '../assets/images/venyjuega/laptop_dashboard.png';
+import cardDatos from '../assets/images/venyjuega/card_datos.png';
+import cardAnalisis from '../assets/images/venyjuega/card_analisis.png';
+import cardReportes from '../assets/images/venyjuega/card_reportes.png';
+import iconLimpieza from '../assets/images/venyjuega/icon_limpieza.png';
+import iconArquitectura from '../assets/images/venyjuega/icon_arquitectura.png';
+import iconOptimizacion from '../assets/images/venyjuega/icon_optimizacion.png';
+
+import iconAuditoria from '../assets/images/venyjuega/icon_auditoria.png';
+import iconDepuracion from '../assets/images/venyjuega/icon_depuracion.png';
+import iconEstructuracion from '../assets/images/venyjuega/icon_estructuracion.png';
+import iconVisualizacion from '../assets/images/venyjuega/icon_visualizacion.png';
+import iconPowerBi from '../assets/images/venyjuega/icon_powerbi.png';
+
+const pageTitle = "Caso de Éxito: Infraestructura de Datos para el Programa Ven y Juega – INNOVA SYSTEMS CENTER";
+const pageDescription = "Caso de éxito de la Fundación Makikuna: cómo estructuramos y creamos tableros analíticos en Power BI para el programa Ven y Juega.";
+const pageKeywords = "caso de éxito Ven y Juega, Fundación Makikuna, infraestructura de datos, Power BI, limpieza de datos, base de datos duplicados, analítica de datos, dashboards";
+---
+
+<Layout title={pageTitle} description={pageDescription} keywords={pageKeywords}>
+  <Header />
+
+  <main class="min-h-screen bg-[#000000] text-white font-sans overflow-hidden">
+    
+    <!-- ══════════════ HERO SECTION ══════════════ -->
+    <section class="relative pt-32 pb-24 md:py-36 px-6 max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <!-- Info Left -->
+      <div class="lg:col-span-5 flex flex-col z-10" data-aos="fade-right">
+        <p class="text-[#F39C12] font-semibold tracking-wider text-xs md:text-sm uppercase mb-4">Caso de Éxito</p>
+        <h1 class="text-3xl md:text-5xl font-black leading-tight mb-6">
+          Infraestructura de Datos y Tableros Analíticos <span class="text-[#F39C12] block md:inline"><br class="hidden md:block"/>para el Programa Ven y Juega</span>
+        </h1>
+        <p class="text-gray-300 text-base md:text-lg mb-8 leading-relaxed">
+          Convertimos datos dispersos e inconsistentes en información confiable y estructurada, lista para análisis y decisiones estratégicas.
+        </p>
+
+        <!-- Box Impacto -->
+        <div class="bg-[#121212] border border-[#222222] rounded-xl p-5 flex items-center gap-5 mb-8 max-w-md">
+          <div class="bg-[#241a08] p-3 rounded-lg flex-shrink-0">
+            <svg class="w-8 h-8 text-[#F39C12]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <div>
+            <p class="text-xs text-gray-400 font-medium uppercase tracking-wider">Impacto Principal Registrado</p>
+            <div class="flex items-baseline gap-2 mt-1">
+              <span class="text-2xl font-black text-white">100%</span>
+              <span class="text-sm text-gray-300 font-medium">Integridad, depuración y consistencia de datos</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mini Features Row -->
+        <div class="grid grid-cols-4 gap-4 pt-4 border-t border-[#1b1b1b]">
+          <div class="flex flex-col items-center text-center">
+            <div class="w-12 h-12 rounded-full border border-[#222] flex items-center justify-center mb-2 hover:border-[#F39C12] transition-colors">
+              <img src={iconLimpieza.src} alt="" class="w-6 h-6 object-contain" />
+            </div>
+            <span class="text-[10px] md:text-xs text-gray-400 font-medium">Limpieza de datos</span>
+          </div>
+          <div class="flex flex-col items-center text-center">
+            <div class="w-12 h-12 rounded-full border border-[#222] flex items-center justify-center mb-2 hover:border-[#F39C12] transition-colors">
+              <img src={iconArquitectura.src} alt="" class="w-6 h-6 object-contain" />
+            </div>
+            <span class="text-[10px] md:text-xs text-gray-400 font-medium">Arquitectura de info</span>
+          </div>
+          <div class="flex flex-col items-center text-center">
+            <div class="w-12 h-12 rounded-full border border-[#222] flex items-center justify-center mb-2 hover:border-[#F39C12] transition-colors">
+              <img src={iconPowerBi.src} alt="" class="w-6 h-6 object-contain" />
+            </div>
+            <span class="text-[10px] md:text-xs text-gray-400 font-medium">Power BI</span>
+          </div>
+          <div class="flex flex-col items-center text-center">
+            <div class="w-12 h-12 rounded-full border border-[#222] flex items-center justify-center mb-2 hover:border-[#F39C12] transition-colors">
+              <img src={iconOptimizacion.src} alt="" class="w-6 h-6 object-contain" />
+            </div>
+            <span class="text-[10px] md:text-xs text-gray-400 font-medium">Optimización estratégica</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Monitor Right -->
+      <div class="lg:col-span-7 flex justify-center relative" data-aos="fade-left">
+        <div class="relative w-full max-w-[640px]">
+          <!-- Glow effect -->
+          <div class="absolute -inset-1 bg-gradient-to-r from-[#F39C12] to-[#ffaa22] rounded-2xl blur-2xl opacity-10"></div>
+          <img src={dashboardPrincipal.src} alt="Ven y Juega Dashboard en Monitor" class="relative z-10 w-full object-contain rounded-lg drop-shadow-[0_20px_50px_rgba(243,156,18,0.15)]" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════ LO QUE LOGRAMOS SECTION ══════════════ -->
+    <section class="py-24 bg-[#070707] border-t border-[#111]">
+      <div class="max-w-[1200px] mx-auto px-6">
+        <p class="text-[#F39C12] text-xs md:text-sm font-bold tracking-widest text-center uppercase mb-3">Lo que logramos</p>
+        <h2 class="text-2xl md:text-4xl font-extrabold text-center text-white mb-16">
+          Resultados que generan confianza
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Card 1 -->
+          <div class="bg-[#121212] border border-[#222222] rounded-2xl p-8 flex flex-col transition-all duration-300 hover:border-[#F39C12]/40 hover:-translate-y-1">
+            <div class="mb-6">
+              <img src={cardDatos.src} alt="" class="w-12 h-12 object-contain" />
+            </div>
+            <h3 class="text-lg font-bold text-white mb-3">Datos confiables y sin duplicados</h3>
+            <p class="text-gray-400 text-sm leading-relaxed">
+              Entregamos una base depurada, unificada y 100% consistente para análisis y reportes.
+            </p>
+            <div class="w-8 h-[2px] bg-[#F39C12] mt-6"></div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="bg-[#121212] border border-[#222222] rounded-2xl p-8 flex flex-col transition-all duration-300 hover:border-[#F39C12]/40 hover:-translate-y-1">
+            <div class="mb-6">
+              <img src={cardAnalisis.src} alt="" class="w-12 h-12 object-contain" />
+            </div>
+            <h3 class="text-lg font-bold text-white mb-3">Análisis claro y decisiones rápidas</h3>
+            <p class="text-gray-400 text-sm leading-relaxed">
+              Tableros visuales que convierten datos complejos en información comprensible en tiempo real.
+            </p>
+            <div class="w-8 h-[2px] bg-[#F39C12] mt-6"></div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="bg-[#121212] border border-[#222222] rounded-2xl p-8 flex flex-col transition-all duration-300 hover:border-[#F39C12]/40 hover:-translate-y-1">
+            <div class="mb-6">
+              <img src={cardReportes.src} alt="" class="w-12 h-12 object-contain" />
+            </div>
+            <h3 class="text-lg font-bold text-white mb-3">Reportes listos para auditoría</h3>
+            <p class="text-gray-400 text-sm leading-relaxed">
+              Informes estructurados y automatizados para sustentar decisiones estratégicas ante juntas y aliados.
+            </p>
+            <div class="w-8 h-[2px] bg-[#F39C12] mt-6"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════ DESAFÍOS SECTION ══════════════ -->
+    <section class="py-24 max-w-[1200px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <!-- Laptop Left/Right? Left in mockup, wait, laptop is on the right, text is on the left -->
+      <div class="lg:col-span-5 flex flex-col justify-center">
+        <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-6 leading-tight">
+          ¿Enfrentas <span class="text-[#F39C12]">desafíos</span> con tus datos?
+        </h2>
+        <p class="text-gray-300 text-base md:text-lg mb-8 leading-relaxed">
+          Conectamos tus flujos de campo con la nube de forma transparente y sin errores.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
+          <a href="/contacto#formulario-contacto" class="bg-[#F39C12] hover:bg-[#ffaa22] text-black font-extrabold px-8 py-3 rounded-lg transition-all transform hover:scale-105 duration-200">
+            Agendar Diagnóstico Gratis
+          </a>
+          <a href="/recoleccion-y-analisis-de-datos" class="text-[#F39C12] hover:text-[#ffaa22] font-semibold text-sm flex items-center gap-1 group py-2">
+            Ver Detalles de la Integración <span class="group-hover:translate-x-1 transition-transform">→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Laptop Image -->
+      <div class="lg:col-span-7 flex justify-center">
+        <div class="relative w-full max-w-[580px]">
+          <img src={laptopDashboard.src} alt="Dashboard en laptop" class="relative z-10 w-full object-contain rounded-lg drop-shadow-[0_15px_30px_rgba(0,0,0,0.5)]" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════ NUESTRO PROCESO ══════════════ -->
+    <section class="py-24 bg-[#070707] border-t border-[#111]">
+      <div class="max-w-[1200px] mx-auto px-6">
+        <p class="text-[#F39C12] text-xs md:text-sm font-bold tracking-widest text-center uppercase mb-3 font-semibold">Nuestro Proceso</p>
+        <h2 class="text-2xl md:text-4xl font-extrabold text-center text-white mb-16">
+          Cómo transformamos tus datos
+        </h2>
+
+        <!-- Process Row/Grid -->
+        <div class="relative">
+          <!-- Desktop connecting dashed line -->
+          <div class="hidden md:block absolute top-12 left-[10%] right-[10%] h-[1px] border-t border-dashed border-[#F39C12]/30 z-0"></div>
+          
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 relative z-10">
+            <!-- Step 1 -->
+            <div class="flex flex-col items-center text-center">
+              <div class="w-24 h-24 rounded-full bg-[#121212] border border-[#222] flex items-center justify-center mb-6 group hover:border-[#F39C12] transition-colors duration-300">
+                <img src={iconAuditoria.src} alt="" class="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300" />
+              </div>
+              <h3 class="text-base font-bold text-white mb-2">1. Auditoría</h3>
+              <p class="text-gray-400 text-xs md:text-sm leading-relaxed max-w-[200px]">
+                Evaluamos la calidad y estructura de los datos existentes.
+              </p>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="flex flex-col items-center text-center">
+              <div class="w-24 h-24 rounded-full bg-[#121212] border border-[#222] flex items-center justify-center mb-6 group hover:border-[#F39C12] transition-colors duration-300">
+                <img src={iconDepuracion.src} alt="" class="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300" />
+              </div>
+              <h3 class="text-base font-bold text-white mb-2">2. Limpieza y depuración</h3>
+              <p class="text-gray-400 text-xs md:text-sm leading-relaxed max-w-[200px]">
+                Eliminamos duplicados y corregimos inconsistencias.
+              </p>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="flex flex-col items-center text-center">
+              <div class="w-24 h-24 rounded-full bg-[#121212] border border-[#222] flex items-center justify-center mb-6 group hover:border-[#F39C12] transition-colors duration-300">
+                <img src={iconEstructuracion.src} alt="" class="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300" />
+              </div>
+              <h3 class="text-base font-bold text-white mb-2">3. Estructuración</h3>
+              <p class="text-gray-400 text-xs md:text-sm leading-relaxed max-w-[200px]">
+                Organizamos la información en una arquitectura sólida lista para el análisis.
+              </p>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="flex flex-col items-center text-center">
+              <div class="w-24 h-24 rounded-full bg-[#121212] border border-[#222] flex items-center justify-center mb-6 group hover:border-[#F39C12] transition-colors duration-300">
+                <img src={iconVisualizacion.src} alt="" class="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300" />
+              </div>
+              <h3 class="text-base font-bold text-white mb-2">4. Visualización</h3>
+              <p class="text-gray-400 text-xs md:text-sm leading-relaxed max-w-[200px]">
+                Creamos tableros dinámicos que faciliten la comprensión y la toma de decisiones.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════ TECNOLOGÍAS SECTION ══════════════ -->
+    <section class="py-20 max-w-[1000px] mx-auto px-6">
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+        <!-- Tech 1 -->
+        <div class="bg-[#121212] border border-[#222] rounded-xl p-4 flex items-center gap-3 hover:border-[#F39C12]/40 transition-colors duration-300">
+          <img src={iconPowerBi.src} alt="" class="w-6 h-6 object-contain" />
+          <span class="text-xs md:text-sm font-semibold text-gray-300">Power BI</span>
+        </div>
+        <!-- Tech 2 -->
+        <div class="bg-[#121212] border border-[#222] rounded-xl p-4 flex items-center gap-3 hover:border-[#F39C12]/40 transition-colors duration-300">
+          <svg class="w-6 h-6 text-[#F39C12]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" />
+          </svg>
+          <span class="text-xs md:text-sm font-semibold text-gray-300">SQL Server</span>
+        </div>
+        <!-- Tech 3 -->
+        <div class="bg-[#121212] border border-[#222] rounded-xl p-4 flex items-center gap-3 hover:border-[#F39C12]/40 transition-colors duration-300">
+          <svg class="w-6 h-6 text-[#F39C12]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M3 14h18m-9-4v8m-7 0h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+          </svg>
+          <span class="text-xs md:text-sm font-semibold text-gray-300">Excel</span>
+        </div>
+        <!-- Tech 4 -->
+        <div class="bg-[#121212] border border-[#222] rounded-xl p-4 flex items-center gap-3 hover:border-[#F39C12]/40 transition-colors duration-300">
+          <svg class="w-6 h-6 text-[#F39C12]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+          </svg>
+          <span class="text-xs md:text-sm font-semibold text-gray-300">Python</span>
+        </div>
+        <!-- Tech 5 -->
+        <div class="bg-[#121212] border border-[#222] rounded-xl p-4 flex items-center gap-3 hover:border-[#F39C12]/40 transition-colors duration-300">
+          <svg class="w-6 h-6 text-[#F39C12]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
+          </svg>
+          <span class="text-xs md:text-sm font-semibold text-gray-300">Azure</span>
+        </div>
+        <!-- Tech 6 -->
+        <div class="bg-[#121212] border border-[#222] rounded-xl p-4 flex items-center gap-3 hover:border-[#F39C12]/40 transition-colors duration-300">
+          <svg class="w-6 h-6 text-[#F39C12]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+          </svg>
+          <span class="text-xs md:text-sm font-semibold text-gray-300">ETL / Power Query</span>
+        </div>
+        <!-- Tech 7 -->
+        <div class="bg-[#121212] border border-[#222] rounded-xl p-4 flex items-center gap-3 hover:border-[#F39C12]/40 transition-colors duration-300">
+          <svg class="w-6 h-6 text-[#F39C12]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+          </svg>
+          <span class="text-xs md:text-sm font-semibold text-gray-300">Data Modeling</span>
+        </div>
+        <!-- Tech 8 -->
+        <div class="bg-[#121212] border border-[#222] rounded-xl p-4 flex items-center gap-3 hover:border-[#F39C12]/40 transition-colors duration-300">
+          <svg class="w-6 h-6 text-[#F39C12]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+          </svg>
+          <span class="text-xs md:text-sm font-semibold text-gray-300">DAX</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════ ¿POR QUÉ TRABAJAR CON NOSOTROS? ══════════════ -->
+    <section class="py-24 bg-[#070707] border-t border-[#111]">
+      <div class="max-w-[1200px] mx-auto px-6 text-center">
+        <p class="text-[#F39C12] text-xs md:text-sm font-bold tracking-widest uppercase mb-3">¿Por qué trabajar con nosotros?</p>
+        <h2 class="text-2xl md:text-4xl font-extrabold text-white mb-16 max-w-2xl mx-auto leading-tight">
+          Creamos contigo: cultura enfocada en innovación, aprendizaje y resultados reales
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+          <!-- Card 1 -->
+          <div class="bg-[#121212] border border-[#222] rounded-2xl p-8 flex gap-5">
+            <div class="bg-[#241a08] p-3 rounded-xl h-fit">
+              <svg class="w-6 h-6 text-[#F39C12]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-white mb-2">Experiencia comprobada</h3>
+              <p class="text-gray-400 text-sm leading-relaxed">
+                Hemos transformado datos en valor para organizaciones sociales y empresariales.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="bg-[#121212] border border-[#222] rounded-2xl p-8 flex gap-5">
+            <div class="bg-[#241a08] p-3 rounded-xl h-fit">
+              <svg class="w-6 h-6 text-[#F39C12]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-white mb-2">Enfoque en impacto</h3>
+              <p class="text-gray-400 text-sm leading-relaxed">
+                Nuestro trabajo se traduce en decisiones más acertadas y mayor eficiencia operativa.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="bg-[#121212] border border-[#222] rounded-2xl p-8 flex gap-5">
+            <div class="bg-[#241a08] p-3 rounded-xl h-fit">
+              <svg class="w-6 h-6 text-[#F39C12]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-white mb-2">Acompañamiento integral</h3>
+              <p class="text-gray-400 text-sm leading-relaxed">
+                Te guiamos en cada etapa para que aproveches al máximo tus datos.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════ CTA FINAL SECTION ══════════════ -->
+    <section class="py-20 border-t border-[#111] bg-gradient-to-b from-[#000] to-[#070707]">
+      <div class="max-w-[1200px] mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
+        <div class="text-center md:text-left">
+          <h2 class="text-2xl md:text-3xl font-extrabold text-white mb-3">
+            ¿Listo para transformar tus datos en <span class="text-[#F39C12]">decisiones con impacto?</span>
+          </h2>
+          <p class="text-gray-400 text-sm md:text-base">
+            Agenda tu auditoría técnica inicial de 15 minutos sin costo.
+          </p>
+        </div>
+        <a href="/contacto#formulario-contacto" class="bg-[#F39C12] hover:bg-[#ffaa22] text-black font-extrabold px-8 py-4 rounded-lg transition-all transform hover:scale-105 duration-200 flex-shrink-0">
+          Agendar Diagnóstico Gratis
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <Footer />
+</Layout>
