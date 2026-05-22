@@ -26,6 +26,8 @@ import numImg4 from '../assets/images/RECURSOS/4.png';
 
 // Caso de uso
 import casoImg from '../assets/images/IMÁGENES/redciclarr.png';
+import redciclarMockup from '../assets/images/IMÁGENES/redciclarr.png';
+import pcImg from '../assets/images/IMÁGENES/pc.png';
 
 const pageTitle = "Desarrollo Web a Medida | INNOVA SYSTEMS CENTER – Sitios Modernos, Rápidos y Seguros";
 const pageDescription = "Creamos sitios web modernos, rápidos y seguros con diseño responsivo, SEO optimizado, integraciones empresariales y tecnología de alto rendimiento.";
@@ -239,9 +241,9 @@ const faqs = [
               Plataforma integral para optimizar la trazabilidad y la gestión operativa de residuos,
               con módulos de seguimiento en tiempo real, dashboards analíticos y reportes automatizados.
             </p>
-            <a href="/redciclar-gestion-residuos-cali" class="dw-link mt-4 inline-block">
+            <button id="btn-abrir-redciclar" class="dw-link mt-4 inline-block dw-caso-cta" type="button">
               Ver caso completo →
-            </a>
+            </button>
           </div>
         </div>
       </div>
@@ -290,6 +292,138 @@ const faqs = [
     </section>
 
   </main>
+
+  <!-- ══════════ MODAL REDCICLAR ══════════ -->
+  <div id="modal-redciclar" class="rc-modal" role="dialog" aria-modal="true" aria-labelledby="rc-modal-title" hidden>
+    <div class="rc-modal__backdrop"></div>
+    <div class="rc-modal__sheet">
+
+      <!-- CERRAR -->
+      <button id="btn-cerrar-redciclar" class="rc-modal__close" aria-label="Cerrar">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+
+      <!-- ── HERO ── -->
+      <section class="rc-hero">
+        <div class="rc-hero__left">
+          <span class="rc-tag">PLATAFORMA REDCICLAR</span>
+          <h2 id="rc-modal-title" class="rc-hero__title">
+            Digitalizamos tu<br />
+            <span class="rc-accent">impacto ambiental</span>
+          </h2>
+          <p class="rc-hero__sub">
+            Solución web que centraliza información, optimiza rutas y visualiza resultados ambientales en tiempo real.
+          </p>
+          <div class="rc-hero__features">
+            <div class="rc-feat">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+              <span>Datos<br/>centralizados</span>
+            </div>
+            <div class="rc-feat">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+              <span>Rutas<br/>optimizadas</span>
+            </div>
+            <div class="rc-feat">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+              <span>Analítica<br/>en tiempo real</span>
+            </div>
+            <div class="rc-feat">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+              <span>Reportes<br/>automáticos</span>
+            </div>
+          </div>
+        </div>
+        <div class="rc-hero__right">
+          <img src={redciclarMockup.src} alt="Dashboard Redciclar" class="rc-hero__mockup" />
+        </div>
+      </section>
+
+      <!-- ── BENEFICIOS ── -->
+      <section class="rc-section rc-section--gray">
+        <p class="rc-tag rc-tag--center">BENEFICIOS QUE GENERA REDCICLAR</p>
+        <div class="rc-benefits">
+          <div class="rc-benefit-card">
+            <div class="rc-benefit-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            </div>
+            <h3 class="rc-benefit-title">Decisiones basadas en datos reales</h3>
+            <p class="rc-benefit-desc">Información confiable y actualizada para planificar acciones efectivas.</p>
+          </div>
+          <div class="rc-benefit-card">
+            <div class="rc-benefit-icon rc-benefit-icon--green">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </div>
+            <h3 class="rc-benefit-title">Menos costos, más eficiencia</h3>
+            <p class="rc-benefit-desc">Rutas inteligentes que reducen tiempos, distancias y gastos.</p>
+          </div>
+          <div class="rc-benefit-card">
+            <div class="rc-benefit-icon rc-benefit-icon--blue">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3 class="rc-benefit-title">Transparencia que genera confianza</h3>
+            <p class="rc-benefit-desc">Reportes listos para auditorías y rendición de cuentas.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── INTEGRACIÓN ── -->
+      <section class="rc-section rc-integ">
+        <div class="rc-integ__left">
+          <h3 class="rc-integ__title">
+            Conecta tus operaciones con <span class="rc-accent">resultados medibles</span>
+          </h3>
+          <p class="rc-integ__sub">
+            Te ayudamos a integrar lo que sucede en campo con tecnología que transforma.
+          </p>
+          <a href="/contacto#formulario-contacto" class="rc-btn" onclick="document.getElementById('modal-redciclar').setAttribute('hidden','');document.body.style.overflow=''">
+            Agendar Diagnóstico Gratis
+          </a>
+        </div>
+        <div class="rc-integ__right">
+          <img src={pcImg.src} alt="Integración Redciclar" class="rc-integ__img" />
+        </div>
+      </section>
+
+      <!-- ── PROCESO ── -->
+      <section class="rc-section rc-section--gray">
+        <p class="rc-tag rc-tag--center">ASÍ TRABAJAMOS</p>
+        <div class="rc-proceso">
+          <div class="rc-paso">
+            <div class="rc-paso__circle">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 16 12 12 8 16"/><line x1="12" y1="12" x2="12" y2="21"/><path d="M20.39 18.39A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.3"/></svg>
+            </div>
+            <h4 class="rc-paso__title">1. Capturamos</h4>
+            <p class="rc-paso__desc">Recolectamos datos de campo desde múltiples fuentes.</p>
+          </div>
+          <div class="rc-paso__arrow">›</div>
+          <div class="rc-paso">
+            <div class="rc-paso__circle">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M16.24 7.76a6 6 0 0 1 0 8.49M4.93 4.93a10 10 0 0 0 0 14.14M7.76 7.76a6 6 0 0 0 0 8.49"/></svg>
+            </div>
+            <h4 class="rc-paso__title">2. Procesamos</h4>
+            <p class="rc-paso__desc">Organizamos y validamos la información automáticamente.</p>
+          </div>
+          <div class="rc-paso__arrow">›</div>
+          <div class="rc-paso">
+            <div class="rc-paso__circle">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8l-4 4 4 4M16 12H8"/></svg>
+            </div>
+            <h4 class="rc-paso__title">3. Optimizamos</h4>
+            <p class="rc-paso__desc">Generamos rutas eficientes con algoritmos inteligentes.</p>
+          </div>
+          <div class="rc-paso__arrow">›</div>
+          <div class="rc-paso">
+            <div class="rc-paso__circle">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+            </div>
+            <h4 class="rc-paso__title">4. Visualizamos</h4>
+            <p class="rc-paso__desc">Dashboards claros para medir y actuar en tiempo real.</p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </div>
 
   <Footer />
 </Layout>
@@ -516,15 +650,313 @@ const faqs = [
   }
   .dw-faq-item.open .dw-faq-answer { max-height: 200px; padding: 0 1.25rem 1.1rem; }
 
-  /* ── CTA Final ── */
-  .dw-cta {
-    padding: 5rem 1.5rem;
-    background: linear-gradient(135deg, #0a0a0a 0%, #1a0d00 50%, #0a0a0a 100%);
+  .dw-caso-cta {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: inherit;
+    font-family: inherit;
+    padding: 0;
+  }
+
+  /* ───────────────────────── MODAL REDCICLAR ───────────────────────── */
+  .rc-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    overflow-y: auto;
+  }
+  .rc-modal[hidden] { display: none !important; }
+
+  .rc-modal__backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    backdrop-filter: blur(4px);
+    z-index: 0;
+  }
+
+  .rc-modal__sheet {
+    position: relative;
+    z-index: 1;
+    background: #0d0d0d;
+    width: 100%;
+    max-width: 960px;
+    margin: 2rem auto;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    box-shadow: 0 32px 80px rgba(0,0,0,0.7), 0 0 0 1px rgba(243,156,18,0.18);
+    animation: rcSlideIn 0.38s cubic-bezier(0.34,1.56,0.64,1) both;
+  }
+  @keyframes rcSlideIn {
+    from { opacity: 0; transform: translateY(40px) scale(0.97); }
+    to   { opacity: 1; transform: translateY(0) scale(1); }
+  }
+
+  .rc-modal__close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 10;
+    width: 40px;
+    height: 40px;
+    background: rgba(0,0,0,0.6);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.2s, border-color 0.2s;
+  }
+  .rc-modal__close:hover {
+    background: rgba(243,156,18,0.2);
+    border-color: #f39c12;
+  }
+  .rc-modal__close svg {
+    width: 18px;
+    height: 18px;
+    color: #fff;
+  }
+
+  /* ── HERO MODAL ── */
+  .rc-hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 3rem 2.5rem 2.5rem;
+    background: linear-gradient(135deg, #0d0d0d 0%, #111 100%);
+    border-bottom: 1px solid rgba(243,156,18,0.12);
+  }
+  @media (max-width: 680px) {
+    .rc-hero { grid-template-columns: 1fr; }
+  }
+  .rc-hero__right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .rc-hero__mockup {
+    width: 100%;
+    max-width: 420px;
+    border-radius: 1rem;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.6);
+    border: 1px solid rgba(243,156,18,0.15);
+  }
+  .rc-tag {
+    color: #f39c12;
+    font-weight: 700;
+    font-size: 0.73rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 0.75rem;
+  }
+  .rc-tag--center { text-align: center; margin-bottom: 2rem; }
+  .rc-hero__title {
+    font-size: clamp(1.7rem, 3.5vw, 2.4rem);
+    font-weight: 900;
+    color: #fff;
+    line-height: 1.2;
+    margin-bottom: 0.85rem;
+  }
+  .rc-accent { color: #f39c12; }
+  .rc-hero__sub {
+    color: #9ca3af;
+    font-size: 0.9rem;
+    line-height: 1.65;
+    margin-bottom: 1.5rem;
+  }
+  .rc-hero__features {
+    display: flex;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+  }
+  .rc-feat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
     text-align: center;
+  }
+  .rc-feat svg {
+    width: 32px;
+    height: 32px;
+    color: #f39c12;
+    background: rgba(243,156,18,0.1);
+    padding: 6px;
+    border-radius: 50%;
+    box-sizing: content-box;
+  }
+  .rc-feat span {
+    font-size: 0.68rem;
+    color: #b3b3b3;
+    line-height: 1.3;
+  }
+
+  /* ── SECTIONS ── */
+  .rc-section {
+    padding: 2.5rem 2.5rem;
+  }
+  .rc-section--gray {
+    background: #111;
+  }
+
+  /* ── BENEFICIOS ── */
+  .rc-benefits {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+  }
+  @media (max-width: 680px) {
+    .rc-benefits { grid-template-columns: 1fr; }
+  }
+  .rc-benefit-card {
+    background: #1a1a1a;
+    border: 1px solid rgba(243,156,18,0.12);
+    border-radius: 1rem;
+    padding: 1.5rem 1.25rem;
+    text-align: center;
+    transition: border-color 0.3s, transform 0.3s;
+  }
+  .rc-benefit-card:hover {
+    border-color: rgba(243,156,18,0.4);
+    transform: translateY(-4px);
+  }
+  .rc-benefit-icon {
+    width: 52px;
+    height: 52px;
+    background: rgba(243,156,18,0.12);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+  }
+  .rc-benefit-icon svg { width: 24px; height: 24px; color: #f39c12; }
+  .rc-benefit-icon--green { background: rgba(52,211,153,0.12); }
+  .rc-benefit-icon--green svg { color: #34d399; }
+  .rc-benefit-icon--blue { background: rgba(96,165,250,0.12); }
+  .rc-benefit-icon--blue svg { color: #60a5fa; }
+  .rc-benefit-title {
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.35;
+  }
+  .rc-benefit-desc {
+    color: #9ca3af;
+    font-size: 0.8rem;
+    line-height: 1.55;
+  }
+
+  /* ── INTEGRACIÓN ── */
+  .rc-integ {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    align-items: center;
+    background: linear-gradient(135deg, #0f0f0f 0%, #1a0d00 60%, #0f0f0f 100%);
+  }
+  @media (max-width: 680px) {
+    .rc-integ { grid-template-columns: 1fr; }
+    .rc-integ__right { display: none; }
+  }
+  .rc-integ__title {
+    font-size: clamp(1.3rem, 2.5vw, 1.85rem);
+    font-weight: 800;
+    color: #fff;
+    line-height: 1.25;
+    margin-bottom: 0.75rem;
+  }
+  .rc-integ__sub {
+    color: #9ca3af;
+    font-size: 0.88rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+  .rc-btn {
+    display: inline-block;
+    background: #f39c12;
+    color: #000;
+    font-weight: 700;
+    font-size: 0.9rem;
+    padding: 0.8rem 1.8rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    transition: background 0.25s, transform 0.2s;
+  }
+  .rc-btn:hover { background: #ffc04a; transform: scale(1.04); }
+  .rc-integ__img {
+    width: 100%;
+    border-radius: 1rem;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.5);
+  }
+
+  /* ── PROCESO ── */
+  .rc-proceso {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .rc-paso {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.6rem;
+    flex: 1;
+    min-width: 110px;
+    max-width: 160px;
+  }
+  .rc-paso__circle {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: rgba(243,156,18,0.1);
+    border: 2px solid rgba(243,156,18,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s, border-color 0.3s;
+  }
+  .rc-paso:hover .rc-paso__circle {
+    background: rgba(243,156,18,0.2);
+    border-color: #f39c12;
+  }
+  .rc-paso__circle svg { width: 24px; height: 24px; color: #f39c12; }
+  .rc-paso__title {
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.85rem;
+    margin: 0;
+  }
+  .rc-paso__desc {
+    color: #9ca3af;
+    font-size: 0.75rem;
+    line-height: 1.5;
+  }
+  .rc-paso__arrow {
+    font-size: 2rem;
+    color: rgba(243,156,18,0.4);
+    align-self: center;
+    padding-bottom: 1.5rem;
+    flex-shrink: 0;
+  }
+  @media (max-width: 560px) {
+    .rc-paso__arrow { display: none; }
+    .rc-proceso { gap: 1.25rem; }
   }
 </style>
 
 <script>
+  // ── FAQ ──
   document.querySelectorAll('.dw-faq-btn').forEach(btn => {
     btn.addEventListener('click', () => {
       const item = btn.closest('.dw-faq-item');
@@ -533,5 +965,33 @@ const faqs = [
       document.querySelectorAll('.dw-faq-item').forEach(i => i.classList.remove('open'));
       if (!isOpen) item.classList.add('open');
     });
+  });
+
+  // ── MODAL REDCICLAR ──
+  const modal     = document.getElementById('modal-redciclar');
+  const backdrop  = modal?.querySelector('.rc-modal__backdrop');
+  const btnAbrir  = document.getElementById('btn-abrir-redciclar');
+  const btnCerrar = document.getElementById('btn-cerrar-redciclar');
+
+  function abrirModal() {
+    if (!modal) return;
+    modal.removeAttribute('hidden');
+    document.body.style.overflow = 'hidden';
+    modal.scrollTop = 0;
+    modal.querySelector('.rc-modal__sheet')?.scrollTo(0, 0);
+  }
+
+  function cerrarModal() {
+    if (!modal) return;
+    modal.setAttribute('hidden', '');
+    document.body.style.overflow = '';
+  }
+
+  btnAbrir?.addEventListener('click', abrirModal);
+  btnCerrar?.addEventListener('click', cerrarModal);
+  backdrop?.addEventListener('click', cerrarModal);
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') cerrarModal();
   });
 </script>
