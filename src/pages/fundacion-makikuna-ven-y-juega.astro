@@ -22,6 +22,7 @@ import iconPowerBi from '../assets/images/venyjuega/icon_powerbi.png';
 const pageTitle = "Caso de Éxito: Infraestructura de Datos para el Programa Ven y Juega – INNOVA SYSTEMS CENTER";
 const pageDescription = "Caso de éxito de la Fundación Makikuna: cómo estructuramos y creamos tableros analíticos en Power BI para el programa Ven y Juega.";
 const pageKeywords = "caso de éxito Ven y Juega, Fundación Makikuna, infraestructura de datos, Power BI, limpieza de datos, base de datos duplicados, analítica de datos, dashboards";
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <Layout title={pageTitle} description={pageDescription} keywords={pageKeywords}>
@@ -155,10 +156,10 @@ const pageKeywords = "caso de éxito Ven y Juega, Fundación Makikuna, infraestr
           Conectamos tus flujos de campo con la nube de forma transparente y sin errores.
         </p>
         <div class="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
-          <a href="/contacto#formulario-contacto" class="bg-[#F39C12] hover:bg-[#ffaa22] text-black font-extrabold px-8 py-3 rounded-lg transition-all transform hover:scale-105 duration-200">
+          <a href={`${base}/contacto#formulario-contacto`} class="bg-[#F39C12] hover:bg-[#ffaa22] text-black font-extrabold px-8 py-3 rounded-lg transition-all transform hover:scale-105 duration-200">
             Agendar Diagnóstico Gratis
           </a>
-          <a href="/recoleccion-y-analisis-de-datos" class="text-[#F39C12] hover:text-[#ffaa22] font-semibold text-sm flex items-center gap-1 group py-2">
+          <a href={`${base}/recoleccion-y-analisis-de-datos`} class="text-[#F39C12] hover:text-[#ffaa22] font-semibold text-sm flex items-center gap-1 group py-2">
             Ver Detalles de la Integración <span class="group-hover:translate-x-1 transition-transform">→</span>
           </a>
         </div>
@@ -362,7 +363,7 @@ const pageKeywords = "caso de éxito Ven y Juega, Fundación Makikuna, infraestr
             Agenda tu auditoría técnica inicial de 15 minutos sin costo.
           </p>
         </div>
-        <a href="/contacto#formulario-contacto" class="bg-[#F39C12] hover:bg-[#ffaa22] text-black font-extrabold px-8 py-4 rounded-lg transition-all transform hover:scale-105 duration-200 flex-shrink-0">
+        <a href={`${base}/contacto#formulario-contacto`} class="bg-[#F39C12] hover:bg-[#ffaa22] text-black font-extrabold px-8 py-4 rounded-lg transition-all transform hover:scale-105 duration-200 flex-shrink-0">
           Agendar Diagnóstico Gratis
         </a>
       </div>

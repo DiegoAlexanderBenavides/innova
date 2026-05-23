@@ -6,6 +6,7 @@ import Footer from '../components/Footer.astro';
 const pageTitle = "Caso de Éxito: Fundación Makikuna | Gestión y Optimización de Datos – INNOVA SYSTEMS CENTER";
 const pageDescription = "Descubre cómo INNOVA SYSTEMS CENTER transformó la base de datos del proyecto ‘Ven y Juega’ de la Fundación Makikuna mediante limpieza, estandarización y análisis visual, permitiendo decisiones basadas en información precisa y organizada.";
 const pageKeywords = "caso de éxito Makikuna, Fundación Makikuna, gestión de datos, limpieza de datos, estandarización de bases de datos, análisis de datos, visualización de datos, dashboards, informes analíticos, depuración de datos, procesamiento de datos, analítica para ONGs, transformación digital, sistemas de datos, automatización de reportes, recolección de datos, datos para proyectos sociales, análisis de información, inteligencia de datos, INNOVA SYSTEMS CENTER, Ven y Juega, consultoría de datos, optimización de bases de datos, análisis estadístico, sistemas de información, BI, business intelligence, reportes institucionales, informes sociales, organización de datos para fundaciones, tecnología para ONGs";
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <Layout title={pageTitle} description={pageDescription} keywords={pageKeywords}>
@@ -31,7 +32,7 @@ const pageKeywords = "caso de éxito Makikuna, Fundación Makikuna, gestión de 
         </h1>
 
         <!-- BOTÓN -->
-        <a href="/contacto#formulario-contacto"
+        <a href={`${base}/contacto#formulario-contacto`}
           class="inline-block bg-[#F39C12] font-bold text-dark-900 text-lg px-6 py-3 rounded-md hover:bg-[#FEB94CFA] transition text-black">
           Quiero un resultado similar
         </a>
@@ -185,7 +186,7 @@ const pageKeywords = "caso de éxito Makikuna, Fundación Makikuna, gestión de 
           que genere impacto real.
         </p>
 
-        <a href="/contacto#formulario-contacto"
+        <a href={`${base}/contacto#formulario-contacto`}
           class="bg-[#F39C12] text-black font-bold px-8 py-4 rounded-md hover:bg-[#FEB94CFA] transition duration-300">
           Agenda una Consultoría
         </a>
