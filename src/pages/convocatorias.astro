@@ -3,6 +3,10 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 
+import imgEquipo from '../assets/images/equipo.png';
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+
 const pageTitle = "Ofertas de Empleo en Tecnología | INNOVA SYSTEMS CENTER – Únete a Nuestro Equipo";
 const pageDescription = "Únete a INNOVA SYSTEMS CENTER y trabaja en proyectos de desarrollo web, automatización, datos, marketing digital y soluciones tecnológicas para empresas. Vacantes activas, cultura innovadora y crecimiento profesional constante.";
 const pageKeywords = "empleos tecnología, trabajos desarrollo web, vacantes programadores, trabajos data analytics, empleo automatización, ofertas de trabajo TI, desarrolladores Colombia, empleo remoto tecnología, Innova Systems Center empleos, work tech Colombia, empleo frontend, empleo backend, empleo fullstack, empleo bases de datos, trabajo marketing digital, vacantes creativos, empleo diseño UI, empleo edición de video, empleo contenidos digitales, trabajo analista de datos, oportunidades profesionales tecnología";
@@ -11,205 +15,173 @@ const pageKeywords = "empleos tecnología, trabajos desarrollo web, vacantes pro
 <Layout title={pageTitle} description={pageDescription} keywords={pageKeywords}>
   <Header />
 
-  <main class="w-full">
+  <main class="w-full bg-[#0A0A0A] min-h-screen text-white">
 
-    <!-- HERO -->
-    <section class="w-full h-screen flex flex-col justify-center bg-center bg-cover bg-fixed"
-      style="background-image: url('/assets/images/fondohome.png'); background-size: cover; background-position: center;"
-      data-animation="animate-fade-in">
-
-      <div class="w-full max-w-[1480px] px-6 mx-auto text-left mt-20">
-
-        <!-- Texto corto -->
-        <p class="text-[#F39C12] text-lg font-semibold mb-3">
-          Oportunidades laborales en tecnología
-        </p>
-
-        <!-- Título -->
-        <h1 class="text-white text-3xl lg:text-6xl font-bold max-w-3xl mb-6 leading-tight">
-          Trabaja con nosotros y construye el futuro digital
+    <!-- HERO SECTION -->
+    <section class="relative w-full overflow-hidden bg-gradient-to-b from-[#251b00]/70 via-[#0A0A0A] to-[#0A0A0A] pt-32 pb-16 flex flex-col items-center">
+      <div class="w-full max-w-[1400px] px-6 flex flex-col items-center text-center">
+        
+        <!-- Title -->
+        <h1 class="text-white text-3xl md:text-5xl font-extrabold tracking-wider uppercase mt-6 leading-tight md:whitespace-nowrap">
+          Convocatorias Laborales <span class="text-[#F39C12]">en Tecnología</span>
         </h1>
 
-        <!-- Descripción -->
-        <p class="text-white text-xl lg:text-2xl font-normal max-w-2xl mb-8 opacity-90">
-          Buscamos talento apasionado por la tecnología, los datos, el desarrollo y la innovación. Crece, aprende y crea impacto real.
+        <!-- Team Image -->
+        <div class="relative w-full max-w-[850px] transform hover:scale-[1.01] transition duration-500 ease-in-out mt-8">
+          <div class="absolute -inset-1 rounded-2xl bg-gradient-to-r from-[#F39C12]/20 to-transparent blur-lg opacity-75"></div>
+          <img 
+            src={imgEquipo.src} 
+            alt="Equipo Innova Systems Center" 
+            class="relative w-full h-auto object-contain rounded-2xl"
+          />
+        </div>
+
+        <!-- Button -->
+        <div class="mt-8">
+          <a href="#vacantes" 
+            class="inline-block bg-[#F39C12] hover:bg-[#ffc04a] text-black font-extrabold text-sm md:text-base px-8 py-3.5 rounded-full uppercase tracking-wider transition duration-300 transform hover:scale-105 shadow-lg shadow-[#F39C12]/25">
+            Ver Vacantes Disponibles →
+          </a>
+        </div>
+
+        <!-- Subtext -->
+        <p class="text-gray-400 text-sm md:text-base max-w-xl mx-auto mt-6 leading-relaxed">
+          Recibimos talentos apasionados por la tecnología, con ganas de aprender y colaborar. 
+          Descubre nuestras vacantes y sé parte de un gran equipo.
         </p>
-
-        <!-- Botón -->
-        <a href="#vacantes"
-          class="inline-block bg-[#F39C12] font-bold text-dark-900 text-lg px-8 py-3 rounded-md hover:bg-[#FEB94CFA] transition text-black">
-          Ver Vacantes Disponibles
-        </a>
       </div>
-
     </section>
 
-    <!-- VACANTES -->
-    <section id="vacantes" class="w-full py-24 bg-[#0A0A0A] text-left">
-      <div class="max-w-[1200px] mx-auto px-6">
+    <!-- VACANTES DISPONIBLES -->
+    <section id="vacantes" class="w-full py-16 bg-[#0A0A0A] flex flex-col items-center">
+      <div class="w-full max-w-[1400px] px-6">
+        
+        <div class="text-center mb-16">
+          <p class="text-[#F39C12] text-xs font-bold tracking-widest uppercase mb-2">Convocatorias Abiertas</p>
+          <h2 class="text-3xl md:text-4xl font-extrabold text-white uppercase tracking-wider">Vacantes Disponibles</h2>
+          <div class="h-1 w-20 bg-[#F39C12] mx-auto mt-4 rounded-full"></div>
+          <p class="text-gray-400 text-sm md:text-base max-w-2xl mx-auto mt-6 leading-relaxed">
+            Estas son las oportunidades actualmente abiertas en Innova Systems Center. Cada puesto está diseñado para trabajar con proyectos reales y con un alto impacto.
+          </p>
+        </div>
 
-        <h2 class="text-4xl font-bold text-white text-center mb-4">Vacantes Disponibles</h2>
-        <p class="text-gray-400 text-center max-w-3xl mx-auto mb-16">
-          Estas son las oportunidades actualmente abiertas en Innova Systems Center. 
-          Cada puesto está diseñado para trabajar con proyectos reales y con impacto.
-        </p>
-
-        <div class="space-y-10">
-
-          <!-- VACANTE -->
-          <article class="bg-[#0D0D0D] p-8 rounded-2xl border border-[#1A1A1A] hover:border-[#F39C12] transition duration-300">
-
-            <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-10">
-
-              <!-- Información principal -->
-              <div class="space-y-5">
-
-                <!-- Badge estado -->
-                <span class="inline-block text-xs font-bold px-3 py-1 rounded-full bg-green-500/10 text-[#ed4950] border border-[#d7797b]">
+        <div class="space-y-8">
+          <!-- CARD DE VACANTE -->
+          <article class="bg-[#111111] p-8 rounded-2xl border border-[#222222] hover:border-[#F39C12]/40 transition duration-300 shadow-md hover:shadow-lg hover:shadow-[#F39C12]/5">
+            <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-8">
+              
+              <!-- Info -->
+              <div class="space-y-4 flex-1">
+                <!-- Estado Badge -->
+                <span class="inline-block text-xs font-extrabold px-3 py-1 rounded-full bg-red-500/10 text-[#ed4950] border border-[#d7797b]/30 uppercase tracking-widest">
                   Convocatoria cerrada
                 </span>
 
-                <!-- Título -->
-                <h3 class="text-2xl font-bold text-white leading-tight mt-3">
+                <!-- Title -->
+                <h3 class="text-2xl font-bold text-white leading-tight">
                   Diseñador Gráfico Junior - 001
-                  <span class="block text-base text-gray-400 font-normal mt-2">
+                  <span class="block text-sm text-gray-400 font-normal mt-1.5">
                     Trabajo presencial – Mocoa, Putumayo
                   </span>
                 </h3>
 
-                <!-- Duración de la convocatoria -->
-                <div class="space-y-2 mt-4">
-
-                  <p class="text-xs uppercase tracking-wide text-gray-500">
-                    Duración de la convocatoria
-                  </p>
-
-                  <div class="flex flex-wrap gap-4 text-sm text-gray-400">
-
+                <!-- Duración -->
+                <div class="space-y-1.5 pt-2">
+                  <p class="text-xs uppercase tracking-wider text-gray-500 font-bold">Duración de la convocatoria</p>
+                  <div class="flex flex-wrap gap-4 text-sm text-gray-300">
                     <span class="flex items-center gap-2">
                       <i data-lucide="calendar-clock" class="w-4 h-4 text-[#F39C12]"></i>
-                      Inicio:
-                      <strong class="text-white">
-                        05 de enero de 2026 · 8:00 a. m.
-                      </strong>
+                      Inicio: <strong>05 de enero de 2026 · 8:00 a.m.</strong>
                     </span>
-
                     <span class="flex items-center gap-2">
                       <i data-lucide="calendar-x" class="w-4 h-4 text-[#F39C12]"></i>
-                      Cierre:
-                      <strong class="text-white">
-                        12 de enero de 2026 · 11:59 p. m.
-                      </strong>
+                      Cierre: <strong>12 de enero de 2026 · 11:59 p.m.</strong>
                     </span>
-
                   </div>
-
                 </div>
 
-                <!-- Ubicación, modalidad y salario -->
-                <div class="flex flex-wrap items-center gap-4 text-gray-400 text-sm mt-4">
-
+                <!-- Detalles (Presencial, Salario) -->
+                <div class="flex flex-wrap items-center gap-x-6 gap-y-2 text-gray-300 text-sm pt-2">
                   <span class="flex items-center gap-2">
                     <i data-lucide="map-pin" class="w-4 h-4 text-[#F39C12]"></i>
                     Mocoa, Putumayo
                   </span>
-
                   <span class="flex items-center gap-2">
                     <i data-lucide="users" class="w-4 h-4 text-[#F39C12]"></i>
                     Modalidad presencial
                   </span>
-
                   <span class="flex items-center gap-2">
                     <i data-lucide="badge-dollar-sign" class="w-4 h-4 text-[#F39C12]"></i>
-                    Salario:
-                    <strong class="text-white">
-                      1 SMMLV + prestaciones sociales
-                    </strong>
+                    Salario: <strong>1 SMMLV + prestaciones sociales</strong>
                   </span>
-
                 </div>
 
                 <!-- Descripción -->
-                <p class="text-gray-300 text-sm leading-relaxed max-w-3xl mt-4">
-                  Buscamos una persona creativa, proactiva y con ganas de aprender, que apoye la
-                  creación de contenido digital para redes sociales, campañas publicitarias y
-                  proyectos internos. Esta vacante está dirigida a perfiles junior, técnicos o
-                  tecnólogos, que deseen fortalecer su experiencia en un entorno real de trabajo.
+                <p class="text-gray-400 text-sm leading-relaxed max-w-3xl pt-2">
+                  Buscamos una persona creativa, proactiva y con ganas de aprender, que apoye la creación de contenido digital para redes sociales, campañas publicitarias y proyectos internos. Esta vacante está dirigida a perfiles junior, técnicos o tecnólogos, que deseen fortalecer su experiencia en un entorno real de trabajo.
                 </p>
 
-                <!-- Habilidades -->
+                <!-- Habilidades Grid -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-4">
-
-                  <div class="flex items-center gap-3 bg-[#1A1A1A] p-3 rounded-lg">
+                  <div class="flex items-center gap-3 bg-[#1A1A1A] p-3 rounded-xl border border-[#262626]">
                     <i data-lucide="video" class="w-5 h-5 text-[#F39C12]"></i>
-                    <span class="text-gray-300 text-sm">Edición básica de video</span>
+                    <span class="text-gray-300 text-xs md:text-sm">Edición básica de video</span>
                   </div>
-
-                  <div class="flex items-center gap-3 bg-[#1A1A1A] p-3 rounded-lg">
+                  <div class="flex items-center gap-3 bg-[#1A1A1A] p-3 rounded-xl border border-[#262626]">
                     <i data-lucide="image" class="w-5 h-5 text-[#F39C12]"></i>
-                    <span class="text-gray-300 text-sm">Diseño y creación de piezas gráficas</span>
+                    <span class="text-gray-300 text-xs md:text-sm">Diseño y creación de piezas gráficas</span>
                   </div>
-
-                  <div class="flex items-center gap-3 bg-[#1A1A1A] p-3 rounded-lg">
+                  <div class="flex items-center gap-3 bg-[#1A1A1A] p-3 rounded-xl border border-[#262626]">
                     <i data-lucide="layout" class="w-5 h-5 text-[#F39C12]"></i>
-                    <span class="text-gray-300 text-sm">Conocimientos básicos en herramientas digitales</span>
+                    <span class="text-gray-300 text-xs md:text-sm">Conocimientos en herramientas digitales</span>
                   </div>
-
-                  <div class="flex items-center gap-3 bg-[#1A1A1A] p-3 rounded-lg">
+                  <div class="flex items-center gap-3 bg-[#1A1A1A] p-3 rounded-xl border border-[#262626]">
                     <i data-lucide="rocket" class="w-5 h-5 text-[#F39C12]"></i>
-                    <span class="text-gray-300 text-sm">Actitud de aprendizaje y creatividad</span>
+                    <span class="text-gray-300 text-xs md:text-sm">Actitud de aprendizaje y creatividad</span>
                   </div>
-
                 </div>
 
-                <!-- Link términos -->
-                <div class="mt-4">
+                <!-- PDF Link -->
+                <div class="pt-4">
                   <a href="/docs/tdr-creativo-contenido.pdf"
                     target="_blank"
-                    class="inline-flex items-center gap-2 text-sm text-[#F39C12] hover:underline">
+                    class="inline-flex items-center gap-2 text-sm text-[#F39C12] hover:text-[#ffc04a] font-bold hover:underline">
                     <i data-lucide="file-text" class="w-4 h-4"></i>
                     Ver términos de referencia de la convocatoria
                   </a>
                 </div>
-
               </div>
 
-              <!-- Acción -->
+              <!-- Button Postulación -->
               <div class="flex-shrink-0 self-center">
                 <a href="/formulario-convocatoria-contenido-digital"
-                  class="pointer-events-none bg-gray-400 text-gray-700 px-8 py-4 font-bold rounded-md
-                        opacity-60 cursor-not-allowed select-none text-center block">
+                  class="pointer-events-none bg-gray-500/20 text-gray-500 px-8 py-4 font-bold rounded-xl opacity-50 cursor-not-allowed select-none text-center block border border-gray-500/20">
                   Postularme
                 </a>
-
               </div>
 
             </div>
-
           </article>
-
         </div>
 
       </div>
     </section>
 
-    <!-- CTA FINAL -->
-    <section class="w-full py-24 text-center bg-[#0A0A0A]">
-      <div class="max-w-[700px] mx-auto px-6">
-
-        <h2 class="text-3xl font-bold text-white mb-4">¿Quieres trabajar con nosotros?</h2>
-        <p class="text-gray-300 mb-8">Envíanos tu hoja de vida y cuéntanos por qué quieres ser parte del equipo.</p>
-
-        <a href="/contacto#formulario-contacto"
-          class="inline-block bg-[#F39C12] px-8 py-4 text-lg font-bold text-black rounded-md hover:bg-[#FEB94CFA] transition">
-          Contactar con Reclutamiento
+    <!-- ¿QUIERES TRABAJAR CON NOSOTROS? -->
+    <section class="w-full py-16 bg-[#0A0A0A] flex flex-col items-center">
+      <div class="w-full max-w-[1400px] px-6 text-center bg-gradient-to-r from-[#111111] via-[#1c180e] to-[#111111] py-12 rounded-2xl border border-[#222222]">
+        <h2 class="text-2xl md:text-3xl font-extrabold text-white uppercase tracking-wider mb-3">¿Quieres trabajar con nosotros?</h2>
+        <p class="text-gray-300 text-sm md:text-base max-w-xl mx-auto mb-8 leading-relaxed font-normal">
+          Postula a una de nuestras vacantes o envíanos tu hoja de vida y cuéntanos por qué quieres ser parte de Innova.
+        </p>
+        <a href={`${base}/contacto#formulario-contacto`}
+          class="inline-block border-2 border-[#F39C12] text-[#F39C12] hover:bg-[#F39C12] hover:text-black font-extrabold text-xs md:text-sm px-8 py-3.5 rounded-full uppercase tracking-widest transition duration-300 transform hover:scale-105 shadow-md shadow-[#F39C12]/10">
+          Contactar con ReclUTAMIENTO
         </a>
-
       </div>
     </section>
 
   </main>
 
   <Footer />
-
 </Layout>
