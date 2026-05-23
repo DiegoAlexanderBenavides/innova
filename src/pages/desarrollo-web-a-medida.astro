@@ -47,8 +47,17 @@ const pasos = [
   { num: "04", img: numImg4.src, titulo: "Optimización y lanzamiento", desc: "SEO técnico, velocidad, seguridad y pruebas exhaustivas antes de publicar al mundo." },
 ];
 
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+
 const tecnologias = [
-  "Python", "JavaScript", "HTML", "CSS", "PHP", "React", "Angular", "Node.js",
+  { name: "Python", icono: `${base}/assets/icons/python.png` },
+  { name: "JavaScript", icono: `${base}/assets/icons/javascript.png` },
+  { name: "HTML", icono: `${base}/assets/icons/html.png` },
+  { name: "CSS", icono: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" },
+  { name: "PHP", icono: `${base}/assets/icons/php.png` },
+  { name: "React", icono: `${base}/assets/icons/react.png` },
+  { name: "Angular", icono: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angular/angular-original.svg" },
+  { name: "Node.js", icono: `${base}/assets/icons/node.png` },
 ];
 
 const faqs = [
@@ -208,7 +217,10 @@ const faqs = [
           <!-- Grid de tecnologías derecha -->
           <div class="dw-tech-badges">
             {tecnologias.map(t => (
-              <div class="dw-tech-badge">{t}</div>
+              <div class="dw-tech-badge">
+                {t.icono && <img src={t.icono} alt={t.name} class="w-6 h-6 object-contain" />}
+                <span>{t.name}</span>
+              </div>
             ))}
           </div>
         </div>
@@ -593,9 +605,12 @@ const faqs = [
     background: #1a1a1a;
     border: 1px solid rgba(243,156,18,0.2);
     border-radius: 0.75rem;
-    padding: 1rem 1.2rem;
+    padding: 0.8rem 1.2rem;
     color: #fff; font-weight: 600; font-size: 0.95rem;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
     transition: border-color 0.3s, background 0.3s, transform 0.3s;
     cursor: default;
   }

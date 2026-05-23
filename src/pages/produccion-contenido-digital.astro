@@ -37,11 +37,17 @@ const pasos = [
   { num: "04", titulo: "Optimización y seguimiento",        desc: "Medimos resultados, ajustamos formatos y optimizamos para mejorar el impacto en cada entrega." },
 ];
 
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+
 const herramientas = [
-  "Adobe Premiere", "After Effects",
-  "Photoshop",      "Illustrator",
-  "DaVinci Resolve","Blender 3D",
-  "Canva Pro",      "Figma",
+  { name: "Adobe Premiere", icono: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/premierepro/premierepro-original.svg" },
+  { name: "After Effects", icono: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/aftereffects/aftereffects-original.svg" },
+  { name: "Photoshop", icono: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/photoshop/photoshop-original.svg" },
+  { name: "Illustrator", icono: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/illustrator/illustrator-line.svg" },
+  { name: "DaVinci Resolve", icono: `${base}/assets/icons/dj.svg` },
+  { name: "Blender 3D", icono: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/blender/blender-original.svg" },
+  { name: "Canva Pro", icono: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg" },
+  { name: "Figma", icono: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" },
 ];
 
 const faqs = [
@@ -197,7 +203,10 @@ const faqs = [
           <!-- Grid de herramientas derecha -->
           <div class="mk-tech-badges">
             {herramientas.map(t => (
-              <div class="mk-tech-badge">{t}</div>
+              <div class="mk-tech-badge">
+                {t.icono && <img src={t.icono} alt={t.name} class="w-6 h-6 object-contain" />}
+                <span>{t.name}</span>
+              </div>
             ))}
           </div>
         </div>
@@ -427,9 +436,12 @@ const faqs = [
     background: #1a1a1a;
     border: 1px solid rgba(243,156,18,0.2);
     border-radius: 0.75rem;
-    padding: 1rem 1.2rem;
+    padding: 0.8rem 1.2rem;
     color: #fff; font-weight: 600; font-size: 0.93rem;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
     transition: border-color 0.3s, background 0.3s, transform 0.3s;
     cursor: default;
   }
