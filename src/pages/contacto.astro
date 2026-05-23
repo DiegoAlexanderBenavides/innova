@@ -4,6 +4,8 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import Contact from "../components/Contact.astro";
 
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+
 const pageTitle =
   "Contacto | INNOVA SYSTEMS CENTER – Asesoría Tecnológica y Consultoría Digital";
 const pageDescription =
@@ -15,124 +17,162 @@ const pageKeywords =
 <Layout title={pageTitle} description={pageDescription} keywords={pageKeywords}>
   <Header />
 
-  <main class="w-full">
-    <!-- HERO -->
-    <section
-      class="w-full h-screen flex flex-col justify-center bg-center bg-cover bg-fixed"
-      style="background-image: url('/assets/images/fondohome.png'); background-size: cover; background-position: center;"
-      data-animation="animate-fade-in"
-    >
-      <div class="w-full max-w-[1480px] px-6 mx-auto text-left mt-20">
-        <!-- TÍTULO HERO -->
-        <p class="text-white text-3xl lg:text-6xl font-bold max-w-3xl mb-6">
-          Conversemos sobre tu próximo proyecto
-        </p>
+  <main class="w-full bg-[#0A0A0A] min-h-screen text-white">
+    
+    <!-- MAIN CONTACT SECTION WITH DUAL LAMPS SPOTS -->
+    <section class="relative w-full pt-32 pb-12 overflow-hidden flex flex-col items-center bg-[#070707]">
+      <!-- CSS radial spotlights mimicking the mockup lamps glow -->
+      <div class="absolute top-0 left-1/4 -translate-x-1/2 w-[500px] h-[400px] bg-[radial-gradient(circle_at_top,_rgba(243,156,18,0.08)_0%,_transparent_75%)] pointer-events-none"></div>
+      <div class="absolute top-0 right-1/4 translate-x-1/2 w-[500px] h-[400px] bg-[radial-gradient(circle_at_top,_rgba(243,156,18,0.08)_0%,_transparent_75%)] pointer-events-none"></div>
 
-        <!-- DESCRIPCIÓN -->
-        <h1
-          class="text-white text-xl lg:text-2xl font-normal max-w-3xl mb-8 leading-relaxed"
-        >
-          Agenda una consultoría gratuita y descubre cómo podemos ayudarte con
-          desarrollo, datos y automatización.
-        </h1>
-
-        <!-- BOTÓN -->
-        <a
-          href="#formulario-contacto"
-          class="inline-block bg-[#F39C12] font-bold text-dark-900 text-lg px-6 py-3 rounded-md hover:bg-[#FEB94CFA] text-black transition"
-        >
-          Quiero hablar con un experto
-        </a>
-      </div>
-    </section>
-
-    <!-- SECCIÓN PRINCIPAL DE CONTACTO -->
-    <section id="formulario-contacto" class="w-full py-24 bg-[#151515]">
-      <div
-        class="max-w-[1200px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16"
-      >
-        <!-- INFORMACIÓN -->
-        <div>
-          <p class="text-[#F39C12] font-semibold tracking-wide mb-3">
-            CONTACTO DIRECTO
-          </p>
-
-          <h2 class="text-3xl font-bold text-white leading-tight mb-6">
-            Estamos listos para impulsar tu transformación digital
-          </h2>
-
-          <p class="text-gray-300 mb-6 text-lg leading-relaxed">
-            Resolvemos tus dudas, analizamos tus necesidades y te guiamos para
-            implementar la solución ideal para tu organización.
-          </p>
-
-          <div class="space-y-6">
-            <div class="flex items-center gap-4">
-              <i data-lucide="mail" class="w-7 h-7 text-[#F39C12]"></i>
-              <p class="text-gray-300 text-lg">
-                gerencia@innovasystemscenter.com
-              </p>
-            </div>
-
-            <div class="flex items-center gap-4">
-              <i data-lucide="phone" class="w-7 h-7 text-[#F39C12]"></i>
-              <p class="text-gray-300 text-lg">+57 323 325 9454</p>
-            </div>
-
-            <div class="flex items-center gap-4">
-              <i data-lucide="facebook" class="w-7 h-7 text-[#F39C12]"></i>
-              <a
-                href="https://web.facebook.com/innovasystemscenter.co/"
-                target="_blank"
-                class="text-gray-300 hover:underline"
-              >
-                Facebook Oficial
+      <div class="w-full max-w-[1300px] px-6 mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 mt-6">
+        
+        <!-- LEFT COLUMN (INFO) -->
+        <div class="lg:col-span-7 space-y-8 flex flex-col justify-between">
+          
+          <!-- Heading Group -->
+          <div class="space-y-4">
+            <p class="text-[#F39C12] text-xs font-extrabold tracking-widest uppercase">
+              HABLEMOS
+            </p>
+            <h1 class="text-white text-3xl md:text-5xl font-extrabold leading-tight uppercase tracking-wide">
+              Conversemos sobre <br />
+              tu <span class="text-[#F39C12]">próximo proyecto</span>
+            </h1>
+            <p class="text-gray-400 text-sm md:text-base max-w-xl leading-relaxed">
+              Agenda una consultoría gratuita y descubre cómo podemos ayudarte con desarrollo, datos y automatización.
+            </p>
+            
+            <div class="pt-4">
+              <a href="#contactForm" 
+                class="inline-flex items-center gap-3 bg-[#F39C12] hover:bg-[#ffc04a] text-black font-extrabold text-xs md:text-sm px-7 py-3.5 rounded-xl uppercase tracking-wider transition duration-300 transform hover:scale-[1.02] shadow-lg shadow-[#F39C12]/20">
+                <i data-lucide="messages-square" class="w-5 h-5"></i>
+                Quiero hablar con un experto
               </a>
             </div>
+          </div>
 
+          <!-- Contact Cards Group -->
+          <div class="space-y-4">
             <div class="flex items-center gap-4">
-              <i data-lucide="linkedin" class="w-7 h-7 text-[#F39C12]"></i>
-              <a href="#" class="text-gray-300 hover:underline"> LinkedIn </a>
+              <span class="text-[#F39C12] text-xs font-extrabold tracking-widest uppercase">CONTACTO DIRECTO</span>
+              <div class="h-[1px] flex-1 bg-gradient-to-r from-[#F39C12]/20 to-transparent"></div>
             </div>
+
+            <div class="bg-[#0D0D0D] border border-[#222] rounded-2xl p-6 space-y-4">
+              <div class="flex items-center gap-4">
+                <div class="w-10 h-10 rounded-lg bg-[#F39C12]/10 flex items-center justify-center border border-[#F39C12]/20">
+                  <i data-lucide="mail" class="w-5 h-5 text-[#F39C12]"></i>
+                </div>
+                <span class="text-gray-300 text-sm md:text-base font-medium">gerencia@innovasystemscenter.com</span>
+              </div>
+
+              <div class="flex items-center gap-4">
+                <div class="w-10 h-10 rounded-lg bg-[#F39C12]/10 flex items-center justify-center border border-[#F39C12]/20">
+                  <i data-lucide="phone" class="w-5 h-5 text-[#F39C12]"></i>
+                </div>
+                <span class="text-gray-300 text-sm md:text-base font-medium">+57 323 325 9454</span>
+              </div>
+
+              <div class="flex items-center gap-4">
+                <div class="w-10 h-10 rounded-lg bg-[#F39C12]/10 flex items-center justify-center border border-[#F39C12]/20">
+                  <i data-lucide="share-2" class="w-5 h-5 text-[#F39C12]"></i>
+                </div>
+                <div class="flex items-center gap-2 text-sm text-gray-300 font-medium">
+                  <a href="https://web.facebook.com/innovasystemscenter.co/" target="_blank" class="hover:text-[#F39C12] transition flex items-center gap-1">
+                    <i data-lucide="facebook" class="w-4 h-4"></i> Facebook Oficial
+                  </a>
+                  <span class="text-gray-600">|</span>
+                  <a href="#" class="hover:text-[#F39C12] transition flex items-center gap-1">
+                    <i data-lucide="linkedin" class="w-4 h-4"></i> LinkedIn
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Highlight Box -->
+          <div class="bg-[#0D0D0D]/40 border border-[#222] rounded-2xl p-6 flex items-start gap-4">
+            <div class="w-12 h-12 rounded-full bg-[#F39C12]/10 flex items-center justify-center border border-[#F39C12]/20 flex-shrink-0 mt-0.5">
+              <i data-lucide="trending-up" class="w-5 h-5 text-[#F39C12]"></i>
+            </div>
+            <div class="space-y-1">
+              <h4 class="text-[#F39C12] font-bold text-sm uppercase tracking-wider">Estamos listos para impulsar tu transformación digital</h4>
+              <p class="text-gray-400 text-xs md:text-sm leading-relaxed">
+                Resolvemos tus dudas, analizamos tus necesidades y te guiamos para implementar la solución ideal para tu organización.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- RIGHT COLUMN (FORM) -->
+        <div class="lg:col-span-5">
+          <div class="bg-[#0B0B0B] p-8 md:p-10 rounded-2xl border border-dashed border-[#F39C12]/20 shadow-xl space-y-6">
+            <div>
+              <p class="text-[#F39C12] text-xs font-extrabold tracking-widest uppercase">ENVÍANOS TU MENSAJE</p>
+              <div class="h-[1px] w-12 bg-[#F39C12] mt-2"></div>
+            </div>
+            
+            <Contact />
           </div>
         </div>
 
-        <!-- FORMULARIO -->
-        <div
-          class="bg-[#0D0D0D] p-8 rounded-2xl border border-[#1A1A1A] shadow-lg text-left"
-        >
-          <Contact />
+      </div>
+    </section>
+
+    <!-- MAP SECTION -->
+    <section class="w-full bg-[#0A0A0A] py-12 flex flex-col items-center">
+      <div class="w-full max-w-[1300px] px-6">
+        <div class="bg-[#0D0D0D] border border-[#222] rounded-2xl p-8 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center shadow-lg">
+          
+          <!-- Location Info -->
+          <div class="space-y-4">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-[#F39C12]/10 flex items-center justify-center border border-[#F39C12]/20">
+                <i data-lucide="map-pin" class="w-5 h-5 text-[#F39C12]"></i>
+              </div>
+              <h3 class="text-[#F39C12] font-extrabold uppercase tracking-wider text-base">Nuestra ubicación</h3>
+            </div>
+            <p class="text-gray-300 text-sm md:text-base leading-relaxed">
+              Operamos en Colombia y Latinoamérica, acompañando a empresas que quieren crecer con tecnología e innovación.
+            </p>
+          </div>
+
+          <!-- Styled Google Maps iframe -->
+          <div class="rounded-xl overflow-hidden border border-[#222] relative w-full h-[280px]">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d1994.50566161683!2d-76.65231099999998!3d1.1524030000000027!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMcKwMDknMDguNyJOIDc2wrAzOScwOC4zIlc!5e0!3m2!1ses-419!2sco!4v1763678433082!5m2!1ses-419!2sco"
+              width="100%"
+              height="100%"
+              style="border:0; filter: grayscale(100%) invert(95%) sepia(100%) saturate(600%) hue-rotate(-5deg) brightness(85%) contrast(125%);"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+
         </div>
       </div>
     </section>
 
-    <!-- MAPA OPCIONAL -->
-    <section class="w-full bg-[#0A0A0A] py-10">
-      <div class="max-w-[1200px] mx-auto px-6">
-        <h3 class="text-xl text-white font-semibold mb-4">Nuestra ubicación</h3>
-        <div class="rounded-xl overflow-hidden border border-[#1A1A1A]">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d1994.50566161683!2d-76.65231099999998!3d1.1524030000000027!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMcKwMDknMDguNyJOIDc2wrAzOScwOC4zIlc!5e0!3m2!1ses-419!2sco!4v1763678433082!5m2!1ses-419!2sco"
-            width="100%"
-            height="380"
-            style="border:0;"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <!-- BANNER CONSULTORÍA -->
+    <section class="w-full bg-[#0A0A0A] pb-16 flex flex-col items-center">
+      <div class="w-full max-w-[1300px] px-6">
+        <div class="bg-gradient-to-r from-[#111] via-[#1c170d] to-[#111] border border-[#222] rounded-2xl p-8 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left shadow-lg">
+          <div>
+            <h3 class="text-2xl font-extrabold text-white uppercase tracking-wider flex items-center justify-center md:justify-start gap-2">
+              ¿Listo para empezar?
+            </h3>
+            <p class="text-gray-400 text-sm mt-1">Agenda tu consultoría gratuita con nosotros hoy mismo.</p>
+          </div>
+          <a href="#formulario-contacto" class="bg-gradient-to-r from-[#F39C12] to-[#ffaa22] hover:brightness-110 text-black font-extrabold text-xs md:text-sm px-8 py-4 rounded-xl uppercase tracking-widest transition duration-300 flex items-center gap-2 transform hover:scale-[1.03] shadow-md shadow-[#F39C12]/20">
+            <i data-lucide="calendar" class="w-5 h-5"></i>
+            Agenda tu consultoría ahora
+          </a>
         </div>
       </div>
     </section>
 
-    <!-- CTA FINAL -->
-    <section class="w-full bg-[#151515] py-20 text-center">
-      <p class="text-2xl font-bold text-white mb-4">¿Listo para empezar?</p>
-      <a
-        href="#formulario-contacto"
-        class="bg-[#F39C12] text-black font-bold px-8 py-4 rounded-md hover:bg-[#FEB94CFA] transition"
-      >
-        Agenda tu consultoría ahora
-      </a>
-    </section>
   </main>
 
   <Footer />
