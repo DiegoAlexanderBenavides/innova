@@ -3,6 +3,11 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 
+import redciclarMockup from '../assets/images/IMÁGENES/redciclarr.png';
+import pcImg from '../assets/images/IMÁGENES/pc.png';
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+
 const pageTitle = "Caso de Éxito: REDCICLAR | Plataforma de Gestión de Residuos con Inteligencia de Negocios – INNOVA SYSTEMS CENTER";
 const pageDescription = "Descubre cómo desarrollamos REDCICLAR, un sistema web que optimiza la recolección de residuos en Cali mediante análisis en tiempo real, reducción de costos y planificación inteligente. Proyecto realizado para la Fundación CRESE.";
 const pageKeywords = "sistema de gestión de residuos, plataforma de residuos, gestión de residuos, redciclar, caso de éxito redciclar, recolección de residuos Cali, sistema web de residuos, optimización ambiental, inteligencia de negocios, BI ambiental, dashboards residuos, sostenibilidad, gestión ambiental digital, plataforma de recolección de residuos, Fundación CRESE, transformación digital ambiental, monitoreo de residuos, trazabilidad residuos, automatización ambiental, análisis de datos ambientales, sistemas SIG, innovación sostenible, sistemas de gestión ambiental, software ambiental, desarrollo web ambiental, logística de residuos, planificación operativa residuos, logística de recolección, BI para residuos, trazabilidad de residuos, optimización operativa, integración de datos, indicadores ambientales, sistema Redciclar, planificación inteligente, monitoreo en tiempo real, sistema web ecológico, gestión operativa";
@@ -11,175 +16,151 @@ const pageKeywords = "sistema de gestión de residuos, plataforma de residuos, g
 <Layout title={pageTitle} description={pageDescription} keywords={pageKeywords}>
   <Header />
 
-  <main class="w-full">
+  <main class="w-full bg-[#0A0A0A] pt-24 min-h-screen text-white">
 
-    <!-- HERO -->
-    <section class="w-full h-screen flex flex-col justify-center bg-center bg-cover bg-fixed"
-      style="background-image: url('/assets/images/fondohome.png'); background-size: cover; background-position: center;"
-      data-animation="animate-fade-in">
-
-      <div class="w-full max-w-[1480px] px-6 mx-auto text-left mt-20">
-        
-        <!-- TÍTULO HERO -->
-        <p class="text-white text-3xl lg:text-6xl font-bold max-w-3xl mb-6">
-          Tecnología que impulsa la sostenibilidad ambiental
-        </p>
-
-        <!-- DESCRIPCIÓN -->
-        <h1 class="text-white text-xl lg:text-2xl font-normal max-w-3xl mb-8 leading-relaxed">
-          Caso real donde desarrollamos REDCICLAR, un sistema web para optimizar la gestión de residuos en la ciudad de Cali, integrando análisis de datos, logística inteligente y reportes ambientales.
+    <!-- ── HERO ── -->
+    <section class="rc-hero max-w-[1200px] mx-auto px-6 py-16 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div class="rc-hero__left">
+        <span class="rc-tag">PLATAFORMA REDCICLAR</span>
+        <h1 class="rc-hero__title">
+          Digitalizamos tu<br />
+          <span class="rc-accent">impacto ambiental</span>
         </h1>
-
-        <!-- BOTÓN -->
-        <a href="/contacto#formulario-contacto"
-          class="inline-block bg-[#F39C12] font-bold text-dark-900 text-lg px-6 py-3 rounded-md hover:bg-[#FEB94CFA] transition text-black">
-          Quiero un resultado similar
-        </a>
-      </div>
-
-    </section>
-
-    <!-- IMPACTO GENERADO -->
-    <section class="w-full py-20 bg-[#151515]">
-      <div class="max-w-[1200px] mx-auto px-6 text-left">
-
-        <h2 class="text-3xl font-bold text-white mb-10">Impacto generado</h2>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-
-          <div class="bg-[#0D0D0D] p-6 rounded-lg border border-[#1A1A1A]">
-            <i data-lucide="map" class="w-10 h-10 text-[#F39C12] mb-4"></i>
-            <p class="text-white font-bold text-3xl mb-2">+40%</p>
-            <p class="text-gray-400 text-sm">Mejora en la eficiencia de rutas de recolección.</p>
+        <p class="rc-hero__sub">
+          Solución web que centraliza información, optimiza rutas y visualiza resultados ambientales en tiempo real.
+        </p>
+        <div class="rc-hero__features">
+          <div class="rc-feat">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+            <span>Datos<br/>centralizados</span>
           </div>
-
-          <div class="bg-[#0D0D0D] p-6 rounded-lg border border-[#1A1A1A]">
-            <i data-lucide="factory" class="w-10 h-10 text-[#F39C12] mb-4"></i>
-            <p class="text-white font-bold text-3xl mb-2">Costos ↓</p>
-            <p class="text-gray-400 text-sm">Reducción de costos operativos mediante análisis inteligente.</p>
+          <div class="rc-feat">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+            <span>Rutas<br/>optimizadas</span>
           </div>
-
-          <div class="bg-[#0D0D0D] p-6 rounded-lg border border-[#1A1A1A]">
-            <i data-lucide="leaf" class="w-10 h-10 text-[#F39C12] mb-4"></i>
-            <p class="text-white font-bold text-3xl mb-2">Impacto verde</p>
-            <p class="text-gray-400 text-sm">Monitoreo ambiental con métricas claras y trazables.</p>
+          <div class="rc-feat">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+            <span>Analítica<br/>en tiempo real</span>
           </div>
+          <div class="rc-feat">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            <span>Reportes<br/>automáticos</span>
+          </div>
+        </div>
+      </div>
+      <div class="rc-hero__right">
+        <img src={redciclarMockup.src} alt="Dashboard Redciclar" class="rc-hero__mockup" />
+      </div>
+    </section>
 
+    <!-- ── BENEFICIOS ── -->
+    <section class="rc-section rc-section--gray py-20 bg-[#111]">
+      <div class="max-w-[1200px] mx-auto px-6">
+        <p class="rc-tag rc-tag--center text-center">BENEFICIOS QUE GENERA REDCICLAR</p>
+        <h2 class="text-3xl font-extrabold text-white text-center mt-2 mb-12 uppercase tracking-wider">
+          Logros medibles en sostenibilidad
+        </h2>
+        <div class="rc-benefits">
+          <div class="rc-benefit-card">
+            <div class="rc-benefit-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            </div>
+            <h3 class="rc-benefit-title">Decisiones basadas en datos reales</h3>
+            <p class="rc-benefit-desc">Información confiable y actualizada para planificar acciones efectivas.</p>
+          </div>
+          <div class="rc-benefit-card">
+            <div class="rc-benefit-icon rc-benefit-icon--green">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </div>
+            <h3 class="rc-benefit-title">Menos costos, más eficiencia</h3>
+            <p class="rc-benefit-desc">Rutas inteligentes que reducen tiempos, distancias y gastos.</p>
+          </div>
+          <div class="rc-benefit-card">
+            <div class="rc-benefit-icon rc-benefit-icon--blue">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3 class="rc-benefit-title">Transparencia que genera confianza</h3>
+            <p class="rc-benefit-desc">Reportes listos para auditorías y rendición de cuentas.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- LA EMPRESA -->
-    <section class="w-full py-24 bg-[#0A0A0A]">
-      <div class="max-w-[1300px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-14 text-left">
-
-        <!-- Izquierda -->
-        <div>
-          <p class="text-[#F39C12] text-sm font-semibold mb-2">LA EMPRESA</p>
-          <h2 class="text-4xl font-bold text-white leading-tight">
-            Fundación CRESE: soluciones para el desarrollo social y ambiental
+    <!-- ── INTEGRACIÓN ── -->
+    <section class="rc-section rc-integ-section bg-[#0A0A0A] py-20">
+      <div class="rc-integ max-w-[1200px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div class="rc-integ__left">
+          <span class="rc-tag">INTEGRACIÓN Y ESCALABILIDAD</span>
+          <h2 class="rc-integ__title">
+            Conecta tus operaciones con <span class="rc-accent">resultados medibles</span>
           </h2>
-        </div>
-
-        <!-- Derecha -->
-        <div>
-          <p class="text-gray-300 text-lg mb-4">
-            La Fundación CRESE impulsa proyectos orientados al manejo responsable de residuos,
-            sostenibilidad urbana y participación comunitaria. Para fortalecer estas iniciativas,
-            necesitaban un sistema moderno que centralizara datos, optimizara rutas de recolección
-            y analizara el impacto ambiental.
+          <p class="rc-integ__sub">
+            Te ayudamos a integrar lo que sucede en campo con tecnología que transforma y optimiza tus procesos clave.
           </p>
-
-          <p class="text-gray-300 text-lg">
-            Antes de REDCICLAR, la información se registraba de forma manual,
-            dificultando la planificación, generando sobrecostos y reduciendo la precisión
-            en la evaluación del impacto ambiental.
-          </p>
+          <a href={`${base}/contacto#formulario-contacto`} class="rc-btn">
+            Agendar Diagnóstico Gratis
+          </a>
         </div>
-
+        <div class="rc-integ__right">
+          <img src={pcImg.src} alt="Integración Redciclar" class="rc-integ__img" />
+        </div>
       </div>
     </section>
 
-    <!-- EL DESAFÍO -->
-    <section class="w-full py-24 bg-[#0A0A0A] border-t border-[#1A1A1A]">
-      <div class="max-w-[1300px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-14 text-left">
-
-        <div>
-          <p class="text-[#F39C12] text-sm font-semibold mb-2">EL DESAFÍO</p>
-          <h2 class="text-4xl font-bold text-white leading-tight">
-            Crear una plataforma integral para monitorear y optimizar la recolección de residuos
-          </h2>
+    <!-- ── PROCESO ── -->
+    <section class="rc-section rc-section--gray py-20 bg-[#111]">
+      <div class="max-w-[1200px] mx-auto px-6">
+        <p class="rc-tag rc-tag--center text-center">ASÍ TRABAJAMOS</p>
+        <h2 class="text-3xl font-extrabold text-white text-center mt-2 mb-12 uppercase tracking-wider">
+          Nuestro Proceso Operativo
+        </h2>
+        <div class="rc-proceso">
+          <div class="rc-paso">
+            <div class="rc-paso__circle">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 16 12 12 8 16"/><line x1="12" y1="12" x2="12" y2="21"/><path d="M20.39 18.39A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.3"/></svg>
+            </div>
+            <h4 class="rc-paso__title">1. Capturamos</h4>
+            <p class="rc-paso__desc">Recolectamos datos de campo desde múltiples fuentes.</p>
+          </div>
+          <div class="rc-paso__arrow">›</div>
+          <div class="rc-paso">
+            <div class="rc-paso__circle">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M16.24 7.76a6 6 0 0 1 0 8.49M4.93 4.93a10 10 0 0 0 0 14.14M7.76 7.76a6 6 0 0 0 0 8.49"/></svg>
+            </div>
+            <h4 class="rc-paso__title">2. Procesamos</h4>
+            <p class="rc-paso__desc">Organizamos y validamos la información automáticamente.</p>
+          </div>
+          <div class="rc-paso__arrow">›</div>
+          <div class="rc-paso">
+            <div class="rc-paso__circle">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8l-4 4 4 4M16 12H8"/></svg>
+            </div>
+            <h4 class="rc-paso__title">3. Optimizamos</h4>
+            <p class="rc-paso__desc">Generamos rutas eficientes con algoritmos inteligentes.</p>
+          </div>
+          <div class="rc-paso__arrow">›</div>
+          <div class="rc-paso">
+            <div class="rc-paso__circle">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+            </div>
+            <h4 class="rc-paso__title">4. Visualizamos</h4>
+            <p class="rc-paso__desc">Dashboards claros para medir y actuar en tiempo real.</p>
+          </div>
         </div>
-
-        <div>
-          <p class="text-gray-300 text-lg mb-4">
-            CRESE necesitaba un sistema digital capaz de registrar recolecciones, cuantificar materiales,
-            visualizarlos en mapas, generar reportes y entregar métricas ambientales en tiempo real.
-          </p>
-
-          <p class="text-gray-300 text-lg">
-            El mayor reto era integrar logística, datos operativos y analítica ambiental
-            en una sola plataforma accesible, intuitiva y segura.
-          </p>
-        </div>
-
       </div>
     </section>
 
-    <!-- LA SOLUCIÓN -->
-    <section class="w-full py-24 bg-[#0A0A0A] border-t border-[#1A1A1A]">
-      <div class="max-w-[1300px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-14 text-left">
-
-        <div>
-          <p class="text-[#F39C12] text-sm font-semibold mb-2">LA SOLUCIÓN</p>
-          <h2 class="text-4xl font-bold text-white leading-tight">
-            Sistema web REDCICLAR con analítica ambiental integrada
-          </h2>
-        </div>
-
-        <div>
-          <ul class="space-y-4 text-gray-300 text-lg">
-
-            <li class="flex items-start gap-3">
-              <i data-lucide="globe" class="w-6 h-6 text-[#F39C12] mt-1"></i>
-              Plataforma web para el registro y monitoreo de recolecciones por zonas.
-            </li>
-
-            <li class="flex items-start gap-3">
-              <i data-lucide="route" class="w-6 h-6 text-[#F39C12] mt-1"></i>
-              Optimización de rutas basadas en datos reales para aumentar eficiencia operativa.
-            </li>
-
-            <li class="flex items-start gap-3">
-              <i data-lucide="bar-chart-3" class="w-6 h-6 text-[#F39C12] mt-1"></i>
-              Dashboards ambientales para visualizar toneladas recicladas, zonas críticas y progreso mensual.
-            </li>
-
-            <li class="flex items-start gap-3">
-              <i data-lucide="clipboard-list" class="w-6 h-6 text-[#F39C12] mt-1"></i>
-              Reportes automáticos para entidades ambientales y administrativas.
-            </li>
-
-          </ul>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- CTA FINAL -->
+    <!-- ── CTA FINAL ── -->
     <section class="w-full bg-[#151515] py-24 text-center">
       <div class="max-w-[700px] mx-auto px-6">
         <h2 class="text-3xl font-bold text-white mb-4">
           ¿Quieres convertir tu proyecto en un caso de éxito?
         </h2>
-
         <p class="text-gray-300 mb-8">
-          Conversemos sobre tus objetivos y construyamos la solución tecnológica
-          que tu organización necesita.
+          Conversemos sobre tus objetivos y construyamos la solución tecnológica que tu organización necesita.
         </p>
-
-        <a href="/contacto#formulario-contacto"
-          class="bg-[#F39C12] text-black font-bold px-8 py-4 rounded-md hover:bg-[#FEB94CFA] transition duration-300">
+        <a href={`${base}/contacto#formulario-contacto`}
+          class="bg-[#F39C12] text-black font-bold px-8 py-4 rounded-md hover:bg-[#FEB94CFA] transition duration-300 transform hover:scale-105 inline-block">
           Agenda una Consultoría
         </a>
       </div>
@@ -188,5 +169,221 @@ const pageKeywords = "sistema de gestión de residuos, plataforma de residuos, g
   </main>
 
   <Footer />
-
 </Layout>
+
+<style is:global>
+  /* ── Styles Redciclar Case study ── */
+  .rc-tag {
+    color: #f39c12;
+    font-weight: 700;
+    font-size: 0.78rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 0.75rem;
+  }
+  .rc-tag--center { text-align: center; margin-bottom: 1rem; }
+  .rc-hero__title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 900;
+    color: #fff;
+    line-height: 1.2;
+    margin-bottom: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .rc-accent { color: #f39c12; }
+  .rc-hero__sub {
+    color: #9ca3af;
+    font-size: 0.95rem;
+    line-height: 1.65;
+    margin-bottom: 1.8rem;
+  }
+  .rc-hero__features {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+  .rc-feat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    text-align: center;
+  }
+  .rc-feat svg {
+    width: 36px;
+    height: 36px;
+    color: #f39c12;
+    background: rgba(243,156,18,0.1);
+    padding: 8px;
+    border-radius: 50%;
+    box-sizing: content-box;
+  }
+  .rc-feat span {
+    font-size: 0.72rem;
+    color: #b3b3b3;
+    line-height: 1.3;
+  }
+  .rc-hero__mockup {
+    width: 100%;
+    max-width: 520px;
+    border-radius: 1rem;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+    border: 1px solid rgba(243,156,18,0.15);
+    margin: 0 auto;
+    transition: transform 0.4s ease;
+  }
+  .rc-hero__mockup:hover {
+    transform: scale(1.02);
+  }
+
+  /* ── BENEFICIOS ── */
+  .rc-benefits {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+  @media (max-width: 768px) {
+    .rc-benefits { grid-template-columns: 1fr; }
+  }
+  .rc-benefit-card {
+    background: #1a1a1a;
+    border: 1px solid rgba(243,156,18,0.12);
+    border-radius: 1rem;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    transition: border-color 0.3s, transform 0.3s;
+  }
+  .rc-benefit-card:hover {
+    border-color: rgba(243,156,18,0.4);
+    transform: translateY(-4px);
+  }
+  .rc-benefit-icon {
+    width: 56px;
+    height: 56px;
+    background: rgba(243,156,18,0.12);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.25rem;
+  }
+  .rc-benefit-icon svg { width: 26px; height: 26px; color: #f39c12; }
+  .rc-benefit-icon--green { background: rgba(52,211,153,0.12); }
+  .rc-benefit-icon--green svg { color: #34d399; }
+  .rc-benefit-icon--blue { background: rgba(96,165,250,0.12); }
+  .rc-benefit-icon--blue svg { color: #60a5fa; }
+  .rc-benefit-title {
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.95rem;
+    margin-bottom: 0.6rem;
+    line-height: 1.35;
+  }
+  .rc-benefit-desc {
+    color: #9ca3af;
+    font-size: 0.85rem;
+    line-height: 1.55;
+  }
+
+  /* ── INTEGRACIÓN ── */
+  .rc-integ {
+    background: linear-gradient(135deg, #0f0f0f 0%, #1a0d00 60%, #0f0f0f 100%);
+    border: 1px solid rgba(243,156,18,0.1);
+    border-radius: 2rem;
+    padding: 3.5rem;
+  }
+  @media (max-width: 991px) {
+    .rc-integ { grid-template-columns: 1fr; padding: 2rem; }
+    .rc-integ__right { display: none; }
+  }
+  .rc-integ__title {
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+    font-weight: 800;
+    color: #fff;
+    line-height: 1.25;
+    margin-bottom: 0.85rem;
+  }
+  .rc-integ__sub {
+    color: #9ca3af;
+    font-size: 0.92rem;
+    line-height: 1.6;
+    margin-bottom: 1.8rem;
+  }
+  .rc-btn {
+    display: inline-block;
+    background: #f39c12;
+    color: #000;
+    font-weight: 700;
+    font-size: 0.9rem;
+    padding: 0.85rem 2rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    transition: background 0.25s, transform 0.2s;
+  }
+  .rc-btn:hover { background: #ffc04a; transform: scale(1.04); }
+  .rc-integ__img {
+    width: 100%;
+    border-radius: 1rem;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+    margin: 0 auto;
+  }
+
+  /* ── PROCESO ── */
+  .rc-proceso {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .rc-paso {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.75rem;
+    flex: 1;
+    min-width: 130px;
+    max-width: 180px;
+  }
+  .rc-paso__circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: rgba(243,156,18,0.1);
+    border: 2px solid rgba(243,156,18,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s, border-color 0.3s;
+  }
+  .rc-paso:hover .rc-paso__circle {
+    background: rgba(243,156,18,0.2);
+    border-color: #f39c12;
+  }
+  .rc-paso__circle svg { width: 26px; height: 26px; color: #f39c12; }
+  .rc-paso__title {
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.9rem;
+    margin: 0;
+  }
+  .rc-paso__desc {
+    color: #9ca3af;
+    font-size: 0.78rem;
+    line-height: 1.5;
+  }
+  .rc-paso__arrow {
+    font-size: 2.2rem;
+    color: rgba(243,156,18,0.4);
+    align-self: center;
+    padding-bottom: 2rem;
+    flex-shrink: 0;
+  }
+  @media (max-width: 560px) {
+    .rc-paso__arrow { display: none; }
+    .rc-proceso { gap: 1.5rem; }
+  }
+</style>
