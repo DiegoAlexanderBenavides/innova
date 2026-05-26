@@ -183,3 +183,49 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
     >
   </nav>
 </div>
+
+<script is:inline>
+  // Scroll header background
+  const header = document.getElementById("main-header");
+  function handleScroll() {
+    if (header) {
+      if (window.scrollY > 10) {
+        header.classList.add("bg-[#121318]/90", "backdrop-blur-md", "shadow-lg");
+        header.classList.remove("bg-transparent");
+      } else {
+        header.classList.remove("bg-[#121318]/90", "backdrop-blur-md", "shadow-lg");
+        header.classList.add("bg-transparent");
+      }
+    }
+  }
+  window.addEventListener("scroll", handleScroll);
+  handleScroll();
+
+  // Mobile Menu toggles
+  function toggleMenu() {
+    const menu = document.getElementById('mobile-menu');
+    const hamburgerIcon = document.getElementById('hamburger-icon');
+    const closeIcon = document.getElementById('close-icon');
+
+    if (menu) {
+      if (menu.classList.contains('translate-y-full')) {
+        menu.classList.remove('translate-y-full');
+        menu.classList.remove('opacity-0');
+      } else {
+        menu.classList.add('translate-y-full');
+        menu.classList.add('opacity-0');
+      }
+    }
+
+    if (hamburgerIcon) hamburgerIcon.classList.toggle('hidden');
+    if (closeIcon) closeIcon.classList.toggle('hidden');
+  }
+
+  function toggleSubmenu() {
+    const submenu = document.getElementById("submenu");
+    const arrow = document.getElementById("submenu-arrow");
+
+    if (submenu) submenu.classList.toggle("hidden");
+    if (arrow) arrow.classList.toggle("rotate-180");
+  }
+</script>
