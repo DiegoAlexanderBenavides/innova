@@ -1,7 +1,17 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
+
+// Import target assets
+import heroImg from '../assets/images/makikuna-video/hero_video_icon.png';
+import previewImg from '../assets/images/makikuna-video/video_preview_forest.png';
+import iconBosque from '../assets/images/makikuna-video/icon_bosque.png';
+import iconBiodiversidad from '../assets/images/makikuna-video/icon_biodiversidad.png';
+import iconServicios from '../assets/images/makikuna-video/icon_servicios.png';
+import iconAmenazas from '../assets/images/makikuna-video/icon_amenazas.png';
+import iconAcciones from '../assets/images/makikuna-video/icon_acciones.png';
+import docentesBanner from '../assets/images/makikuna-video/docentes_banner.png';
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 
 const pageTitle = "Caso de Éxito – Casa del Bosque | Producción de Video Educativo Infantil | INNOVA SYSTEMS CENTER";
 const pageDescription = "Descubre cómo INNOVA SYSTEMS CENTER creó un video educativo infantil para Casa del Bosque, combinando animación, narrativa y diseño audiovisual para generar aprendizaje dinámico y atractivo para niños.";
@@ -9,235 +19,490 @@ const pageKeywords = "caso de éxito, producción audiovisual, video educativo i
 ---
 
 <Layout title={pageTitle} description={pageDescription} keywords={pageKeywords}>
-  <Header />
-
-  <main class="w-full">
-
-    <!-- HERO -->
-    <section class="w-full h-screen flex flex-col justify-center bg-center bg-cover bg-fixed"
-      style="background-image: url('/assets/images/fondohome.png'); background-size: cover; background-position: center;"
-      data-animation="animate-fade-in">
-
-      <div class="w-full max-w-[1480px] px-6 mx-auto text-left mt-20">
+  
+  <div class="cb-wrapper bg-[#080808] text-white min-h-screen font-sans selection:bg-[#F39C12] selection:text-black">
+    
+    <!-- ── CUSTOM HEADER ── -->
+    <header class="cb-header fixed top-0 left-0 w-full z-50 transition-all duration-300">
+      <div class="max-w-[1240px] mx-auto px-6 h-20 flex items-center justify-between">
         
-        <!-- TÍTULO HERO -->
-        <p class="text-white text-3xl lg:text-6xl font-bold max-w-3xl mb-6">
-          Contenido Audiovisual que Educa y Conecta con los Niños
-        </p>
-
-        <!-- DESCRIPCIÓN -->
-        <h1 class="text-white text-xl lg:text-2xl font-normal max-w-3xl mb-8 leading-relaxed">
-          Edición y producción de un video educativo infantil para Casa del Bosque y Fábrica Cuentos,
-          diseñado para fomentar el aprendizaje a través de narrativa visual, animación y contenido interactivo.
-        </h1>
-
-        <!-- BOTÓN -->
-        <a href="/contacto#formulario-contacto"
-          class="inline-block bg-[#F39C12] font-bold text-dark-900 text-lg px-6 py-3 rounded-md hover:bg-[#FEB94CFA] transition text-black">
-          Quiero un resultado similar
+        <!-- Logo -->
+        <a href={`${base}/`} class="flex items-center group">
+          <img
+            src={`${base}/assets/images/logo.png`}
+            alt="Logo Innova Systems Center"
+            class="h-12 w-auto transition-transform group-hover:scale-105"
+          />
         </a>
+
+        <!-- Navigation Links -->
+        <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-300">
+          <a href="#inicio" class="hover:text-[#F39C12] transition-colors">Inicio</a>
+          <a href="#sobre-el-proyecto" class="hover:text-[#F39C12] transition-colors">Sobre el proyecto</a>
+          <a href="#temas" class="hover:text-[#F39C12] transition-colors">Temas</a>
+          <a href="#recursos" class="hover:text-[#F39C12] transition-colors">Recursos</a>
+          <a href="#contacto" class="hover:text-[#F39C12] transition-colors">Contacto</a>
+          <a href={`${base}/produccion-contenido-digital/`} class="text-[#F39C12] border border-[#F39C12]/30 px-3 py-1 rounded hover:bg-[#F39C12]/10 transition-all">Volver a Servicios</a>
+        </nav>
+
+        <!-- CTAs -->
+        <a href="#video-seccion" class="bg-[#F39C12] text-black font-bold text-xs uppercase px-5 py-2.5 rounded-full hover:bg-[#ffb339] transition-all flex items-center gap-2 transform hover:scale-105 shadow-lg shadow-[#F39C12]/20">
+          Ver video
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+            <polygon points="5 3 19 12 5 21 5 3"/>
+          </svg>
+        </a>
+
       </div>
+    </header>
 
-    </section>
+    <!-- ── HERO SECTION ── -->
+    <section id="inicio" class="relative pt-32 pb-20 md:py-40 overflow-hidden flex items-center min-h-screen bg-radial-glow">
+      <div class="cb-spotlight spotlight-1"></div>
+      <div class="cb-spotlight spotlight-2"></div>
+      
+      <div class="max-w-[1240px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10 w-full">
+        
+        <!-- Left Side Content -->
+        <div class="flex flex-col text-left">
+          <span class="text-[#F39C12] font-bold text-xs uppercase tracking-[0.2em] mb-4">Caso de Éxito</span>
+          <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-[1.1] mb-6 tracking-tight">
+            Casa del Bosque<br />
+            <span class="text-[#F39C12]">Video Educativo</span>
+          </h1>
+          <p class="text-gray-300 text-lg md:text-xl font-normal leading-relaxed mb-8 max-w-lg">
+            Una producción educativa que invita a niñas, niños y jóvenes a descubrir la importancia de los bosques para la vida y nuestro futuro.
+          </p>
 
-    <!-- IMPACTO GENERADO -->
-    <section class="w-full py-20 bg-[#151515]">
-      <div class="max-w-[1200px] mx-auto px-6 text-left">
-
-        <h2 class="text-3xl font-bold text-white mb-10">Impacto generado</h2>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-
-          <div class="bg-[#0D0D0D] p-6 rounded-lg border border-[#1A1A1A]">
-            <i data-lucide="sparkles" class="w-10 h-10 text-[#F39C12] mb-4"></i>
-            <p class="text-white font-bold text-3xl mb-2">+90%</p>
-            <p class="text-gray-400 text-sm">Mejora en retención de la atención infantil.</p>
+          <!-- Buttons -->
+          <div class="flex flex-wrap gap-4 mb-12">
+            <a href="#video-seccion" class="bg-[#F39C12] text-black font-extrabold px-8 py-3.5 rounded-full hover:bg-[#ffb339] transition-all flex items-center gap-3 transform hover:scale-105 shadow-xl shadow-[#F39C12]/25">
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                <polygon points="5 3 19 12 5 21 5 3"/>
+              </svg>
+              Ver video educativo
+            </a>
           </div>
 
-          <div class="bg-[#0D0D0D] p-6 rounded-lg border border-[#1A1A1A]">
-            <i data-lucide="film" class="w-10 h-10 text-[#F39C12] mb-4"></i>
-            <p class="text-white font-bold text-3xl mb-2">Contenido dinámico</p>
-            <p class="text-gray-400 text-sm">Video atractivo con narrativa visual optimizada.</p>
-          </div>
-
-          <div class="bg-[#0D0D0D] p-6 rounded-lg border border-[#1A1A1A]">
-            <i data-lucide="book-open" class="w-10 h-10 text-[#F39C12] mb-4"></i>
-            <p class="text-white font-bold text-3xl mb-2">Aprendizaje activo</p>
-            <p class="text-gray-400 text-sm">Estructura audiovisual pensada para niños.</p>
+          <!-- Micro Features Under Hero -->
+          <div class="grid grid-cols-3 gap-4 border-t border-gray-800/60 pt-8 max-w-lg">
+            <div class="flex flex-col items-start text-left">
+              <svg class="w-6 h-6 text-[#F39C12] mb-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/>
+                <path d="M12 6v12M6 12h12"/>
+              </svg>
+              <span class="text-xs text-gray-400 font-medium leading-tight">Aprende sobre los bosques</span>
+            </div>
+            <div class="flex flex-col items-start text-left">
+              <svg class="w-6 h-6 text-[#F39C12] mb-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
+              <span class="text-xs text-gray-400 font-medium leading-tight">Conoce su importancia</span>
+            </div>
+            <div class="flex flex-col items-start text-left">
+              <svg class="w-6 h-6 text-[#F39C12] mb-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+              <span class="text-xs text-gray-400 font-medium leading-tight">Actúa por un mejor futuro</span>
+            </div>
           </div>
 
         </div>
+
+        <!-- Right Side Image/Mockup -->
+        <div class="flex justify-center relative">
+          <div class="relative w-full max-w-[480px]">
+            <img src={heroImg.src} alt="Casa del Bosque Video" class="w-full h-auto object-contain z-10 relative drop-shadow-[0_20px_50px_rgba(243,156,18,0.15)] animate-float" />
+          </div>
+        </div>
+
       </div>
     </section>
 
-    <!-- LA EMPRESA -->
-    <section class="w-full py-24 bg-[#0A0A0A]">
-      <div class="max-w-[1300px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-14 text-left">
+    <!-- ── SOBRE EL PROYECTO SECTION ── -->
+    <section id="sobre-el-proyecto" class="py-24 bg-[#0d0d0d] border-t border-gray-900 relative">
+      <div class="max-w-[1240px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        
+        <!-- Left Side Content -->
+        <div class="flex flex-col text-left">
+          <span class="text-[#F39C12] font-bold text-xs uppercase tracking-[0.2em] mb-3">Sobre el proyecto</span>
+          <h2 class="text-3xl md:text-5xl font-extrabold text-white leading-tight mb-6">
+            Educación que <span class="text-[#F39C12]">inspira y transforma</span>
+          </h2>
+          <p class="text-gray-300 text-lg leading-relaxed mb-8">
+            Casa del Bosque es un video educativo que busca fomentar la conciencia ambiental a través de historias cercanas, lenguaje claro y contenido audiovisual de alta calidad.
+          </p>
+          <a href="#video-seccion" class="self-start border border-[#F39C12] text-white hover:bg-[#F39C12] hover:text-black font-bold px-8 py-3 rounded-full transition-all duration-300">
+            Conoce más
+          </a>
+        </div>
 
-        <div>
-          <p class="text-[#F39C12] text-sm font-semibold mb-2">LA ORGANIZACIÓN</p>
-          <h2 class="text-4xl font-bold text-white leading-tight">
-            Casa del Bosque y Fábrica Cuentos: contenido creativo para el aprendizaje infantil
+        <!-- Right Side Forest Mockup Play -->
+        <div class="relative group cursor-pointer overflow-hidden rounded-2xl border border-gray-800 shadow-2xl shadow-black/80">
+          <img src={previewImg.src} alt="Forest preview" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+          <div class="absolute inset-0 bg-black/35 group-hover:bg-black/20 transition-all flex items-center justify-center">
+            <a href="#video-seccion" class="w-20 h-20 bg-[#F39C12] text-black rounded-full flex items-center justify-center shadow-2xl shadow-[#F39C12]/50 hover:scale-110 hover:bg-[#ffb339] transition-all transform duration-350">
+              <svg class="w-8 h-8 fill-current ml-1" viewBox="0 0 24 24">
+                <polygon points="5 3 19 12 5 21 5 3"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── TEMAS QUE ENCONTRARÁS SECTION ── -->
+    <section id="temas" class="py-24 bg-[#080808] relative">
+      <div class="max-w-[1240px] mx-auto px-6">
+        
+        <!-- Header -->
+        <div class="text-center mb-16">
+          <span class="text-[#F39C12] font-bold text-xs uppercase tracking-[0.2em] mb-3 block">Temas que encontrarás</span>
+          <h2 class="text-3xl md:text-5xl font-extrabold text-white">
+            Explora. <span class="text-[#F39C12]">Aprende.</span> Actúa.
           </h2>
         </div>
 
-        <div>
-          <p class="text-gray-300 text-lg mb-4">
-            Casa del Bosque y Fábrica Cuentos producen contenidos educativos diseñados especialmente 
-            para niños, con el objetivo de estimular la imaginación, el aprendizaje temprano y la exploración creativa.
-          </p>
+        <!-- Grid of 5 Cards -->
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-6 mb-12">
+          
+          <!-- Card 1 -->
+          <div class="cb-card group">
+            <div class="cb-card__icon-wrap">
+              <img src={iconBosque.src} alt="¿Qué es un bosque?" class="w-14 h-14 object-contain group-hover:scale-110 transition-transform" />
+            </div>
+            <h3 class="text-sm font-bold text-white uppercase tracking-wider text-center group-hover:text-[#F39C12] transition-colors">
+              ¿Qué es<br />un bosque?
+            </h3>
+          </div>
 
-          <p class="text-gray-300 text-lg">
-            Su misión es transformar conceptos educativos en experiencias audiovisuales dinámicas y accesibles.
-            En este proyecto, necesitaban una pieza visual que fuese clara, atractiva y adaptada a la comprensión infantil.
-          </p>
+          <!-- Card 2 -->
+          <div class="cb-card group">
+            <div class="cb-card__icon-wrap">
+              <img src={iconBiodiversidad.src} alt="Biodiversidad" class="w-14 h-14 object-contain group-hover:scale-110 transition-transform" />
+            </div>
+            <h3 class="text-sm font-bold text-white uppercase tracking-wider text-center group-hover:text-[#F39C12] transition-colors">
+              Biodiversidad
+            </h3>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="cb-card group">
+            <div class="cb-card__icon-wrap">
+              <img src={iconServicios.src} alt="Servicios ambientales" class="w-14 h-14 object-contain group-hover:scale-110 transition-transform" />
+            </div>
+            <h3 class="text-sm font-bold text-white uppercase tracking-wider text-center group-hover:text-[#F39C12] transition-colors">
+              Servicios<br />ambientales
+            </h3>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="cb-card group">
+            <div class="cb-card__icon-wrap">
+              <img src={iconAmenazas.src} alt="Amenazas y cuidados" class="w-14 h-14 object-contain group-hover:scale-110 transition-transform" />
+            </div>
+            <h3 class="text-sm font-bold text-white uppercase tracking-wider text-center group-hover:text-[#F39C12] transition-colors">
+              Amenazas<br />y cuidados
+            </h3>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="cb-card group">
+            <div class="cb-card__icon-wrap">
+              <img src={iconAcciones.src} alt="Acciones para un futuro mejor" class="w-14 h-14 object-contain group-hover:scale-110 transition-transform" />
+            </div>
+            <h3 class="text-sm font-bold text-white uppercase tracking-wider text-center group-hover:text-[#F39C12] transition-colors">
+              Acciones para<br />un futuro mejor
+            </h3>
+          </div>
+
+        </div>
+
+        <!-- Centered button -->
+        <div class="text-center">
+          <a href="#sobre-el-proyecto" class="inline-block border border-[#F39C12] text-white hover:bg-[#F39C12] hover:text-black font-bold px-8 py-3 rounded-full transition-all duration-300">
+            Ver todos los temas
+          </a>
         </div>
 
       </div>
     </section>
 
-    <!-- EL DESAFÍO -->
-    <section class="w-full py-24 bg-[#0A0A0A] border-t border-[#1A1A1A]">
-      <div class="max-w-[1300px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-14 text-left">
+    <!-- ── PARA DOCENTES BANNER SECTION ── -->
+    <section id="recursos" class="py-16 bg-[#080808]">
+      <div class="max-w-[1240px] mx-auto px-6">
+        <div class="cb-docentes-banner relative overflow-hidden rounded-3xl border border-gray-800 shadow-2xl">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center p-8 md:p-12 relative z-10">
+            
+            <!-- Left content -->
+            <div class="flex flex-col text-left">
+              <span class="text-[#F39C12] font-bold text-xs uppercase tracking-[0.2em] mb-3">Para docentes</span>
+              <h2 class="text-3xl md:text-4xl font-extrabold text-white leading-tight mb-4">
+                Recursos para llevar el aprendizaje <span class="text-[#F39C12]">más lejos</span>
+              </h2>
+              <p class="text-gray-300 text-base leading-relaxed mb-6 max-w-md">
+                Guías didácticas, actividades y materiales descargables para trabajar en el aula y motivar a tus alumnos.
+              </p>
+              <a href={`${base}/contacto#formulario-contacto`} class="self-start bg-transparent border border-[#F39C12] text-white hover:bg-[#F39C12] hover:text-black font-bold px-6 py-2.5 rounded-full transition-all duration-300">
+                Ir a recursos
+              </a>
+            </div>
 
-        <div>
-          <p class="text-[#F39C12] text-sm font-semibold mb-2">EL DESAFÍO</p>
-          <h2 class="text-4xl font-bold text-white leading-tight">
-            Crear un video educativo atractivo, comprensible y adaptado a niños
-          </h2>
+            <!-- Right banner image -->
+            <div class="flex justify-center lg:justify-end">
+              <img src={docentesBanner.src} alt="Docentes banner" class="w-full max-w-[420px] rounded-2xl shadow-xl border border-gray-800/40" />
+            </div>
+
+          </div>
         </div>
-
-        <div>
-          <p class="text-gray-300 text-lg mb-4">
-            El reto consistía en convertir un contenido narrativo infantil en un video que transmitiera 
-            mensajes educativos claros sin perder dinamismo, diversión y atención visual.
-          </p>
-
-          <p class="text-gray-300 text-lg">
-            Se requería una edición profesional que integrara animaciones, transiciones suaves, 
-            colores amigables y elementos visuales que mantuvieran el interés de los niños durante toda la historia.
-          </p>
-        </div>
-
       </div>
     </section>
 
-    <!-- LA SOLUCIÓN -->
-    <section class="w-full py-24 bg-[#0A0A0A] border-t border-[#1A1A1A]">
-      <div class="max-w-[1300px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-14 text-left">
+    <!-- ── BOTTOM BANNER CUIDEMOS HOY ── -->
+    <section class="py-12 bg-[#080808]">
+      <div class="max-w-[1240px] mx-auto px-6">
+        <div class="cb-cuidemos-banner rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl border border-[#F39C12]/15 bg-gradient-to-r from-[#140d00] to-[#0A0A0A]">
+          <div class="flex items-center gap-4 text-left">
+            <div class="w-12 h-12 bg-[#F39C12]/10 rounded-full flex items-center justify-center text-[#F39C12] border border-[#F39C12]/20 flex-shrink-0">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                <path d="M2 12h20"/>
+              </svg>
+            </div>
+            <div>
+              <h4 class="text-white font-bold text-base md:text-lg">Cuidemos hoy los bosques</h4>
+              <p class="text-gray-400 text-sm">para disfrutar mañana un mundo mejor.</p>
+            </div>
+          </div>
+          <a href="#video-seccion" class="bg-[#F39C12] text-black font-extrabold px-6 py-3 rounded-full hover:bg-[#ffb339] transition-all flex items-center gap-2 text-sm shadow-lg shadow-[#F39C12]/25">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+              <polygon points="5 3 19 12 5 21 5 3"/>
+            </svg>
+            Ver video educativo
+          </a>
+        </div>
+      </div>
+    </section>
 
+    <!-- ── VIDEO SECCION ── -->
+    <section id="video-seccion" class="py-24 bg-[#0d0d0d] border-t border-gray-900">
+      <div class="max-w-[1000px] mx-auto px-6">
+        <div class="text-center mb-12">
+          <span class="text-[#F39C12] font-bold text-xs uppercase tracking-[0.2em] mb-3 block">Producción Final</span>
+          <h2 class="text-3xl md:text-4xl font-extrabold text-white">Video Completo del Proyecto</h2>
+        </div>
+        <div class="w-full rounded-2xl overflow-hidden border border-gray-800 shadow-2xl bg-black">
+          <video class="w-full h-auto max-h-[560px]" controls poster={previewImg.src}>
+            <source src="https://innovasystemscenter.com/assets/videos/casa_bosque_video.mp4" type="video/mp4" />
+            <source src={`${base}/assets/videos/casa_bosque_video.mp4`} type="video/mp4" />
+            <source src="/assets/videos/casa_bosque_video.mp4" type="video/mp4" />
+            Tu navegador no soporta videos HTML5.
+          </video>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CUSTOM FOOTER ── -->
+    <footer id="contacto" class="cb-footer bg-[#050505] text-gray-400 pt-20 pb-10 border-t border-gray-900 relative overflow-hidden">
+      <div class="cb-leaf-watermark"></div>
+      
+      <div class="max-w-[1240px] mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12 relative z-10 mb-16 text-left">
+        
+        <!-- Column 1: Logo & brand -->
         <div>
-          <p class="text-[#F39C12] text-sm font-semibold mb-2">LA SOLUCIÓN</p>
-          <h2 class="text-4xl font-bold text-white leading-tight">
-            Edición audiovisual infantil con narrativa dinámica y animación
-          </h2>
+          <a href={`${base}/`} class="flex items-center mb-6 group">
+            <img
+              src={`${base}/assets/images/logo.png`}
+              alt="Logo Innova Systems Center"
+              class="h-12 w-auto transition-transform group-hover:scale-105"
+            />
+          </a>
+          <p class="text-sm text-gray-500 leading-relaxed mb-6">
+            Un proyecto de Innova Systems Center orientado a impulsar la educación digital interactiva y la conciencia ecológica en el público infantil.
+          </p>
+          <p class="text-xs text-gray-600">
+            © 2026 Todos los derechos reservados.
+          </p>
         </div>
 
+        <!-- Column 2: Navegación -->
         <div>
-          <ul class="space-y-4 text-gray-300 text-lg">
-
-            <li class="flex items-start gap-3">
-              <i data-lucide="pen-tool" class="w-6 h-6 text-[#F39C12] mt-1"></i>
-              Diseño visual adaptado a niños: colores cálidos, ilustraciones y ritmo narrativo atractivo.
-            </li>
-
-            <li class="flex items-start gap-3">
-              <i data-lucide="film" class="w-6 h-6 text-[#F39C12] mt-1"></i>
-              Edición profesional con transiciones suaves, efectos ligeros y animación infantil.
-            </li>
-
-            <li class="flex items-start gap-3">
-              <i data-lucide="volume-2" class="w-6 h-6 text-[#F39C12] mt-1"></i>
-              Integración de música y narración educativa para maximizar comprensión y estímulo.
-            </li>
-
-            <li class="flex items-start gap-3">
-              <i data-lucide="sparkles" class="w-6 h-6 text-[#F39C12] mt-1"></i>
-              Optimización final para plataformas digitales y proyecciones educativas.
-            </li>
-
+          <h4 class="text-white font-bold text-xs uppercase tracking-widest mb-6">Navegación</h4>
+          <ul class="space-y-3.5 text-sm">
+            <li><a href="#inicio" class="hover:text-white transition-colors">Inicio</a></li>
+            <li><a href="#sobre-el-proyecto" class="hover:text-white transition-colors">Sobre el proyecto</a></li>
+            <li><a href="#temas" class="hover:text-white transition-colors">Temas</a></li>
+            <li><a href="#recursos" class="hover:text-white transition-colors">Recursos</a></li>
+            <li><a href={`${base}/contacto#formulario-contacto`} class="hover:text-white transition-colors">Contacto</a></li>
           </ul>
         </div>
 
-      </div>
-    </section>
-
-    <!-- RESULTADOS VISUALES DEL PROYECTO -->
-    <section class="w-full py-24 bg-[#0A0A0A] border-t border-[#1A1A1A]">
-      <div class="max-w-[1300px] mx-auto px-6">
-
-        <!-- TÍTULO -->
-        <div class="text-center mb-14">
-          <p class="text-[#F39C12] font-semibold tracking-wide mb-2">RESULTADOS DEL PROYECTO</p>
-          <h2 class="text-4xl font-bold text-white leading-tight">
-            Imágenes y contenido final entregado
-          </h2>
-          <p class="text-gray-400 max-w-2xl mx-auto mt-4">
-            Una muestra visual del proceso creativo y del resultado final desarrollado para Casa del Bosque.
-          </p>
+        <!-- Column 3: Recursos -->
+        <div>
+          <h4 class="text-white font-bold text-xs uppercase tracking-widest mb-6">Recursos</h4>
+          <ul class="space-y-3.5 text-sm">
+            <li><a href="#recursos" class="hover:text-white transition-colors">Guías didácticas</a></li>
+            <li><a href="#recursos" class="hover:text-white transition-colors">Actividades</a></li>
+            <li><a href="#recursos" class="hover:text-white transition-colors">Material descargable</a></li>
+            <li><a href="#recursos" class="hover:text-white transition-colors">Enlaces de interés</a></li>
+          </ul>
         </div>
 
-        <!-- GALERÍA -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-
-          <!-- ITEM IMAGEN 1 -->
-          <div class="group relative rounded-xl overflow-hidden border border-[#1A1A1A]">
-            <img src="/assets/images/projects/clientes11.webp"
-              class="w-full h-64 object-cover group-hover:scale-105 transition duration-500" />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60 group-hover:opacity-40 transition"></div>
-          </div>
-
-          <!-- ITEM IMAGEN 2 -->
-          <div class="group relative rounded-xl overflow-hidden border border-[#1A1A1A]">
-            <img src="/assets/images/projects/clientes12.webp"
-              class="w-full h-64 object-cover group-hover:scale-105 transition duration-500" />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60 group-hover:opacity-40 transition"></div>
-          </div>
-
-          <!-- ITEM IMAGEN 3 -->
-          <div class="group relative rounded-xl overflow-hidden border border-[#1A1A1A]">
-            <img src="/assets/images/projects/clientes12.webp"
-              class="w-full h-64 object-cover group-hover:scale-105 transition duration-500" />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60 group-hover:opacity-40 transition"></div>
-          </div>
-
-        </div>
-
-        <!-- VIDEO PRINCIPAL -->
-        <div class="mt-16">
-          <h3 class="text-2xl font-bold text-white mb-6 text-center">Video final del proyecto</h3>
-
-          <div class="w-full rounded-xl overflow-hidden border border-[#1A1A1A] shadow-lg">
-            <video class="w-full h-auto" controls poster="/assets/images/casa_bosque_poster.webp">
-              <source src="/assets/videos/casa_bosque_video.mp4" type="video/mp4" />
-              Tu navegador no soporta videos HTML5.
-            </video>
+        <!-- Column 4: Síguenos -->
+        <div>
+          <h4 class="text-white font-bold text-xs uppercase tracking-widest mb-6">Síguenos</h4>
+          <div class="flex items-center gap-4 mb-6">
+            <a href="https://facebook.com" class="w-10 h-10 bg-gray-900 hover:bg-[#F39C12] hover:text-black rounded-full flex items-center justify-center transition-colors text-white">
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                <path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c4.56-.93 8-4.96 8-9.75z"/>
+              </svg>
+            </a>
+            <a href="https://instagram.com" class="w-10 h-10 bg-gray-900 hover:bg-[#F39C12] hover:text-black rounded-full flex items-center justify-center transition-colors text-white">
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
+              </svg>
+            </a>
+            <a href="https://youtube.com" class="w-10 h-10 bg-gray-900 hover:bg-[#F39C12] hover:text-black rounded-full flex items-center justify-center transition-colors text-white">
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                <path d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.107C19.52 3.545 12 3.545 12 3.545s-7.52 0-9.388.51C1.244 4.545.51 5.28.298 7.15c-.52 1.867-.52 5.76-.52 5.76s0 3.893.52 5.76c.21 1.87.944 2.605 2.812 2.605 1.868.51 9.388.51 9.388.51s7.52 0 9.388-.51c1.868-.51 2.603-1.244 2.812-3.115.52-1.867.52-5.76.52-5.76s0-3.893-.52-5.76zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+              </svg>
+            </a>
           </div>
         </div>
 
       </div>
-    </section>
 
-    <!-- CTA FINAL -->
-    <section class="w-full bg-[#151515] py-24 text-center">
-      <div class="max-w-[700px] mx-auto px-6">
-        <h2 class="text-3xl font-bold text-white mb-4">
-          ¿Quieres convertir tu proyecto en un caso de éxito?
-        </h2>
-
-        <p class="text-gray-300 mb-8">
-          Hablemos sobre tu idea y construyamos contenido audiovisual que conecte con tu audiencia.
-        </p>
-
-        <a href="/contacto#formulario-contacto"
-          class="bg-[#F39C12] text-black font-bold px-8 py-4 rounded-md hover:bg-[#FEB94CFA] transition duration-300">
-          Agenda una Consultoría
-        </a>
+      <!-- Bottom border line and logo watermark -->
+      <div class="max-w-[1240px] mx-auto px-6 border-t border-gray-900/60 pt-6 flex flex-col md:flex-row items-center justify-between text-xs text-gray-600 gap-4">
+        <div>
+          Un proyecto innovador desarrollado con pasión por <a href={`${base}/`} class="text-[#F39C12] hover:underline">Innova Systems Center</a>.
+        </div>
       </div>
-    </section>
+    </footer>
 
-  </main>
-
-  <Footer />
+  </div>
 
 </Layout>
+
+<style is:global>
+  /* ───────────────────────── CUSTOM GLASSY HEADER ───────────────────────── */
+  .cb-header {
+    background: rgba(8, 8, 8, 0.7);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  .cb-header.scrolled {
+    background: rgba(8, 8, 8, 0.95);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  }
+
+  /* ── BACKGROUND SPOTLIGHT EFFECTS ── */
+  .bg-radial-glow {
+    background: radial-gradient(circle at 75% 50%, rgba(243, 156, 18, 0.05) 0%, rgba(8, 8, 8, 1) 70%);
+  }
+  .cb-spotlight {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(120px);
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0.45;
+  }
+  .spotlight-1 {
+    width: 400px;
+    height: 400px;
+    background: rgba(243, 156, 18, 0.1);
+    top: 10%;
+    right: 5%;
+  }
+  .spotlight-2 {
+    width: 300px;
+    height: 300px;
+    background: rgba(243, 156, 18, 0.06);
+    bottom: 20%;
+    left: 5%;
+  }
+
+  /* ── FLOATING ANIMATION ── */
+  .animate-float {
+    animation: cbFloat 6s ease-in-out infinite;
+  }
+  @keyframes cbFloat {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(-15px); }
+  }
+
+  /* ── TEMAS CARDS ── */
+  .cb-card {
+    background: #111;
+    border: 1px solid rgba(243, 156, 18, 0.15);
+    border-radius: 1.25rem;
+    padding: 2rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    cursor: default;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+  .cb-card:hover {
+    transform: translateY(-8px);
+    border-color: #F39C12;
+    box-shadow: 0 15px 30px rgba(243, 156, 18, 0.08);
+    background: #151515;
+  }
+  .cb-card__icon-wrap {
+    width: 80px;
+    height: 80px;
+    background: rgba(243, 156, 18, 0.08);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(243, 156, 18, 0.15);
+    transition: all 0.4s;
+  }
+  .cb-card:hover .cb-card__icon-wrap {
+    background: rgba(243, 156, 18, 0.16);
+    border-color: #F39C12;
+  }
+
+  /* ── DOCENTES BANNER ── */
+  .cb-docentes-banner {
+    background: linear-gradient(145deg, #111111 0%, #171106 100%);
+    border: 1px solid rgba(243, 156, 18, 0.12);
+  }
+
+  /* ── LEAF WATERMARK FOR FOOTER ── */
+  .cb-footer {
+    position: relative;
+  }
+  .cb-leaf-watermark {
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    width: 250px;
+    height: 250px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23f39c12' stroke-width='0.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5'/%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.03;
+    pointer-events: none;
+  }
+</style>
+
+<script>
+  // Add scroll class to header for styling
+  const header = document.querySelector('.cb-header');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      header?.classList.add('scrolled');
+    } else {
+      header?.classList.remove('scrolled');
+    }
+  });
+</script>
