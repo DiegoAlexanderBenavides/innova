@@ -6,18 +6,12 @@ import Footer from '../components/Footer.astro';
 // Import target assets
 import heroImg from '../assets/images/makikuna-video/hero_video_icon.png';
 import previewImg from '../assets/images/makikuna-video/video_preview_forest.png';
-import iconBosque from '../assets/images/makikuna-video/icon_bosque.png';
-import iconBiodiversidad from '../assets/images/makikuna-video/icon_biodiversidad.png';
-import iconServicios from '../assets/images/makikuna-video/icon_servicios.png';
-import iconAmenazas from '../assets/images/makikuna-video/icon_amenazas.png';
-import iconAcciones from '../assets/images/makikuna-video/icon_acciones.png';
-import docentesBanner from '../assets/images/makikuna-video/docentes_banner.png';
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 
-const pageTitle = "Caso de Éxito – Casa del Bosque | Producción de Video Educativo Infantil | INNOVA SYSTEMS CENTER";
-const pageDescription = "Descubre cómo INNOVA SYSTEMS CENTER creó un video educativo infantil para Casa del Bosque, combinando animación, narrativa y diseño audiovisual para generar aprendizaje dinámico y atractivo para niños.";
-const pageKeywords = "caso de éxito, producción audiovisual, video educativo infantil, contenido infantil, animación para niños, storytelling infantil, edición de video, diseño audiovisual, producción digital, contenido educativo, Casa del Bosque, Fabrica Cuentos, Innova Systems Center, videos para educación, creatividad infantil, multimedia, diseño de contenido para niños, aprendizaje interactivo, producción de contenido educativo, video narrativo infantil, animación infantil Colombia";
+const pageTitle = "Caso de Éxito – Casa del Bosque | Producción y Edición de Video | INNOVA SYSTEMS CENTER";
+const pageDescription = "Descubre cómo INNOVA SYSTEMS CENTER llevó a cabo la producción audiovisual y animación 2D del video educativo Casa del Bosque para la Fundación Makikuna.";
+const pageKeywords = "caso de éxito, producción audiovisual, animación 2D, edición de video, diseño audiovisual, producción digital, Innova Systems Center, videos para educación, multimedia, aprendizaje interactivo, postproducción de video";
 ---
 
 <Layout title={pageTitle} description={pageDescription} keywords={pageKeywords}>
@@ -36,17 +30,17 @@ const pageKeywords = "caso de éxito, producción audiovisual, video educativo i
         <div class="flex flex-col text-left">
           <span class="text-[#F39C12] font-bold text-xs uppercase tracking-[0.2em] mb-4">Caso de Éxito</span>
           <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-[1.1] mb-6 tracking-tight">
-            Casa del Bosque<br />
-            <span class="text-[#F39C12]">Video Educativo</span>
+            Producción Audiovisual<br />
+            <span class="text-[#F39C12]">Casa del Bosque</span>
           </h1>
           <p class="text-gray-300 text-lg md:text-xl font-normal leading-relaxed mb-8 max-w-lg">
-            Una producción educativa que invita a niñas, niños y jóvenes a descubrir la importancia de los bosques para la vida y nuestro futuro.
+            Conceptualización, animación 2D y postproducción de video educativo de alta calidad desarrollado por el equipo técnico de INNOVA.
           </p>
 
           <!-- Buttons -->
           <div class="flex flex-wrap gap-4 mb-12">
             <a href="#sobre-el-proyecto" class="bg-[#F39C12] text-black font-extrabold px-8 py-3.5 rounded-full hover:bg-[#ffb339] transition-all flex items-center gap-3 transform hover:scale-105 shadow-xl shadow-[#F39C12]/25">
-              Conocer ficha técnica
+              Ver detalles técnicos
               <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
                 <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
@@ -57,24 +51,21 @@ const pageKeywords = "caso de éxito, producción audiovisual, video educativo i
           <div class="grid grid-cols-3 gap-4 border-t border-gray-800/60 pt-8 max-w-lg">
             <div class="flex flex-col items-start text-left">
               <svg class="w-6 h-6 text-[#F39C12] mb-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/>
-                <path d="M12 6v12M6 12h12"/>
+                <path d="M15 10l5 5-5 5M4 4v7a4 4 0 004 4h12" />
               </svg>
-              <span class="text-xs text-gray-400 font-medium leading-tight">Aprende sobre los bosques</span>
+              <span class="text-xs text-gray-400 font-medium leading-tight">Proceso ágil</span>
             </div>
             <div class="flex flex-col items-start text-left">
               <svg class="w-6 h-6 text-[#F39C12] mb-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                <path d="M9.663 17h4.673M12 3v1m6.364 1.364l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 113.536 0V21h2v-4.343z" />
               </svg>
-              <span class="text-xs text-gray-400 font-medium leading-tight">Conoce su importancia</span>
+              <span class="text-xs text-gray-400 font-medium leading-tight">Ilustración digital</span>
             </div>
             <div class="flex flex-col items-start text-left">
               <svg class="w-6 h-6 text-[#F39C12] mb-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-                <circle cx="9" cy="7" r="4"/>
-                <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+                <path d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
               </svg>
-              <span class="text-xs text-gray-400 font-medium leading-tight">Actúa por un mejor futuro</span>
+              <span class="text-xs text-gray-400 font-medium leading-tight">Sonorización HD</span>
             </div>
           </div>
 
@@ -107,40 +98,40 @@ const pageKeywords = "caso de éxito, producción audiovisual, video educativo i
         <div class="flex flex-col text-left">
           <div class="flex items-center gap-4 mb-4">
             <img src={heroImg.src} alt="" class="w-12 h-12 object-contain" />
-            <span class="text-[#F39C12] font-bold text-xs uppercase tracking-[0.2em]">Sobre el proyecto</span>
+            <span class="text-[#F39C12] font-bold text-xs uppercase tracking-[0.2em]">El Trabajo Realizado</span>
           </div>
           <h2 class="text-3xl md:text-5xl font-extrabold text-white leading-tight mb-6">
-            Educación que <span class="text-[#F39C12]">inspira y transforma</span>
+            Creatividad y técnica de <span class="text-[#F39C12]">INNOVA</span>
           </h2>
           <p class="text-gray-300 text-lg leading-relaxed mb-8">
-            Casa del Bosque es un video educativo de alta calidad desarrollado por INNOVA SYSTEMS CENTER para la Fundación Makikuna. Busca fomentar la conciencia ambiental a través de historias cercanas, lenguaje claro y contenido audiovisual dinámico que capta la atención de los niños y promueve la conservación de nuestros recursos naturales.
+            Diseñamos una solución audiovisual integral que incluye la redacción de guión técnico, la ilustración digital de escenarios y personajes, y la postproducción final de audio y video. El resultado es un producto digital fluido, dinámico y de gran valor educativo.
           </p>
-          <a href="#temas" class="self-start border border-[#F39C12] text-white hover:bg-[#F39C12] hover:text-black font-bold px-8 py-3 rounded-full transition-all duration-300">
-            Ver temas de aprendizaje
+          <a href="#lo-que-logramos" class="self-start border border-[#F39C12] text-white hover:bg-[#F39C12] hover:text-black font-bold px-8 py-3 rounded-full transition-all duration-300">
+            Ver hitos alcanzados
           </a>
         </div>
 
         <!-- Right Side Ficha Técnica Grid -->
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
           
-          <div class="bg-[#121212] border border-gray-800 rounded-xl p-5 hover:border-[#F39C12]/30 transition-all">
+          <div class="bg-[#121212] border border-gray-800 rounded-xl p-5 hover:border-[#F39C12]/30 transition-all text-left">
             <span class="text-xs text-gray-500 font-semibold uppercase tracking-wider block mb-1">Cliente</span>
             <span class="text-base text-white font-bold block">Fundación Makikuna</span>
           </div>
 
-          <div class="bg-[#121212] border border-gray-800 rounded-xl p-5 hover:border-[#F39C12]/30 transition-all">
-            <span class="text-xs text-gray-500 font-semibold uppercase tracking-wider block mb-1">Tipo de Proyecto</span>
-            <span class="text-base text-white font-bold block">Producción de Video Educativo</span>
+          <div class="bg-[#121212] border border-gray-800 rounded-xl p-5 hover:border-[#F39C12]/30 transition-all text-left">
+            <span class="text-xs text-gray-500 font-semibold uppercase tracking-wider block mb-1">Servicio prestado</span>
+            <span class="text-base text-white font-bold block">Producción & Edición Digital</span>
           </div>
 
-          <div class="bg-[#121212] border border-gray-800 rounded-xl p-5 hover:border-[#F39C12]/30 transition-all">
-            <span class="text-xs text-gray-500 font-semibold uppercase tracking-wider block mb-1">Formato</span>
-            <span class="text-base text-white font-bold block">Animación Digital 2D & Narrativa</span>
+          <div class="bg-[#121212] border border-gray-800 rounded-xl p-5 hover:border-[#F39C12]/30 transition-all text-left">
+            <span class="text-xs text-gray-500 font-semibold uppercase tracking-wider block mb-1">Tecnología</span>
+            <span class="text-base text-white font-bold block">Animación 2D & Sonorización</span>
           </div>
 
-          <div class="bg-[#121212] border border-gray-800 rounded-xl p-5 hover:border-[#F39C12]/30 transition-all">
-            <span class="text-xs text-gray-500 font-semibold uppercase tracking-wider block mb-1">Público Objetivo</span>
-            <span class="text-base text-white font-bold block">Infantil, Juvenil y Docentes</span>
+          <div class="bg-[#121212] border border-gray-800 rounded-xl p-5 hover:border-[#F39C12]/30 transition-all text-left">
+            <span class="text-xs text-gray-500 font-semibold uppercase tracking-wider block mb-1">Calidad de Entrega</span>
+            <span class="text-base text-white font-bold block">Full HD 1080p con Subtítulos</span>
           </div>
           
         </div>
@@ -148,146 +139,130 @@ const pageKeywords = "caso de éxito, producción audiovisual, video educativo i
       </div>
     </section>
 
-    <!-- ── TEMAS QUE ENCONTRARÁS SECTION ── -->
-    <section id="temas" class="py-24 bg-[#080808] relative">
+    <!-- ── LO QUE LOGRAMOS SECTION ── -->
+    <section id="lo-que-logramos" class="py-24 bg-[#080808] border-t border-gray-900">
       <div class="max-w-[1240px] mx-auto px-6">
         
-        <!-- Header -->
         <div class="text-center mb-16">
-          <span class="text-[#F39C12] font-bold text-xs uppercase tracking-[0.2em] mb-3 block">Temas que encontrarás</span>
+          <span class="text-[#F39C12] font-bold text-xs uppercase tracking-[0.2em] mb-3 block">Lo que logramos</span>
           <h2 class="text-3xl md:text-5xl font-extrabold text-white">
-            Explora. <span class="text-[#F39C12]">Aprende.</span> Actúa.
+            Resultados de nuestra <span class="text-[#F39C12]">producción</span>
           </h2>
         </div>
 
-        <!-- Grid of 5 Cards -->
-        <div class="grid grid-cols-2 md:grid-cols-5 gap-6 mb-12">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           
-          <!-- Card 1 -->
-          <div class="cb-card group">
-            <div class="cb-card__icon-wrap">
-              <img src={iconBosque.src} alt="¿Qué es un bosque?" class="w-14 h-14 object-contain group-hover:scale-110 transition-transform" />
+          <!-- Hito 1 -->
+          <div class="bg-[#121212] border border-gray-800 rounded-2xl p-8 flex flex-col text-left transition-all duration-300 hover:border-[#F39C12]/40 hover:-translate-y-1">
+            <div class="mb-6 text-[#F39C12]">
+              <svg class="w-10 h-10" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+              </svg>
             </div>
-            <h3 class="text-sm font-bold text-white uppercase tracking-wider text-center group-hover:text-[#F39C12] transition-colors">
-              ¿Qué es<br />un bosque?
-            </h3>
+            <h3 class="text-lg font-bold text-white mb-3">Guión y Estructura Educativa</h3>
+            <p class="text-gray-400 text-sm leading-relaxed">
+              Planificación técnica de escenas y diálogos optimizados para mantener el interés del espectador y asegurar la claridad del mensaje.
+            </p>
           </div>
 
-          <!-- Card 2 -->
-          <div class="cb-card group">
-            <div class="cb-card__icon-wrap">
-              <img src={iconBiodiversidad.src} alt="Biodiversidad" class="w-14 h-14 object-contain group-hover:scale-110 transition-transform" />
+          <!-- Hito 2 -->
+          <div class="bg-[#121212] border border-gray-800 rounded-2xl p-8 flex flex-col text-left transition-all duration-300 hover:border-[#F39C12]/40 hover:-translate-y-1">
+            <div class="mb-6 text-[#F39C12]">
+              <svg class="w-10 h-10" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
             </div>
-            <h3 class="text-sm font-bold text-white uppercase tracking-wider text-center group-hover:text-[#F39C12] transition-colors">
-              Biodiversidad
-            </h3>
+            <h3 class="text-lg font-bold text-white mb-3">Ilustraciones y Escenarios 2D</h3>
+            <p class="text-gray-400 text-sm leading-relaxed">
+              Desarrollo visual con una paleta de colores vibrante, ilustraciones personalizadas y personajes amigables adaptados a la audiencia.
+            </p>
           </div>
 
-          <!-- Card 3 -->
-          <div class="cb-card group">
-            <div class="cb-card__icon-wrap">
-              <img src={iconServicios.src} alt="Servicios ambientales" class="w-14 h-14 object-contain group-hover:scale-110 transition-transform" />
+          <!-- Hito 3 -->
+          <div class="bg-[#121212] border border-gray-800 rounded-2xl p-8 flex flex-col text-left transition-all duration-300 hover:border-[#F39C12]/40 hover:-translate-y-1">
+            <div class="mb-6 text-[#F39C12]">
+              <svg class="w-10 h-10" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
+              </svg>
             </div>
-            <h3 class="text-sm font-bold text-white uppercase tracking-wider text-center group-hover:text-[#F39C12] transition-colors">
-              Servicios<br />ambientales
-            </h3>
+            <h3 class="text-lg font-bold text-white mb-3">Postproducción y Sonido</h3>
+            <p class="text-gray-400 text-sm leading-relaxed">
+              Edición de audio digital, integración de voces profesionales (voice-over) y musicalización de fondo con efectos ambientales.
+            </p>
           </div>
 
-          <!-- Card 4 -->
-          <div class="cb-card group">
-            <div class="cb-card__icon-wrap">
-              <img src={iconAmenazas.src} alt="Amenazas y cuidados" class="w-14 h-14 object-contain group-hover:scale-110 transition-transform" />
-            </div>
-            <h3 class="text-sm font-bold text-white uppercase tracking-wider text-center group-hover:text-[#F39C12] transition-colors">
-              Amenazas<br />y cuidados
-            </h3>
-          </div>
-
-          <!-- Card 5 -->
-          <div class="cb-card group">
-            <div class="cb-card__icon-wrap">
-              <img src={iconAcciones.src} alt="Acciones para un futuro mejor" class="w-14 h-14 object-contain group-hover:scale-110 transition-transform" />
-            </div>
-            <h3 class="text-sm font-bold text-white uppercase tracking-wider text-center group-hover:text-[#F39C12] transition-colors">
-              Acciones para<br />un futuro mejor
-            </h3>
-          </div>
-
-        </div>
-
-        <!-- Centered button -->
-        <div class="text-center">
-          <a href="#recursos" class="inline-block border border-[#F39C12] text-white hover:bg-[#F39C12] hover:text-black font-bold px-8 py-3 rounded-full transition-all duration-300">
-            Ver recursos para docentes
-          </a>
         </div>
 
       </div>
     </section>
 
-    <!-- ── RECURSOS Y COMPROMISO AMBIENTAL ── -->
-    <section id="recursos" class="py-20 bg-[#080808]">
+    <!-- ── NUESTRO PROCESO DE PRODUCCIÓN ── -->
+    <section class="py-24 bg-[#0d0d0d] border-t border-gray-900">
       <div class="max-w-[1240px] mx-auto px-6">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+        
+        <div class="text-center mb-16">
+          <span class="text-[#F39C12] font-bold text-xs uppercase tracking-[0.2em] mb-3 block">El Proceso</span>
+          <h2 class="text-3xl md:text-5xl font-extrabold text-white">
+            Cómo creamos el <span class="text-[#F39C12]">material</span>
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           
-          <!-- Left: Recursos didácticos (Para Docentes) - 7 cols -->
-          <div class="lg:col-span-7 bg-gradient-to-br from-[#111111] to-[#171106] border border-gray-800 rounded-3xl p-8 md:p-12 flex flex-col justify-between shadow-2xl relative overflow-hidden group">
-            <!-- Decorative gradient blur -->
-            <div class="absolute -right-20 -bottom-20 w-60 h-60 bg-[#F39C12]/5 rounded-full blur-3xl group-hover:bg-[#F39C12]/10 transition-all duration-500"></div>
-            
-            <div class="relative z-10 flex flex-col md:flex-row gap-8 items-center h-full">
-              <!-- Text content -->
-              <div class="flex-1 flex flex-col text-left justify-between h-full">
-                <div>
-                  <span class="text-[#F39C12] font-bold text-xs uppercase tracking-[0.2em] mb-3 block">Para Docentes</span>
-                  <h3 class="text-2xl md:text-3xl font-extrabold text-white leading-tight mb-4">
-                    Materiales didácticos y actividades
-                  </h3>
-                  <p class="text-gray-300 text-sm leading-relaxed mb-6">
-                    Lleva el aprendizaje más lejos con guías didácticas, talleres y recursos descargables diseñados especialmente para complementar el video en el aula.
-                  </p>
-                </div>
-                <a href={`${base}/contacto#formulario-contacto`} class="self-start border border-[#F39C12] text-white hover:bg-[#F39C12] hover:text-black font-bold px-6 py-2.5 rounded-full transition-all duration-300">
-                  Acceder a recursos
-                </a>
-              </div>
-              
-              <!-- Banner image inside resource card -->
-              <div class="w-full max-w-[200px] flex-shrink-0">
-                <img src={docentesBanner.src} alt="Docentes banner" class="w-full h-auto rounded-xl shadow-lg border border-gray-800/40 transform group-hover:scale-102 transition-transform duration-300" />
-              </div>
-            </div>
+          <!-- Paso 1 -->
+          <div class="bg-[#121212] border border-gray-800 rounded-2xl p-6 text-left hover:border-[#F39C12]/40 transition-colors">
+            <span class="text-[#F39C12] text-3xl font-black block mb-4">01</span>
+            <h4 class="text-base font-bold text-white mb-2">Guión y Estructura</h4>
+            <p class="text-gray-400 text-xs leading-relaxed">
+              Definición de las ideas clave, estructuración de la narrativa y redacción de diálogos didácticos.
+            </p>
           </div>
 
-          <!-- Right: Compromiso Ambiental (Cuidemos hoy los bosques) - 5 cols -->
-          <div class="lg:col-span-5 bg-gradient-to-br from-[#140d00] to-[#0A0A0A] border border-[#F39C12]/15 rounded-3xl p-8 md:p-12 flex flex-col justify-between shadow-2xl relative overflow-hidden group">
-            <div class="absolute -left-10 -top-10 w-40 h-40 bg-[#F39C12]/5 rounded-full blur-2xl"></div>
-            
-            <div class="relative z-10 flex flex-col h-full justify-between text-left">
-              <div>
-                <div class="w-12 h-12 bg-[#F39C12]/10 rounded-full flex items-center justify-center text-[#F39C12] border border-[#F39C12]/20 mb-6">
-                  <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                    <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/>
-                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-                    <path d="M2 12h20"/>
-                  </svg>
-                </div>
-                <h3 class="text-2xl font-bold text-white mb-2">Cuidemos hoy los bosques</h3>
-                <p class="text-gray-400 text-sm leading-relaxed mb-6">
-                  Para disfrutar mañana un mundo mejor. Proteger el medio ambiente es una tarea colectiva que comienza con la educación de los más jóvenes.
-                </p>
-              </div>
-              
-              <a href={`${base}/contacto#formulario-contacto`} class="bg-[#F39C12] text-black font-extrabold px-6 py-3 rounded-full hover:bg-[#ffb339] transition-all flex items-center justify-center gap-2 text-sm shadow-lg shadow-[#F39C12]/25">
-                Iniciar consultoría ambiental
-                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
-                  <polygon points="5 3 19 12 5 21 5 3"/>
-                </svg>
-              </a>
-            </div>
+          <!-- Paso 2 -->
+          <div class="bg-[#121212] border border-gray-800 rounded-2xl p-6 text-left hover:border-[#F39C12]/40 transition-colors">
+            <span class="text-[#F39C12] text-3xl font-black block mb-4">02</span>
+            <h4 class="text-base font-bold text-white mb-2">Diseño y Storyboard</h4>
+            <p class="text-gray-400 text-xs leading-relaxed">
+              Esquematización visual de cada escena, bocetado de personajes y preparación de fondos.
+            </p>
+          </div>
+
+          <!-- Paso 3 -->
+          <div class="bg-[#121212] border border-gray-800 rounded-2xl p-6 text-left hover:border-[#F39C12]/40 transition-colors">
+            <span class="text-[#F39C12] text-3xl font-black block mb-4">03</span>
+            <h4 class="text-base font-bold text-white mb-2">Animación Digital</h4>
+            <p class="text-gray-400 text-xs leading-relaxed">
+              Movimiento de elementos visuales en 2D, transiciones entre escenas y renderizado de animaciones.
+            </p>
+          </div>
+
+          <!-- Paso 4 -->
+          <div class="bg-[#121212] border border-gray-800 rounded-2xl p-6 text-left hover:border-[#F39C12]/40 transition-colors">
+            <span class="text-[#F39C12] text-3xl font-black block mb-4">04</span>
+            <h4 class="text-base font-bold text-white mb-2">Sonorización y Master</h4>
+            <p class="text-gray-400 text-xs leading-relaxed">
+              Grabación y ecualización de voz en off, sincronía de efectos y exportación en alta definición.
+            </p>
           </div>
 
         </div>
+
+      </div>
+    </section>
+
+    <!-- ── CTA SECCIÓN ── -->
+    <section class="py-24 bg-[#080808] border-t border-gray-900">
+      <div class="max-w-[800px] mx-auto px-6 text-center">
+        <span class="text-[#F39C12] font-bold text-xs uppercase tracking-[0.2em] mb-4 block">¿Tienes un proyecto en mente?</span>
+        <h2 class="text-3xl md:text-5xl font-extrabold text-white mb-6">
+          Lleva tu contenido al <span class="text-[#F39C12]">siguiente nivel</span>
+        </h2>
+        <p class="text-gray-400 text-base leading-relaxed mb-8">
+          En INNOVA SYSTEMS CENTER creamos soluciones multimedia, videos profesionales y animaciones adaptadas a las necesidades de tu empresa o fundación.
+        </p>
+        <a href={`${base}/contacto#formulario-contacto`} class="bg-[#F39C12] text-black font-extrabold px-8 py-3.5 rounded-full hover:bg-[#ffb339] transition-all inline-block transform hover:scale-105 shadow-xl shadow-[#F39C12]/25">
+          Cotiza tu producción audiovisual
+        </a>
       </div>
     </section>
 
@@ -322,49 +297,5 @@ const pageKeywords = "caso de éxito, producción audiovisual, video educativo i
     background: rgba(243, 156, 18, 0.06);
     bottom: 20%;
     left: 5%;
-  }
-
-  /* ── FLOATING ANIMATION ── */
-  .animate-float {
-    animation: cbFloat 6s ease-in-out infinite;
-  }
-  @keyframes cbFloat {
-    0%, 100% { transform: translateY(0); }
-    50%      { transform: translateY(-15px); }
-  }
-
-  /* ── TEMAS CARDS ── */
-  .cb-card {
-    background: #111;
-    border: 1px solid rgba(243, 156, 18, 0.15);
-    border-radius: 1.25rem;
-    padding: 2rem 1.25rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-    cursor: default;
-    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-  }
-  .cb-card:hover {
-    transform: translateY(-8px);
-    border-color: #F39C12;
-    box-shadow: 0 15px 30px rgba(243, 156, 18, 0.08);
-    background: #151515;
-  }
-  .cb-card__icon-wrap {
-    width: 80px;
-    height: 80px;
-    background: rgba(243, 156, 18, 0.08);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid rgba(243, 156, 18, 0.15);
-    transition: all 0.4s;
-  }
-  .cb-card:hover .cb-card__icon-wrap {
-    background: rgba(243, 156, 18, 0.16);
-    border-color: #F39C12;
   }
 </style>
