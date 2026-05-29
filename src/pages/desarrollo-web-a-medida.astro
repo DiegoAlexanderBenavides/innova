@@ -630,9 +630,9 @@ const faqs = [
     max-width: 860px; margin: 0 auto;
   }
   @media (max-width: 700px) { .dw-caso { grid-template-columns: 1fr; } }
-  .dw-caso-img-wrap { overflow: hidden; height: 100%; min-height: 260px; }
-  .dw-caso-img      { width: 100%; height: 100%; object-fit: cover; min-height: 260px; transition: transform 0.4s; }
-  .dw-caso-img-wrap:hover .dw-caso-img { transform: scale(1.05); }
+  .dw-caso-img-wrap { background: #0d0d0d; display: flex; align-items: center; justify-content: center; height: 100%; min-height: 260px; padding: 1rem; }
+  .dw-caso-img      { width: 100%; height: 100%; object-fit: contain; min-height: 220px; max-height: 300px; transition: transform 0.4s; }
+  .dw-caso-img-wrap:hover .dw-caso-img { transform: scale(1.03); }
   .dw-caso-body  { padding: 2rem 2rem 2rem 0.5rem; position: relative; }
   @media (max-width: 700px) { .dw-caso-body { padding: 1.5rem; } }
   .dw-caso-bar   { width: 100%; height: 3px; background: #F39C12; margin-bottom: 1.25rem; border-radius: 2px; }

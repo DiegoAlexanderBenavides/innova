@@ -8,7 +8,6 @@ import { services, projects } from "../data/siteData.ts";
 // HERO
 import queSomosImg from "../assets/images/somos/innova_principal.png";
 
-
 // Empresas aliadas
 import fondoEmprender from "../assets/images/empresas_aliadas/fondo_emprender.png";
 import senaImg from "../assets/images/empresas_aliadas/sena.png";
@@ -40,11 +39,7 @@ const pageKeywords =
   "soluciones tecnológicas, transformación digital, desarrollo de software, desarrollo web, análisis de datos";
 const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 
-const serviceImages = [
-  imgAnalisis.src,
-  imgDesarrolloWeb.src,
-  imgContenido.src,
-];
+const serviceImages = [imgAnalisis.src, imgDesarrolloWeb.src, imgContenido.src];
 
 const sectores = [
   {
@@ -104,8 +99,6 @@ const projectsData = [
       class="w-full min-h-screen opacity-0 flex flex-col justify-center pt-24 pb-12 relative"
       data-animation="animate-fade-in"
     >
-
-
       <div
         class="max-w-7xl mx-auto px-6 w-full flex flex-col lg:flex-row items-center justify-between gap-12 relative z-10"
       >
@@ -382,17 +375,21 @@ const projectsData = [
   .emprender-section {
     background: linear-gradient(
       to right,
-      #1a0900 0%,
-      #b0763d 20%,
-      #f5c200 50%,
-      #c89867 80%,
-      #1a0900 100%
+      #c07b00 0%,
+      #7a4a00 15%,
+      #2e1500 28%,
+      #0d0d0d 50%,
+      #2e1500 72%,
+      #7a4a00 85%,
+      #c07b00 100%
     );
-    height: 140px; /* altura fija, no crece con las imágenes */
-    overflow: hidden;
+    height: 120px; /* altura reducida de la sección */
+    overflow: visible; /* las imágenes sobresalen independientemente del tamaño */
     display: flex;
     align-items: center;
     padding: 0 1.5rem;
+    position: relative;
+    z-index: 20; /* por encima de las secciones adyacentes */
   }
   .aliadas-row {
     display: flex;
@@ -416,7 +413,6 @@ const projectsData = [
     transition:
       opacity 0.3s,
       transform 0.3s;
-    filter: drop-shadow(0 0 14px rgba(255, 200, 0, 0.45));
   }
   .aliada-logo:hover {
     opacity: 1;

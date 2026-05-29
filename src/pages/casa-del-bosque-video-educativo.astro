@@ -6,6 +6,7 @@ import Footer from '../components/Footer.astro';
 // Import target assets
 import heroImg from '../assets/images/makikuna-video/hero_video_icon.png';
 import previewImg from '../assets/images/makikuna-video/video_preview_forest.png';
+import videoosImg from '../assets/images/makikuna-video/videoos.png';
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 
@@ -77,13 +78,7 @@ const pageKeywords = "caso de éxito, producción audiovisual, animación 2D, ed
           <div class="absolute -inset-1 bg-gradient-to-r from-[#F39C12] to-[#ffb339] rounded-2xl blur-xl opacity-20 animate-pulse"></div>
           
           <div class="relative z-10 w-full overflow-hidden rounded-2xl border-2 border-[#F39C12]/30 shadow-2xl bg-black">
-            <!-- Video Player -->
-            <video id="video-hero-player" class="w-full h-auto object-cover max-h-[400px]" controls poster={previewImg.src}>
-              <source src="https://innovasystemscenter.com/assets/videos/casa_bosque_video.mp4" type="video/mp4" />
-              <source src={`${base}/assets/videos/casa_bosque_video.mp4`} type="video/mp4" />
-              <source src="/assets/videos/casa_bosque_video.mp4" type="video/mp4" />
-              Tu navegador no soporta videos HTML5.
-            </video>
+            <img src={videoosImg.src} alt="Casa del Bosque - Caso de éxito" class="w-full h-auto object-cover max-h-[400px] transition-transform duration-500 hover:scale-[1.02]" />
           </div>
         </div>
 
