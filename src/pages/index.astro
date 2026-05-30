@@ -7,6 +7,7 @@ import { services, projects } from "../data/siteData.ts";
 
 // HERO
 import queSomosImg from "../assets/images/somos/innova_principal.png";
+import globo2Img from "../assets/images/globo2.webp";
 
 // Empresas aliadas
 import fondoEmprender from "../assets/images/empresas_aliadas/fondo_emprender.png";
@@ -78,11 +79,17 @@ const projectsData = [
   {
     title: "Redciclar - Plataforma de Gestión de Residuos",
     img: imgRedciclar.src,
+    slug: "redciclar-gestion-residuos-cali",
   },
-  { title: "Fundación Makikuna - Gestión de Datos", img: imgMakikuna.src },
+  {
+    title: "Fundación Makikuna - Gestión de Datos",
+    img: imgMakikuna.src,
+    slug: "fundacion-makikuna-gestion-de-datos",
+  },
   {
     title: "Casa del Bosque - Video Educativo (Muestra Infantil)",
     img: imgCasaBosque.src,
+    slug: "casa-del-bosque-video-educativo",
   },
 ];
 ---
@@ -99,6 +106,13 @@ const projectsData = [
       class="w-full min-h-screen opacity-0 flex flex-col justify-center pt-24 pb-12 relative"
       data-animation="animate-fade-in"
     >
+      <!-- Globo decorativo esquina superior derecha -->
+      <img
+        src={globo2Img.src}
+        alt=""
+        aria-hidden="true"
+        class="globo-deco"
+      />
       <div
         class="max-w-7xl mx-auto px-6 w-full flex flex-col lg:flex-row items-center justify-between gap-12 relative z-10"
       >
@@ -134,7 +148,7 @@ const projectsData = [
         <div
           class="flex-1 w-full mt-12 lg:mt-0 flex justify-center lg:justify-end"
         >
-          <div class="relative w-full max-w-lg group">
+          <div class="relative w-full max-w-2xl group">
             <img
               src={queSomosImg.src}
               alt="Innova Systems Center"
@@ -287,33 +301,20 @@ const projectsData = [
           </p>
         </div>
 
-        <div class="proj-outer">
-          <button
-            class="proj-arrow proj-arrow--left"
-            id="projPrev"
-            aria-label="Anterior">&#8592;</button
-          >
-          <div class="proj-viewport">
-            <div class="proj-track" id="projTrack">
-              {
-                projectsData.map((p) => (
-                  <div class="proj-card">
-                    <div class="proj-card__img-wrap">
-                      <img src={p.img} alt={p.title} class="proj-card__img" />
-                    </div>
-                    <div class="proj-card__body">
-                      <p class="proj-card__title">{p.title}</p>
-                    </div>
-                  </div>
-                ))
-              }
-            </div>
-          </div>
-          <button
-            class="proj-arrow proj-arrow--right"
-            id="projNext"
-            aria-label="Siguiente">&#8594;</button
-          >
+        <div class="proj-grid">
+          {
+            projectsData.map((p) => (
+              <a href={`${base}/${p.slug}`} class="proj-card">
+                <div class="proj-card__img-wrap">
+                  <img src={p.img} alt={p.title} class="proj-card__img" />
+                </div>
+                <div class="proj-card__body">
+                  <p class="proj-card__title">{p.title}</p>
+                  <span class="proj-card__cta">Ver caso de éxito →</span>
+                </div>
+              </a>
+            ))
+          }
         </div>
       </div>
     </section>
@@ -434,6 +435,20 @@ const projectsData = [
     overflow: hidden;
     cursor: grab;
     padding: 0.5rem 0 1rem;
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent 0%,
+      black 12%,
+      black 88%,
+      transparent 100%
+    );
+    mask-image: linear-gradient(
+      to right,
+      transparent 0%,
+      black 12%,
+      black 88%,
+      transparent 100%
+    );
   }
   .svc-carousel-outer:active {
     cursor: grabbing;
@@ -492,6 +507,7 @@ const projectsData = [
   .svc-card__body {
     padding: 1rem 1rem 0.4rem;
     flex: 1;
+    text-align: left;
   }
   .svc-card__title {
     color: #f39c12;
@@ -669,33 +685,39 @@ const projectsData = [
     margin-top: 2px;
   }
 
-  /* ── Proyectos carousel ── */
-  .proj-outer {
-    position: relative;
-    padding: 0 2.5rem;
-  }
-  .proj-viewport {
-    overflow: hidden;
-  }
-  .proj-track {
-    display: flex;
+  /* ── Proyectos grid ── */
+  .proj-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.4rem;
-    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   }
+  @media (max-width: 900px) {
+    .proj-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (max-width: 540px) {
+    .proj-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
   .proj-card {
-    flex-shrink: 0;
-    width: calc(33.333% - 0.95rem);
+    display: block;
+    text-decoration: none;
     background: #1a1a1a;
     border: 1px solid rgba(243, 156, 18, 0.2);
     border-radius: 1rem;
     overflow: hidden;
     transition:
       box-shadow 0.3s,
-      transform 0.3s;
+      transform 0.3s,
+      border-color 0.3s;
   }
   .proj-card:hover {
     box-shadow: 0 0 30px rgba(243, 156, 18, 0.28);
     transform: translateY(-4px);
+    border-color: rgba(243, 156, 18, 0.5);
   }
 
   .proj-card__img-wrap {
@@ -711,7 +733,10 @@ const projectsData = [
     transform: scale(1.05);
   }
   .proj-card__body {
-    padding: 0.85rem 1rem;
+    padding: 0.85rem 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
   }
   .proj-card__title {
     color: #ddd;
@@ -719,75 +744,38 @@ const projectsData = [
     font-weight: 600;
     line-height: 1.4;
   }
-
-  @media (max-width: 900px) {
-    .proj-card {
-      width: calc(50% - 0.7rem);
-    }
-  }
-  @media (max-width: 540px) {
-    .proj-card {
-      width: 80vw;
-    }
-  }
-
-  .proj-arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 42px;
-    height: 42px;
-    background: rgba(243, 156, 18, 0.12);
-    border: 1px solid rgba(243, 156, 18, 0.4);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    z-index: 10;
+  .proj-card__cta {
     color: #f39c12;
-    font-size: 1.15rem;
-    font-weight: bold;
-    transition:
-      background 0.2s,
-      transform 0.2s;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    transition: color 0.2s;
   }
-  .proj-arrow:hover {
-    background: rgba(243, 156, 18, 0.32);
-    transform: translateY(-50%) scale(1.12);
+  .proj-card:hover .proj-card__cta {
+    color: #ffc04a;
   }
-  .proj-arrow--left {
-    left: 0;
+  /* ── Globo decorativo hero ── */
+  .globo-deco {
+    position: absolute;
+    top: -80px;
+    right: -160px;
+    width: 520px;
+    height: auto;
+    opacity: 0.08;
+    pointer-events: none;
+    user-select: none;
+    z-index: 0;
   }
-  .proj-arrow--right {
-    right: 0;
+  @media (max-width: 768px) {
+    .globo-deco {
+      width: 320px;
+      top: -50px;
+      right: -100px;
+    }
   }
 </style>
 
 <script>
-  // ── Carousel de proyectos (flechas manuales) ──
-  const track = document.getElementById("projTrack") as HTMLElement | null;
-  const cards = track ? (Array.from(track.children) as HTMLElement[]) : [];
-  let idx = 0;
-
-  function slideProj() {
-    if (!track || !cards.length) return;
-    const gap = 22;
-    const w = (cards[0] as HTMLElement).offsetWidth + gap;
-    track.style.transform = `translateX(-${idx * w}px)`;
-  }
-
-  document.getElementById("projNext")?.addEventListener("click", () => {
-    idx = (idx + 1) % cards.length;
-    slideProj();
-  });
-  document.getElementById("projPrev")?.addEventListener("click", () => {
-    idx = (idx - 1 + cards.length) % cards.length;
-    slideProj();
-  });
-
-  window.addEventListener("resize", slideProj);
-  document.addEventListener("astro:page-load", slideProj);
 
   // ── Carrusel automático de servicios (derecha → izquierda) ──
   (function () {
@@ -797,7 +785,7 @@ const projectsData = [
     const svcTrack = document.getElementById("svcTrack") as HTMLElement | null;
     if (!outer || !svcTrack) return;
 
-    const SPEED = 0.55; // px por frame (velocidad)
+    const SPEED = 0.28; // px por frame (velocidad reducida)
     let offset = 0;
     let paused = false;
     let rafId: number;

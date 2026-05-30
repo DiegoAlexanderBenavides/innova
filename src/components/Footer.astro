@@ -83,15 +83,21 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
       </p>
 
       <p class="text-gray-300 text-sm">Teléfono / WhatsApp:</p>
-      <a
-        href="https://wa.me/573233259454"
-        target="_blank"
-        class="flex items-center gap-2 font-bold mt-1 hover:text-[#F39C12] transition"
-      >
-        <i data-lucide="phone" class="w-5 h-5 text-[#F39C12]"></i>
-        <i data-lucide="message-circle" class="w-5 h-5 text-[#25D366]"></i>
-        <span>+57 323 325 9454</span>
-      </a>
+      <div class="flex flex-col gap-1 mt-1">
+        <a
+          href="tel:+573233259454"
+          class="font-bold text-white hover:text-[#F39C12] transition text-sm"
+        >
+          +57 323 325 9454
+        </a>
+        <a
+          href="https://wa.me/573233259454"
+          target="_blank"
+          class="font-bold text-white hover:text-[#25D366] transition text-sm"
+        >
+          WhatsApp
+        </a>
+      </div>
 
       <!-- Redes -->
       <div class="flex gap-4 mt-5">
